@@ -10,6 +10,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel21",
                   "title": "Developers",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -133,6 +134,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel24",
                   "title": "Questionnaire answerers ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -347,6 +349,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel25",
                   "title": "System",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "text",
@@ -814,6 +817,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel1",
                   "title": "Strategy",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -1036,6 +1040,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel2",
                   "title": "Infastructure / Security",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -1525,6 +1530,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel26",
                   "title": "Data",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -1962,6 +1968,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel4",
                   "title": "Governance",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "boolean",
@@ -2565,6 +2572,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel5",
                   "title": "Staff",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -2735,6 +2743,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel6",
                   "title": "Culture",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -3012,6 +3021,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel7",
                   "title": "Objectives",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "comment",
@@ -3284,6 +3294,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel9",
                   "title": "Automation",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -3649,6 +3660,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel3",
                   "title": "Ethical assessments/Risks",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -4478,6 +4490,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel10",
                   "title": "Source and Documentation",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "checkbox",
@@ -4729,6 +4742,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel13",
                   "title": "Privacy and Legality",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "boolean",
@@ -5259,6 +5273,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel12",
                   "title": "Quality and Bias ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -6052,6 +6067,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel14",
                   "title": "Algorithm ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "comment",
@@ -6411,6 +6427,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel16",
                   "title": "Fairness",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "checkbox",
@@ -6668,6 +6685,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel15",
                   "title": "Explainability and Transparency",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -6964,6 +6982,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel23",
                   "title": "Traceability ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -7165,6 +7184,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "question187",
                   "title": "Robustness and testing the tool ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "checkbox",
@@ -7332,6 +7352,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel17",
                   "title": "Ethical Considerations ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "comment",
@@ -8651,6 +8672,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel8",
                   "title": "Testing ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -8901,6 +8923,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel27",
                   "title": "Deploy",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -9111,6 +9134,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel18",
                   "title": "Compliance checks ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "checkbox",
@@ -9282,6 +9306,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel19",
                   "title": "Certification and Audits ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -9442,6 +9467,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel20",
                   "title": "Continuous Monitoring and feedback ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "radiogroup",
@@ -9989,6 +10015,7 @@ const json_questionnaire = {
                   "type": "panel",
                   "name": "panel22",
                   "title": "Attacks and Security ",
+                  "state": "expanded",
                   "elements": [
                       {
                           "type": "boolean",
