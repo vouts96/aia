@@ -951,28 +951,32 @@ const savePdf = function(surveyData) {
 
     const imgElement = document.getElementById('headerImage');
 
-    // Create canvas to extract base64 from image
-    const canvas = document.createElement('canvas');
-    canvas.width = imgElement.naturalWidth;
-    canvas.height = imgElement.naturalHeight;
+    // Cover Page
+    surveyPdf.setFontSize(24);
+    surveyPdf.setFont('helvetica', 'bold');
+    surveyPdf.setTextColor('#333');
+    surveyPdf.text("Algorithmic Impact Assessment", surveyPdf.internal.pageSize.getWidth() / 2, 60, { align: 'center' });
 
-    const ctx_header = canvas.getContext('2d');
-    ctx_header.drawImage(imgElement, 0, 0);
+    const img = document.getElementById('headerImage');
+    if (img) {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        canvas.getContext('2d').drawImage(img, 0, 0);
+        surveyPdf.addImage(canvas.toDataURL('image/png'), 'PNG', 50, 70, 110, 45);
+    }
 
-    const imageData = canvas.toDataURL('image/png'); // base64 string
+    surveyPdf.setFontSize(12);
+    surveyPdf.setFont('helvetica', 'normal');
+    surveyPdf.text(`Generated on: ${new Date().toLocaleDateString()}`, surveyPdf.internal.pageSize.getWidth() / 2, 130, { align: 'center' });
+    
 
-
-    // Add the image at the top of the PDF
-    surveyPdf.addImage(imageData, 'PNG', 20, 10, 170, 70); // x, y, width, height
-
-    //surveyPdf.setFontSize(titleFontSize);
-    //surveyPdf.text("Survey Results", margin, 20);
-
-    let yPosition = 90;
-    surveyPdf.setDrawColor(180);
-    surveyPdf.setLineWidth(0.3);
-    surveyPdf.line(margin, yPosition, margin + pageWidth, yPosition);
-    yPosition += lineHeight;
+    let yPosition = 20;
+    surveyPdf.addPage()
+    // surveyPdf.setDrawColor(180);
+    // surveyPdf.setLineWidth(0.3);
+    // surveyPdf.line(margin, yPosition, margin + pageWidth, yPosition);
+    // yPosition += lineHeight;
 
     // Function to handle text wrapping and page breaks
     const addWrappedText = (
@@ -1006,12 +1010,16 @@ const savePdf = function(surveyData) {
     }
 
     let currentPageTitle = null;
+    // Initializing Bookmarks
+    surveyPdf.outline = surveyPdf.internal.outline || surveyPdf.outline;
+    const rootBookmark = surveyPdf.outline.add(null, "Survey Results", { pageNumber: 1 });
 
     surveyData.questionDetails.forEach((question) => {
         if (question.page !== currentPageTitle) {
             currentPageTitle = question.page;
             yPosition += lineHeight;
-            addWrappedText(currentPageTitle, titleFontSize, 'black', 'bold')
+            surveyPdf.outline.add(rootBookmark, currentPageTitle, { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+            addWrappedText(currentPageTitle, titleFontSize, '#0A74DA', 'bold')
             yPosition += lineHeight;
         }
 
@@ -1051,7 +1059,8 @@ const savePdf = function(surveyData) {
 
     yPosition += 2 * lineHeight;
 
-    addWrappedText("Conclusional Results", titleFontSize, 'black');
+    addWrappedText("Conclusional Results", titleFontSize, '#0A74DA', 'bold');
+    surveyPdf.outline.add(rootBookmark, "Conclusional Results", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
 
     // // Total scores for the five new categories
     const totalTableBody = [
