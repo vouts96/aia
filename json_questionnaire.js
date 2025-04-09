@@ -1,5 +1,6 @@
 const json_questionnaire = {
   "title": "Algorithmic Impact Assessment",
+  "showProgressBar": "top",
   "logoPosition": "right",
   "pages": [
       {
