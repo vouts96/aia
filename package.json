@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "survey-core": "1.12.16",
+    "survey-react-ui": "1.12.16"
+  }
+}
