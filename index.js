@@ -971,12 +971,6 @@ const savePdf = function(surveyData) {
     surveyPdf.text(`Generated on: ${new Date().toLocaleDateString()}`, surveyPdf.internal.pageSize.getWidth() / 2, 130, { align: 'center' });
     
 
-    let yPosition = 20;
-    surveyPdf.addPage()
-    // surveyPdf.setDrawColor(180);
-    // surveyPdf.setLineWidth(0.3);
-    // surveyPdf.line(margin, yPosition, margin + pageWidth, yPosition);
-    // yPosition += lineHeight;
 
     // Function to handle text wrapping and page breaks
     const addWrappedText = (
@@ -1009,10 +1003,51 @@ const savePdf = function(surveyData) {
         return ((score - min) / (max - min)) * 100;
     }
 
-    let currentPageTitle = null;
     // Initializing Bookmarks
     surveyPdf.outline = surveyPdf.internal.outline || surveyPdf.outline;
     const rootBookmark = surveyPdf.outline.add(null, "Survey Results", { pageNumber: 1 });
+    
+    let yPosition = 20;
+    surveyPdf.addPage()
+    // Explanation Page
+    surveyPdf.outline.add(rootBookmark, "Assessment Explanation", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+
+    addWrappedText("Assessment Explanation", titleFontSize, '#0A74DA', 'bold')
+    yPosition += lineHeight;
+
+    // Explanation text in English
+    addWrappedText("The reliability of an AI system has been defined in various ways by different researchers. For example, CapAI defines a trustworthy system as one that is legal, ethical, and technically robust. Meanwhile, the National Institute of Standards and Technology describes trustworthy AI as valid, reliable, secure, resilient, accountable, transparent, explainable, privacy-enhancing, and fair.", 12);
+
+    addWrappedText("In this evaluation, we apply the five principles proposed by Floridi and Cowls in “A Unified Framework of Five Principles for AI in Society”:", 12);
+
+    addWrappedText("• Beneficence:", 12, 'black', 'bold');
+    addWrappedText("Promoting well-being, dignity, and sustainability. AI should benefit humanity and the environment.", 12);
+
+    addWrappedText("• Non-maleficence:", 12, 'black', 'bold');
+    addWrappedText("Avoiding harm to privacy, safety, or misuse. AI must minimize risks and prevent misuse.", 12);
+
+    addWrappedText("• Autonomy:", 12, 'black', 'bold');
+    addWrappedText("Ensuring humans retain control and decision-making power over AI systems.", 12);
+
+    addWrappedText("• Justice:", 12, 'black', 'bold');
+    addWrappedText("Promoting fairness, equity, and avoiding discrimination. AI should support diversity and just benefit distribution.", 12);
+
+    addWrappedText("• Explicability:", 12, 'black', 'bold');
+    addWrappedText("Ensuring AI systems are transparent, interpretable, and accountable.", 12);
+
+    addWrappedText("Each multiple-choice question is scored using 5 weights (ranging from -5 to 5), one for each metric, depending on how compliant the answer is with responsible AI development practices.", 12);
+
+    addWrappedText("For single-choice questions, the lowest weight represents the most aligned answer. In multi-select questions, weights add up — either positively (more risk) or negatively (more safeguards). Neutral responses receive a weight of 0.", 12);
+
+    addWrappedText("An exception applies to the ethical risk matrix used in the \"Model Development Stage\", where the Non-maleficence metric receives a product of several risk factors (Importance, Urgency, Difficulty, Detectability, Probability), normalized by 0.5.", 12);
+
+    addWrappedText("Final results include both absolute values and normalized percentages per metric to clearly show alignment with ideal AI development standards.", 12);
+    // --------------------------------
+
+    yPosition = 20;
+    surveyPdf.addPage()
+
+    let currentPageTitle = null;
 
     surveyData.questionDetails.forEach((question) => {
         if (question.page !== currentPageTitle) {
