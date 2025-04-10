@@ -426,34 +426,37 @@ const calculateScore = function(surveyData, surveyJson) {
 
 
     // Helper function to search for a question recursively inside panels
-    const findQuestion = (elements, questionName) => {
+    const findQuestion = (elements, questionName, parentPanelTitle = null) => {
         if (!elements) return null;
         for (const element of elements) {
             if (element.name === questionName) {
-                return element;
+                return {
+                    element,
+                    panelTitle: parentPanelTitle
+                };
             }
             if (element.type === "panel" && element.elements) {
-                const found = findQuestion(element.elements, questionName);
+                const found = findQuestion(element.elements, questionName, element.title || element.name);
                 if (found) return found;
             }
         }
         return null;
     };
-
+    
 
     // Iterate through the survey data responses
     Object.keys(surveyData).forEach(question => {
         const response = surveyData[question];
-        // const questionElement = surveyJson.pages.flatMap(page => page.elements).find(element => element.name === question);
         let questionElement = null;
         let questionPageTitle = null;
+        let questionPanelTitle = null;
 
-        // Code for parsing questions and pages
         for (const page of surveyJson.pages) {
-            const element = findQuestion(page.elements, question);
-            if (element) {
-                questionElement = element;
-                questionPageTitle = page.title; // fallback to name if no title
+            const result = findQuestion(page.elements, question);
+            if (result) {
+                questionElement = result.element;
+                questionPanelTitle = result.panelTitle;
+                questionPageTitle = page.title;
                 break;
             }
         }
@@ -509,6 +512,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -539,6 +543,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -570,6 +575,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -615,6 +621,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -651,6 +658,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -681,6 +689,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -715,6 +724,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -738,6 +748,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: questionAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -783,6 +794,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: multipleTextAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -838,6 +850,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: matrixAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -899,6 +912,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
+                    panel: questionPanelTitle,
                     answer: matrixDropdownAnswer,
                     beneficence: questionBeneficence,
                     non_maleficence: questionNonMaleficence,
@@ -923,6 +937,7 @@ const calculateScore = function(surveyData, surveyJson) {
         console.log(`Question: ${questionElement.title}`);
         console.log(`Answer Type: ${questionElement.type}`);
         console.log(`Page: ${questionPageTitle}`);
+        console.log(`Panel: ${questionPanelTitle}`);
         console.log(`Answer: ${questionAnswer}`);
         console.log(`Beneficence: ${questionBeneficence}`);
         console.log(`Non-maleficence: ${questionNonMaleficence}`);
@@ -942,7 +957,7 @@ const savePdf = function(surveyData) {
     const { jsPDF } = window.jspdf;
     const surveyPdf = new jsPDF();
     const titleFontSize = 20;
-    const subtitleFontSize = 14;
+    const subtitleFontSize = 15;
     const textFontSize = 12;
     const margin = 20;
     const lineHeight = 10;
@@ -1048,14 +1063,40 @@ const savePdf = function(surveyData) {
     surveyPdf.addPage()
 
     let currentPageTitle = null;
+    let currentPanelTitle = null;
+    let currentPageBookmark = null;
 
     surveyData.questionDetails.forEach((question) => {
+        // New page
         if (question.page !== currentPageTitle) {
             currentPageTitle = question.page;
+            currentPanelTitle = null; // reset panel when page changes
             yPosition += lineHeight;
-            surveyPdf.outline.add(rootBookmark, currentPageTitle, { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
-            addWrappedText(currentPageTitle, titleFontSize, '#0A74DA', 'bold')
+            
+
+            // Add page heading
+            addWrappedText(currentPageTitle, titleFontSize, '#0A74DA', 'bold');
             yPosition += lineHeight;
+
+            // Add page-level bookmark
+            currentPageBookmark = surveyPdf.outline.add(rootBookmark, currentPageTitle, {
+                pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber,
+            });
+        }
+
+        // New panel (if any)
+        if (question.panel && question.panel !== currentPanelTitle) {
+            currentPanelTitle = question.panel;
+            yPosition += lineHeight / 2;
+
+            // Add sub-heading
+            addWrappedText(currentPanelTitle, subtitleFontSize, '#0A74DA', 'bold');
+            yPosition += lineHeight;
+
+            // Add sub-bookmark under current page
+            surveyPdf.outline.add(currentPageBookmark, currentPanelTitle, {
+                pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber,
+            });
         }
 
         
