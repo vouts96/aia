@@ -3740,109 +3740,51 @@ const json_questionnaire_gr = {
                           {
                             "type": "checkbox",
                             "name": "question98",
-                            "title": "Η απόφαση ενδέχεται να έχει αρνητικό πολιτικοοικονομικό αντίκτυπο με τους εξής τρόπους:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητικό πολιτικό ή οικονομικό αντίκτυπο με τους εξής τρόπους:",
                             "choices": [
-                              {
-                                "text": "Ζημιά σε κρίσιμες υποδομές",
-                                "value": "Item 1"
-                              },
-                              {
-                                "text": "Οικονομική αστάθεια",
-                                "value": "Item 2"
-                              },
-                              {
-                                "text": "Συγκέντρωση εξουσίας",
-                                "value": "Item 3"
-                              },
-                              {
-                                "text": "Παρέμβαση σε εκλογικές διαδικασίες",
-                                "value": "Item 4"
-                              },
-                              {
-                                "text": "Απώλεια εμπιστοσύνης στους θεσμούς",
-                                "value": "Item 5"
-                              },
-                              {
-                                "text": "Πολιτική αστάθεια",
-                                "value": "Item 6"
-                              },
-                              {
-                                "text": "Πολιτική χειραγώγηση",
-                                "value": "Item 7"
-                              }
+                              { "text": "Ζημιά σε κρίσιμες υποδομές", "value": "Item 1", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Οικονομική αστάθεια", "value": "Item 2", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Συγκέντρωση εξουσίας", "value": "Item 3", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Παρέμβαση στις εκλογές", "value": "Item 4", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Απώλεια εμπιστοσύνης στους θεσμούς", "value": "Item 5", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Πολιτική αστάθεια", "value": "Item 6", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Πολιτική χειραγώγηση", "value": "Item 7", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 }
                             ],
                             "showOtherItem": true
                           },
                           {
                             "type": "checkbox",
                             "name": "question99",
-                            "title": "Η απόφαση ενδέχεται να έχει αρνητικό περιβαλλοντικό αντίκτυπο με τους εξής τρόπους:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητικές περιβαλλοντικές επιπτώσεις με τους εξής τρόπους:",
                             "choices": [
-                              {
-                                "text": "Απώλεια βιοποικιλότητας",
-                                "value": "Item 1"
-                              },
-                              {
-                                "text": "Εκπομπές διοξειδίου του άνθρακα",
-                                "value": "Item 2"
-                              },
-                              {
-                                "text": "Ηλεκτρονικά απόβλητα",
-                                "value": "Item 3"
-                              },
-                              {
-                                "text": "Υπερβολική κατανάλωση ενέργειας",
-                                "value": "Item 4"
-                              },
-                              {
-                                "text": "Υπερβολική παραγωγή απορριμμάτων",
-                                "value": "Item 5"
-                              },
-                              {
-                                "text": "Υπερβολική κατανάλωση νερού",
-                                "value": "Item 6"
-                              },
-                              {
-                                "text": "Εξόρυξη φυσικών πόρων",
-                                "value": "Item 7"
-                              },
-                              {
-                                "text": "Ρύπανση",
-                                "value": "Item 8"
-                              }
+                              { "text": "Απώλεια βιοποικιλότητας", "value": "Item 1", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Εκπομπές άνθρακα", "value": "Item 2", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Ηλεκτρονικά απόβλητα", "value": "Item 3", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Υπερβολική κατανάλωση ενέργειας", "value": "Item 4", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Υπερβολικά απορρίμματα σε χώρους υγειονομικής ταφής", "value": "Item 5", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Υπερβολική κατανάλωση νερού", "value": "Item 6", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Εξόρυξη φυσικών πόρων", "value": "Item 7", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Ρύπανση", "value": "Item 8", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 }
                             ],
                             "showOtherItem": true
                           },
                           {
                             "type": "checkbox",
                             "name": "question91",
-                            "title": "Επηρεάζει το σύστημα τις συνθήκες εργασίας εντός του φορέα υλοποίησης;",
+                            "title": "Επηρεάζει το σύστημα τις συνθήκες εργασίας εντός της αρμόδιας αρχής;",
                             "choices": [
-                              {
-                                "text": "Το σύστημα δημιουργεί τον κίνδυνο απώλειας δεξιοτήτων του προσωπικού",
-                                "value": "Item 1"
-                              },
-                              {
-                                "text": "Το σύστημα προωθεί ή απαιτεί νέες (ψηφιακές) δεξιότητες",
-                                "value": "Item 2"
-                              },
-                              {
-                                "text": "Το σύστημα απαιτεί ειδικές ικανότητες που δεν υπάρχουν ακόμα στο υπάρχον προσωπικό",
-                                "value": "Item 3"
-                              },
-                              {
-                                "text": "Το σύστημα μειώνει τον απαιτούμενο αριθμό υπαλλήλων στον διοικητικό σας φορέα",
-                                "value": "Item 4"
-                              }
+                              { "text": "Το σύστημα δημιουργεί τον κίνδυνο υποβάθμισης δεξιοτήτων του προσωπικού", "value": "Item 1", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Το σύστημα προωθεί ή απαιτεί νέες (ψηφιακές) δεξιότητες", "value": "Item 2", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Το σύστημα απαιτεί ειδικές ικανότητες που δεν διαθέτει το υπάρχον προσωπικό", "value": "Item 3", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 },
+                              { "text": "Το σύστημα μειώνει τον αριθμό υπαλλήλων που απαιτούνται στην υπηρεσία", "value": "Item 4", "beneficence": 0, "non_maleficence": 1, "autonomy": 0, "justice": 0, "explicability": 0 }
                             ],
                             "showOtherItem": true
                           },
                           {
                             "type": "comment",
                             "name": "question100",
-                            "title": "Πώς θα μπορούσε το σύστημα αυτό να χρησιμοποιηθεί λανθασμένα ή κακόβουλα;"
-                          }
-                          
+                            "title": "Πώς θα μπορούσε αυτό το σύστημα να χρησιμοποιηθεί κατά λάθος ή σκόπιμα με ακατάλληλο τρόπο;"
+                          }                          
                     ]
                 }
             ]
