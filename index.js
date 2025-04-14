@@ -978,7 +978,13 @@ const savePdf = function(surveyData) {
         canvas.width = img.naturalWidth;
         canvas.height = img.naturalHeight;
         canvas.getContext('2d').drawImage(img, 0, 0);
-        surveyPdf.addImage(canvas.toDataURL('image/png'), 'PNG', 50, 70, 110, 45);
+
+        const imageWidth = 130;
+        const imageHeight = 45;
+        const pageWidth = surveyPdf.internal.pageSize.getWidth();
+        const xCentered = (pageWidth - imageWidth) / 2;
+
+        surveyPdf.addImage(canvas.toDataURL('image/png'), 'PNG', xCentered, 70, imageWidth, imageHeight);
     }
 
     surveyPdf.setFontSize(12);
@@ -992,25 +998,57 @@ const savePdf = function(surveyData) {
         text,
         fontSize = textFontSize,
         color = 'black',
-        fontStyle = 'normal' // 👈 New parameter!
+        fontStyle = 'normal'
       ) => {
         surveyPdf.setFontSize(fontSize);
         surveyPdf.setTextColor(color);
-        surveyPdf.setFont(undefined, fontStyle); // 👈 Set font style (e.g., bold)
+        surveyPdf.setFont('helvetica', fontStyle);
       
         const lines = surveyPdf.splitTextToSize(text, pageWidth);
+      
         lines.forEach(line => {
           if (yPosition + lineHeight > maxYPosition) {
             surveyPdf.addPage();
             yPosition = 20;
           }
-          surveyPdf.text(line, margin, yPosition);
+      
+          let x = margin;
+      
+          // Match ***bold italic***, **bold**, *italic* ONLY when fully enclosed
+          const parts = line.split(/(\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*\s][^*]*?\*)/g).filter(Boolean);
+      
+          parts.forEach(part => {
+            if (part.startsWith('***') && part.endsWith('***')) {
+              const styledText = part.slice(3, -3);
+              surveyPdf.setFont('helvetica', 'bolditalic');
+              surveyPdf.text(styledText, x, yPosition);
+              x += surveyPdf.getTextWidth(styledText + ' ');
+            } else if (part.startsWith('**') && part.endsWith('**')) {
+              const styledText = part.slice(2, -2);
+              surveyPdf.setFont('helvetica', 'bold');
+              surveyPdf.text(styledText, x, yPosition);
+              x += surveyPdf.getTextWidth(styledText + ' ');
+            } else if (part.startsWith('*') && part.endsWith('*')) {
+              const styledText = part.slice(1, -1);
+              surveyPdf.setFont('helvetica', 'italic');
+              surveyPdf.text(styledText, x, yPosition);
+              x += surveyPdf.getTextWidth(styledText + ' ');
+            } else {
+              surveyPdf.setFont('helvetica', fontStyle);
+              surveyPdf.text(part, x, yPosition);
+              x += surveyPdf.getTextWidth(part + ' ');
+            }
+          });
+      
           yPosition += lineHeight;
         });
       
-        // Reset to normal just in case
-        surveyPdf.setFont(undefined, 'normal');
-    };
+        surveyPdf.setFont('helvetica', 'normal'); // reset
+      };
+      
+      
+      
+      
       
 
     // Function to calculate percentage of total metric
@@ -1027,36 +1065,26 @@ const savePdf = function(surveyData) {
     // Explanation Page
     surveyPdf.outline.add(rootBookmark, "Assessment Explanation", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
 
-    addWrappedText("Assessment Explanation", titleFontSize, '#0A74DA', 'bold')
+    addWrappedText("Assessment Explanation", titleFontSize, '#0D3B3E', 'bold')
     yPosition += lineHeight;
 
     // Explanation text in English
-    addWrappedText("The reliability of an AI system has been defined in various ways by different researchers. For example, CapAI defines a trustworthy system as one that is legal, ethical, and technically robust. Meanwhile, the National Institute of Standards and Technology describes trustworthy AI as valid, reliable, secure, resilient, accountable, transparent, explainable, privacy-enhancing, and fair.", 12);
-
-    addWrappedText("In this evaluation, we apply the five principles proposed by Floridi and Cowls in “A Unified Framework of Five Principles for AI in Society”:", 12);
-
-    addWrappedText("• Beneficence:", 12, 'black', 'bold');
-    addWrappedText("Promoting well-being, dignity, and sustainability. AI should benefit humanity and the environment.", 12);
-
-    addWrappedText("• Non-maleficence:", 12, 'black', 'bold');
-    addWrappedText("Avoiding harm to privacy, safety, or misuse. AI must minimize risks and prevent misuse.", 12);
-
-    addWrappedText("• Autonomy:", 12, 'black', 'bold');
-    addWrappedText("Ensuring humans retain control and decision-making power over AI systems.", 12);
-
-    addWrappedText("• Justice:", 12, 'black', 'bold');
-    addWrappedText("Promoting fairness, equity, and avoiding discrimination. AI should support diversity and just benefit distribution.", 12);
-
-    addWrappedText("• Explicability:", 12, 'black', 'bold');
-    addWrappedText("Ensuring AI systems are transparent, interpretable, and accountable.", 12);
-
-    addWrappedText("Each multiple-choice question is scored using 5 weights (ranging from -5 to 5), one for each metric, depending on how compliant the answer is with responsible AI development practices.", 12);
-
-    addWrappedText("For single-choice questions, the lowest weight represents the most aligned answer. In multi-select questions, weights add up — either positively (more risk) or negatively (more safeguards). Neutral responses receive a weight of 0.", 12);
-
-    addWrappedText("An exception applies to the ethical risk matrix used in the \"Model Development Stage\", where the Non-maleficence metric receives a product of several risk factors (Importance, Urgency, Difficulty, Detectability, Probability), normalized by 0.5.", 12);
-
-    addWrappedText("Final results include both absolute values and normalized percentages per metric to clearly show alignment with ideal AI development standards.", 12);
+    addWrappedText(
+        "The reliability of an AI system has been defined in various ways by different researchers. For example, CapAI defines a trustworthy system as one that is legal, ethical, and technically robust. Meanwhile, the National Institute of Standards and Technology describes trustworthy AI as valid, reliable, secure, resilient, accountable, transparent, explainable, privacy-enhancing, and fair.\n\n" +
+        "In this evaluation, we apply the five principles proposed by Floridi and Cowls in “A Unified Framework of Five Principles for AI in Society”:\n\n" +
+        "• **Beneficence**: Promoting well-being, dignity, and sustainability. AI should benefit humanity and the environment.\n\n" +
+        "• **Non-maleficence**: Avoiding harm to privacy, safety, or misuse. AI must minimize risks and prevent misuse.\n\n" +
+        "• **Autonomy**: Ensuring humans retain control and decision-making power over AI systems.\n\n" +
+        "• **Justice**: Promoting fairness, equity, and avoiding discrimination. AI should support diversity and just benefit distribution.\n\n" +
+        "• **Explicability**: Ensuring AI systems are transparent, interpretable, and accountable.\n\n" +
+        "Each multiple-choice question is scored using 5 weights (ranging from -5 to 5), one for each metric, depending on how compliant the answer is with responsible AI development practices.\n\n" +
+        "For single-choice questions, the lowest weight represents the most aligned answer. In multi-select questions, weights add up — either positively (more risk) or negatively (more safeguards). Neutral responses receive a weight of 0.\n\n" +
+        "An exception applies to the ethical risk matrix used in the \"Model Development Stage\", where the **Non-maleficence** metric receives a product of several risk factors (Importance, Urgency, Difficulty, Detectability, Probability), normalized by 0.5.\n\n" +
+        "Final results include both absolute values and normalized percentages per metric to clearly show alignment with ideal AI development standards.",
+        12
+      );
+      
+      
     // --------------------------------
 
     yPosition = 20;
@@ -1075,7 +1103,7 @@ const savePdf = function(surveyData) {
             
 
             // Add page heading
-            addWrappedText(currentPageTitle, titleFontSize, '#0A74DA', 'bold');
+            addWrappedText(currentPageTitle, titleFontSize, '#0D3B3E', 'bold');
             yPosition += lineHeight;
 
             // Add page-level bookmark
@@ -1090,7 +1118,7 @@ const savePdf = function(surveyData) {
             yPosition += lineHeight / 2;
 
             // Add sub-heading
-            addWrappedText(currentPanelTitle, subtitleFontSize, '#0A74DA', 'bold');
+            addWrappedText(currentPanelTitle, subtitleFontSize, '#1C5C5E', 'bold');
             yPosition += lineHeight;
 
             // Add sub-bookmark under current page
@@ -1120,8 +1148,8 @@ const savePdf = function(surveyData) {
             body: [[`${question.beneficence}`, `${question.non_maleficence}`, `${question.autonomy}`, `${question.justice}`, `${question.explicability}`]],
             margin: { top: 20, left: 20, right: 20 },
             styles: { fontSize: 12 },
-            headStyles: { fillColor: [135, 206, 235], textColor: 255 },
-            alternateRowStyles: { fillColor: [245, 245, 245] },
+            headStyles: { fillColor: [13, 59, 62], textColor: 255 },
+            alternateRowStyles: { fillColor: [245, 250, 250] },
             startY: yPosition
         });
         
@@ -1135,8 +1163,68 @@ const savePdf = function(surveyData) {
 
     yPosition += 2 * lineHeight;
 
-    addWrappedText("Conclusional Results", titleFontSize, '#0A74DA', 'bold');
+    addWrappedText("Conclusional Results", titleFontSize, '#0D3B3E', 'bold');
     surveyPdf.outline.add(rootBookmark, "Conclusional Results", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+
+
+    // Grouped Results
+    const groupedScores = {};
+
+    surveyData.questionDetails.forEach((question) => {
+        const stage = question.page || "Unknown Stage";
+        const subsection = question.panel || "Uncategorized";
+
+        const score =
+            (question.beneficence || 0) +
+            (question.non_maleficence || 0) +
+            (question.autonomy || 0) +
+            (question.justice || 0) +
+            (question.explicability || 0);
+
+        if (!groupedScores[stage]) {
+            groupedScores[stage] = {};
+        }
+
+        if (!groupedScores[stage][subsection]) {
+            groupedScores[stage][subsection] = {
+                score: 0,
+                questionCount: 0
+            };
+        }
+
+        groupedScores[stage][subsection].score += score;
+        groupedScores[stage][subsection].questionCount += 1;
+    });
+
+    Object.entries(groupedScores).forEach(([stage, subsections]) => {
+        yPosition += lineHeight;
+    
+        // Stage Heading
+        addWrappedText(`${stage}`, subtitleFontSize, '#1C5C5E', 'bold');
+    
+        const tableBody = Object.entries(subsections).map(([subsection, data]) => [
+            subsection,
+            data.questionCount,
+            data.score
+        ]);
+    
+        surveyPdf.autoTable({
+            head: [["Subsection", "Questions", "Total Score"]],
+            body: tableBody,
+            startY: yPosition,
+            styles: { fontSize: 12 },
+            headStyles: {
+                fillColor: [13, 59, 62],
+                textColor: 255,
+                fontStyle: 'bold'
+            },
+            alternateRowStyles: { fillColor: [245, 250, 250] },
+            margin: { left: 20, right: 20 },
+        });
+    
+        yPosition = surveyPdf.lastAutoTable.finalY + lineHeight;
+    });
+    
 
     // // Total scores for the five new categories
     const totalTableBody = [
@@ -1181,6 +1269,11 @@ const savePdf = function(surveyData) {
           ],
       ];
       
+
+      yPosition += lineHeight;
+      addWrappedText(`Summarized Results`, subtitleFontSize, '#1C5C5E', 'bold');
+      
+
       // Render the table
       surveyPdf.autoTable({
         head: [["Category", "Score", "Percentage"]],
@@ -1188,11 +1281,11 @@ const savePdf = function(surveyData) {
         startY: yPosition,
         styles: { fontSize: 12 },
         headStyles: {
-          fillColor: [173, 216, 230], // light blue
-          textColor: 20,
+            fillColor: [13, 59, 62], 
+          textColor: 255,
           fontStyle: 'bold'
         },
-        alternateRowStyles: { fillColor: [245, 245, 245] },
+        alternateRowStyles: { fillColor: [245, 250, 250] },
         margin: { left: 20, right: 20 },
       });
       
@@ -1236,7 +1329,7 @@ const savePdf = function(surveyData) {
         responsive: false,
         animation: {
         duration: 0,
-        onComplete: () => {
+        onComplete: async () => {
             const chartImage = document.getElementById("scorePieChart").toDataURL("image/png");
 
             const chartHeight = 120;
@@ -1249,7 +1342,58 @@ const savePdf = function(surveyData) {
             yPosition = 20;
             }
 
+            // Extract the user answers and scores
+            const userAnswers = surveyData.questionDetails.map(q => ({
+                question: q.title,
+                answer: q.answer,
+                page: q.page,
+                panel: q.panel
+            }));
+            
+
+            const scoreSummary = {
+                beneficence: surveyData.beneficence,
+                non_maleficence: surveyData.non_maleficence,
+                autonomy: surveyData.autonomy,
+                justice: surveyData.justice,
+                explicability: surveyData.explicability
+            };
+
+            const payload = {
+                answers: userAnswers,
+                scoreSummary: scoreSummary
+              };
+              
+              // Double stringify here
+              const stringPayload = JSON.stringify(payload);
+
+            // Send request to your LLM API
+            let llmAnalysis = "Loading analysis failed.";
+            try {
+                const response = await fetch("https://147.102.74.178:5001/generate", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ input: stringPayload }) 
+                });
+
+                const data = await response.json();
+                llmAnalysis = data.response || "No analysis returned.";
+            } catch (err) {
+                console.error("LLM request failed:", err);
+            }
+
+            // Add LLM section to the PDF
+            yPosition += lineHeight;
+            addWrappedText("LLM Ethical Analysis", titleFontSize, '#0D3B3E', 'bold');
+            surveyPdf.outline.add(rootBookmark, "LLM Ethical Analysis", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+
+            const llmLines = llmAnalysis.split("\n");
+            llmLines.forEach(line => {
+                addWrappedText(line.trim(), textFontSize, 'black');
+            });
+
             // Step 3: Add chart to PDF
+            yPosition += lineHeight;
             surveyPdf.addImage(chartImage, 'PNG', chartX, yPosition, chartWidth, chartHeight);
             yPosition += chartHeight + 10;
 
