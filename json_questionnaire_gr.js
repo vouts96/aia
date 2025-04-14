@@ -2472,170 +2472,170 @@ const json_questionnaire_gr = {
         },
         {
             "name": "page3",
-            "title": "Design State : Use case",
+            "title": "Στάδιο Σχεδιασμού: Περίπτωση Χρήσης",
             "elements": [
                 {
                     "type": "panel",
                     "name": "panel7",
-                    "title": "Objectives",
+                    "title": "Στόχοι",
                     "state": "expanded",
                     "elements": [
                         {
                             "type": "comment",
                             "name": "question30",
-                            "title": "Write a short description of the defined and documented objectives of the AI application?"
-                        },
-                        {
+                            "title": "Γράψτε μια σύντομη περιγραφή των καθορισμένων και τεκμηριωμένων στόχων της εφαρμογής τεχνητής νοημοσύνης;"
+                          },
+                          {
                             "type": "comment",
                             "name": "question31",
-                            "title": "What client needs will the system address and how will this system meet them?"
-                        },
-                        {
+                            "title": "Ποιες ανάγκες των πελατών θα καλύψει το σύστημα και πώς θα τις ικανοποιήσει;"
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question32",
-                            "title": "How were those client needs identified?",
+                            "title": "Πώς εντοπίστηκαν αυτές οι ανάγκες των πελατών;",
                             "choices": [
-                                {
-                                    "text": "Surveys among the appropriate demographics",
-                                    "value": "Item 1",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Market research for similar products",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Consultation with professionals from different fields , public institutions or NGOs",
-                                    "value": "Item 3",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Έρευνες μεταξύ των κατάλληλων δημογραφικών ομάδων",
+                                "value": "Item 1",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Έρευνα αγοράς για παρόμοια προϊόντα",
+                                "value": "Item 2",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Διαβούλευση με επαγγελματίες από διαφορετικούς τομείς, δημόσιους οργανισμούς ή ΜΚΟ",
+                                "value": "Item 3",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true,
-                            "showNoneItem" : true
-                        },
-                        {
+                            "showNoneItem": true
+                          },
+                          {
                             "type": "comment",
                             "name": "question33",
                             "visibleIf": "{question32} anyof ['Item 2', 'Item 1', 'Item 3', 'other']",
-                            "title": "How did that consultation happen and to what extent?"
-                        },
-                        {
+                            "title": "Πώς πραγματοποιήθηκε αυτή η διαβούλευση και σε ποιο βαθμό;"
+                          },
+                          {
                             "type": "comment",
                             "name": "question75",
-                            "title": "What problem is being solved?"
-                        },
-                        {
+                            "title": "Ποιο πρόβλημα επιλύεται;"
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question76",
-                            "title": "What area is being impacted by automation?",
+                            "title": "Ποιος τομέας επηρεάζεται από την αυτοματοποίηση;",
                             "choices": [
-                                {
-                                    "text": "Health related services",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Economic interests (grants and contributions, tax benefits, debt collection)",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Social assistance (employment insurance, disability claims)",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Access and mobility (security clearances, border crossings)",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Licensing and issuance of permits",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Employment (recruitment, hiring, promotion, performance evaluation, monitoring, security clearance)",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Legal matters ( judiciary, police, prosecutor\u2019s office, civil rights )",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Environmental protection",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Υπηρεσίες σχετικές με την υγεία",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Οικονομικά συμφέροντα (επιχορηγήσεις και συνεισφορές, φορολογικά οφέλη, είσπραξη χρεών)",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Κοινωνική πρόνοια (ασφάλιση ανεργίας, αιτήσεις αναπηρίας)",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Πρόσβαση και κινητικότητα (άδειες ασφαλείας, διασυνοριακές διελεύσεις)",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Αδειοδότηση και έκδοση αδειών",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απασχόληση (προσλήψεις, αξιολόγηση απόδοσης, παρακολούθηση, άδειες ασφαλείας)",
+                                "value": "Item 6",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Νομικά ζητήματα (δικαστική εξουσία, αστυνομία, εισαγγελία, πολιτικά δικαιώματα)",
+                                "value": "Item 7",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Προστασία περιβάλλοντος",
+                                "value": "Item 8",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question101",
-                            "title": "Please describe the output produced by the system and any relevant information needed to interpret it in the context of the administrative decision."
-                        },
-                        {
+                            "title": "Περιγράψτε την έξοδο που παράγεται από το σύστημα και κάθε σχετική πληροφορία που είναι απαραίτητη για την ερμηνεία της στο πλαίσιο της διοικητικής απόφασης."
+                          },
+                          {
                             "type": "comment",
                             "name": "question29",
-                            "title": "Who are the stakeholders who will be affected by this system?"
-                        },
-                        {
+                            "title": "Ποιοι είναι οι ενδιαφερόμενοι φορείς που θα επηρεαστούν από αυτό το σύστημα;"
+                          },
+                          {
                             "type": "comment",
                             "name": "question69",
-                            "title": "For each stakeholder document the potential benefit and potential harms"
-                        },
-                        {
+                            "title": "Για κάθε ενδιαφερόμενο φορέα καταγράψτε το πιθανό όφελος και τις πιθανές βλάβες"
+                          },
+                          {
                             "type": "boolean",
                             "name": "question87",
-                            "title": "Did you consider a mechanism to include the participation of the widest range of possible stakeholders in the AI system's design and development?",
+                            "title": "Λάβατε υπόψη σας έναν μηχανισμό για τη συμμετοχή του ευρύτερου δυνατού φάσματος ενδιαφερομένων στη σχεδίαση και ανάπτυξη του συστήματος τεχνητής νοημοσύνης;",
                             "beneficenceTrue": 0,
                             "non_maleficenceTrue": -1,
                             "autonomyTrue": 0,
@@ -2646,299 +2646,300 @@ const json_questionnaire_gr = {
                             "autonomyFalse": 0,
                             "justiceFalse": 1,
                             "explicabilityFalse": 0
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question317",
                             "visibleIf": "{question87} = true",
-                            "title": "Describe that mechanism."
-                        },
-                        {
+                            "title": "Περιγράψτε αυτόν τον μηχανισμό."
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question88",
-                            "title": "Based on your answers to the previous questions, how would you rate the measures you put in place to ensure the involvement of the relevant stakeholders? ",
+                            "title": "Με βάση τις απαντήσεις σας στις προηγούμενες ερωτήσεις, πώς θα αξιολογούσατε τα μέτρα που λάβατε για να εξασφαλίσετε τη συμμετοχή των σχετικών ενδιαφερομένων;",
                             "choices": [
-                                {
-                                    "text": "Non-existent",
-                                    "value": "Item 1",
-                                    "beneficence": 4,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully adequate",
-                                    "value": "Item 5",
-                                    "beneficence": -3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Ανύπαρκτα",
+                                "value": "Item 1",
+                                "beneficence": 4,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Πλήρως ανεπαρκή",
+                                "value": "Item 2",
+                                "beneficence": 3,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Σχεδόν επαρκή",
+                                "value": "Item 3",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Επαρκή",
+                                "value": "Item 4",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Πλήρως επαρκή",
+                                "value": "Item 5",
+                                "beneficence": -3,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question123",
-                            "title": "Have you defined specific performance criteria for your system?",
+                            "title": "Έχετε ορίσει συγκεκριμένα κριτήρια απόδοσης για το σύστημά σας;",
                             "choices": [
-                                {
-                                    "text": "Yes. We have defined thorough performance criteria that are intended to be used as quality measures during the evaluation stage.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes. We have defined performance criteria that are less applicable and more like general goals that our system should meet.",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No. We have not done such process.",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Ναι. Έχουμε ορίσει αναλυτικά κριτήρια απόδοσης που προορίζονται να χρησιμοποιηθούν ως δείκτες ποιότητας κατά το στάδιο της αξιολόγησης.",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ναι. Έχουμε ορίσει κριτήρια απόδοσης που είναι λιγότερο εφαρμόσιμα και μοιάζουν περισσότερο με γενικούς στόχους που πρέπει να επιτύχει το σύστημά μας.",
+                                "value": "Item 2",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Όχι. Δεν έχουμε πραγματοποιήσει αυτήν τη διαδικασία.",
+                                "value": "Item 3",
+                                "beneficence": 2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question130",
                             "visibleIf": "{question123} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes, describe those criteria."
-                        }
+                            "title": "Αν ναι, περιγράψτε αυτά τα κριτήρια."
+                          }
+                          
                     ]
                 },
                 {
                     "type": "panel",
                     "name": "panel9",
-                    "title": "Automation",
+                    "title": "Αυτοματοποίηση",
                     "state": "expanded",
                     "elements": [
                         {
                             "type": "radiogroup",
                             "name": "question102",
-                            "title": "Choose what represents the system best.",
+                            "title": "Επιλέξτε την περιγραφή που αντιπροσωπεύει καλύτερα το σύστημα.",
                             "choices": [
-                                {
-                                    "text": "People will be responsible for troubleshooting triggered by system alerts but will not otherwise oversee system operation. For example, an AI system that generates keywords from unstructured text alerts the operator of errors, such as improper format of submission files.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 4,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system will support effective hand-off to people but will be designed to automate most use. For example, an AI system that generates keywords from unstructured text that can be configured by system admins to alert the operator when keyword generation falls below a certain confidence threshold.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 3,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system will require effective hand-off to people but will be designed to automate most use. For example, an AI system that generates keywords from unstructured text alerts the operator when keyword generation falls below a certain confidence threshold (regardless of system admin configuration).",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "People will evaluate system outputs and can intervene before any action is taken: the system will proceed unless the reviewer intervenes. For example, an AI system that generates keywords from unstructured text will deliver the generated keywords for operator review but will finalize the results unless the operator intervenes.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "People will make decisions based on output provided by the system: the system will not proceed unless a person approves. For example, an AI system that generates keywords from unstructured text but does not finalize the results without review and approval from the operator",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Οι άνθρωποι θα είναι υπεύθυνοι για την επίλυση προβλημάτων που προκύπτουν από ειδοποιήσεις του συστήματος, αλλά δεν θα επιβλέπουν τη λειτουργία του συστήματος σε γενικές γραμμές. Για παράδειγμα, ένα σύστημα ΤΝ που δημιουργεί λέξεις-κλειδιά από μη δομημένο κείμενο ειδοποιεί τον χειριστή για σφάλματα, όπως λάθος μορφή αρχείων υποβολής.",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 4,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Το σύστημα θα υποστηρίζει αποτελεσματική μεταβίβαση στους ανθρώπους, αλλά θα έχει σχεδιαστεί για να αυτοματοποιεί τις περισσότερες χρήσεις. Για παράδειγμα, ένα σύστημα ΤΝ που δημιουργεί λέξεις-κλειδιά από μη δομημένο κείμενο και μπορεί να διαμορφωθεί από διαχειριστές για να ειδοποιεί τον χειριστή όταν η εμπιστοσύνη στη δημιουργία λέξεων-κλειδιών πέσει κάτω από ένα συγκεκριμένο όριο.",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 3,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Το σύστημα θα απαιτεί αποτελεσματική μεταβίβαση στους ανθρώπους, αλλά θα έχει σχεδιαστεί για να αυτοματοποιεί τις περισσότερες χρήσεις. Για παράδειγμα, ένα σύστημα ΤΝ που δημιουργεί λέξεις-κλειδιά από μη δομημένο κείμενο ειδοποιεί τον χειριστή όταν η εμπιστοσύνη πέσει κάτω από ένα συγκεκριμένο όριο (ανεξαρτήτως ρυθμίσεων διαχειριστή).",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 2,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Οι άνθρωποι θα αξιολογούν τις εξόδους του συστήματος και μπορούν να παρέμβουν πριν γίνει οποιαδήποτε ενέργεια: το σύστημα θα προχωρά εκτός αν παρέμβει ο αξιολογητής. Για παράδειγμα, ένα σύστημα ΤΝ που δημιουργεί λέξεις-κλειδιά από μη δομημένο κείμενο θα τις παρουσιάζει για έλεγχο, αλλά θα ολοκληρώνει το αποτέλεσμα εκτός αν υπάρξει παρέμβαση.",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 1,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Οι άνθρωποι θα λαμβάνουν αποφάσεις με βάση τα αποτελέσματα του συστήματος: το σύστημα δεν θα προχωρά χωρίς έγκριση από άτομο. Για παράδειγμα, ένα σύστημα ΤΝ που δημιουργεί λέξεις-κλειδιά από μη δομημένο κείμενο αλλά δεν ολοκληρώνει τα αποτελέσματα χωρίς επανεξέταση και έγκριση από τον χειριστή.",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question104",
-                            "title": "Please describe whether the AI system",
+                            "title": "Περιγράψτε εάν το σύστημα ΤΝ",
                             "choices": [
-                                {
-                                    "text": "Is a self-learning or autonomous system",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 3,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Is overseen by a human-in-the-loop",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Is overseen by a human-on-the-loop",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Is overseen by a human-in-command",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Είναι ένα αυτοεκπαιδευόμενο ή αυτόνομο σύστημα",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 3,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εποπτεύεται από άνθρωπο μέσα στον κύκλο (human-in-the-loop)",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 2,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εποπτεύεται από άνθρωπο πάνω από τον κύκλο (human-on-the-loop)",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 1,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εποπτεύεται από άνθρωπο που έχει τον πλήρη έλεγχο (human-in-command)",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question82",
-                            "title": "To what specific process does the automation relate? "
-                        },
-                        {
+                            "title": "Σε ποια συγκεκριμένη διαδικασία σχετίζεται η αυτοματοποίηση;"
+                          },
+                          {
                             "type": "comment",
                             "name": "question78",
-                            "title": "Describe the role of the system in the decision-making process."
-                        },
-                        {
+                            "title": "Περιγράψτε τον ρόλο του συστήματος στη διαδικασία λήψης αποφάσεων."
+                          },
+                          {
                             "type": "comment",
                             "name": "question86",
-                            "title": "On what legal basis is the algorithm for automated decision-making implemented?"
-                        },
-                        {
+                            "title": "Με ποια νομική βάση υλοποιείται ο αλγόριθμος για τη λήψη αυτόματων αποφάσεων;"
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question28",
-                            "title": " What is motivating your team to introduce automation into this decision-making process? ",
+                            "title": "Τι παρακινεί την ομάδα σας να εισάγει αυτοματοποίηση σε αυτή τη διαδικασία λήψης αποφάσεων;",
                             "choices": [
-                                {
-                                    "text": "Existing backlog of work or cases",
-                                    "value": "Item 4",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Improve overall quality of decisions",
-                                    "value": "Item 5",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Lower transaction costs of an existing program",
-                                    "value": "Item 6",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system is performing tasks that humans could not accomplish in a reasonable period of time",
-                                    "value": "Item 7",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Use innovative approaches",
-                                    "value": "Item 8",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Eliminating delays in the current system",
-                                    "value": "Item 9",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Increasing the availability of services for the citizen",
-                                    "value": "Item 10",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Υφιστάμενο υπόλοιπο εργασιών ή υποθέσεων",
+                                "value": "Item 4",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Βελτίωση της συνολικής ποιότητας των αποφάσεων",
+                                "value": "Item 5",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Μείωση του κόστους συναλλαγών ενός υφιστάμενου προγράμματος",
+                                "value": "Item 6",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Το σύστημα εκτελεί εργασίες που οι άνθρωποι δεν θα μπορούσαν να ολοκληρώσουν σε εύλογο χρονικό διάστημα",
+                                "value": "Item 7",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Χρήση καινοτόμων προσεγγίσεων",
+                                "value": "Item 8",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εξάλειψη καθυστερήσεων στο τρέχον σύστημα",
+                                "value": "Item 9",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Αύξηση της διαθεσιμότητας υπηρεσιών για τους πολίτες",
+                                "value": "Item 10",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "boolean",
                             "name": "question71",
-                            "title": "Will the system be making decisions or assessments that require judgement or discretion?",
+                            "title": "Θα λαμβάνει το σύστημα αποφάσεις ή αξιολογήσεις που απαιτούν κρίση ή διακριτική ευχέρεια;",
                             "beneficenceTrue": 1,
                             "non_maleficenceTrue": 0,
                             "autonomyTrue": 2,
@@ -2949,11 +2950,11 @@ const json_questionnaire_gr = {
                             "autonomyFalse": 0,
                             "justiceFalse": 0,
                             "explicabilityFalse": 0
-                        },
-                        {
+                          },
+                          {
                             "type": "boolean",
                             "name": "question72",
-                            "title": "Will the system perform an assessment or other operation that would not otherwise be completed by a human?  ",
+                            "title": "Θα εκτελέσει το σύστημα μια αξιολόγηση ή άλλη ενέργεια που διαφορετικά δεν θα γινόταν από άνθρωπο;",
                             "beneficenceTrue": -2,
                             "non_maleficenceTrue": 0,
                             "autonomyTrue": 0,
@@ -2964,17 +2965,17 @@ const json_questionnaire_gr = {
                             "autonomyFalse": 0,
                             "justiceFalse": 0,
                             "explicabilityFalse": 0
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question81",
                             "visibleIf": "{question72} = true",
-                            "title": "Describe the relevant function(s) of the system. "
-                        },
-                        {
+                            "title": "Περιγράψτε τις σχετικές λειτουργίες του συστήματος."
+                          },
+                          {
                             "type": "boolean",
                             "name": "question73",
-                            "title": "Have attempts been made to implement process changes by methods other than automation?",
+                            "title": "Έχουν γίνει προσπάθειες να εφαρμοστούν αλλαγές στη διαδικασία με άλλες μεθόδους εκτός της αυτοματοποίησης;",
                             "beneficenceTrue": 0,
                             "non_maleficenceTrue": 0,
                             "autonomyTrue": 0,
@@ -2985,17 +2986,17 @@ const json_questionnaire_gr = {
                             "autonomyFalse": 2,
                             "justiceFalse": 0,
                             "explicabilityFalse": 0
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question74",
                             "visibleIf": "{question73} = true",
-                            "title": " If so, why did they fail?"
-                        },
-                        {
+                            "title": "Αν ναι, γιατί απέτυχαν;"
+                          },
+                          {
                             "type": "boolean",
                             "name": "question77",
-                            "title": "Does your system rely on the initiative, cooperation or trust of persons  concerned?",
+                            "title": "Βασίζεται το σύστημά σας στην πρωτοβουλία, συνεργασία ή εμπιστοσύνη των ενδιαφερόμενων προσώπων;",
                             "beneficenceTrue": 0,
                             "non_maleficenceTrue": 1,
                             "autonomyTrue": 1,
@@ -3006,935 +3007,842 @@ const json_questionnaire_gr = {
                             "autonomyFalse": 0,
                             "justiceFalse": 0,
                             "explicabilityFalse": 0
-                        },
-                        {
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question83",
-                            "title": "How would you rate the persons concerned trust of AI systems for that use case ? ",
+                            "title": "Πώς θα αξιολογούσατε την εμπιστοσύνη των ενδιαφερόμενων προσώπων στα συστήματα ΤΝ για αυτή τη χρήση;",
                             "choices": [
-                                {
-                                    "text": "Very High - People are waiting for AI developments in that area and they have prior experience with similar systems",
-                                    "value": "Item 1",
-                                    "beneficence": -2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "High - People are waiting for AI developments in that area but they haven't prior experience with similar systems",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Normal - People are indifferent about AI developments in that area",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Low - People are suspicious of AI developments in that area but they haven't prior experience with similar systems",
-                                    "value": "Item 4",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Very Low - People are suspicious of AI developments in that area due to prior bad experience with similar systems",
-                                    "value": "Item 5",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Πολύ υψηλή - Οι άνθρωποι περιμένουν εξελίξεις ΤΝ σε αυτόν τον τομέα και έχουν προηγούμενη εμπειρία με παρόμοια συστήματα",
+                                "value": "Item 1",
+                                "beneficence": -2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Υψηλή - Οι άνθρωποι περιμένουν εξελίξεις ΤΝ σε αυτόν τον τομέα αλλά δεν έχουν προηγούμενη εμπειρία με παρόμοια συστήματα",
+                                "value": "Item 2",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Κανονική - Οι άνθρωποι είναι αδιάφοροι για τις εξελίξεις ΤΝ σε αυτόν τον τομέα",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Χαμηλή - Οι άνθρωποι είναι επιφυλακτικοί απέναντι στις εξελίξεις ΤΝ σε αυτόν τον τομέα αλλά δεν έχουν προηγούμενη εμπειρία",
+                                "value": "Item 4",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Πολύ χαμηλή - Οι άνθρωποι είναι επιφυλακτικοί λόγω προηγούμενης κακής εμπειρίας με παρόμοια συστήματα",
+                                "value": "Item 5",
+                                "beneficence": 2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question103",
-                            "title": "How likely is it that a lack of knowledge of the AI system among its users will result in harm to individuals or communities?",
+                            "title": "Πόσο πιθανό είναι η έλλειψη γνώσης του συστήματος ΤΝ από τους χρήστες του να προκαλέσει βλάβη σε άτομα ή κοινότητες;",
                             "choices": [
-                                {
-                                    "text": "Very likely",
-                                    "value": "Item 1",
-                                    "beneficence": 4,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Likely",
-                                    "value": "Item 2",
-                                    "beneficence": 3,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Neutral",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Not very likely",
-                                    "value": "Item 4",
-                                    "beneficence": 1,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Not likely",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Πολύ πιθανό",
+                                "value": "Item 1",
+                                "beneficence": 4,
+                                "non_maleficence": 4,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Πιθανό",
+                                "value": "Item 2",
+                                "beneficence": 3,
+                                "non_maleficence": 3,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ουδέτερο",
+                                "value": "Item 3",
+                                "beneficence": 2,
+                                "non_maleficence": 2,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Όχι πολύ πιθανό",
+                                "value": "Item 4",
+                                "beneficence": 1,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Καθόλου πιθανό",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        }
+                          }
+                          
                     ]
                 },
                 {
                     "type": "panel",
                     "name": "panel3",
-                    "title": "Ethical assessments/Risks",
+                    "title": "Ηθικές εκτιμήσεις / Κίνδυνοι",
                     "state": "expanded",
                     "elements": [
                         {
-                            "type": "radiogroup",
-                            "name": "question45",
-                            "title": "Is the project within an area of intense public scrutiny (e.g. because of privacy concerns) and/or frequent litigation? ",
-                            "choices": [
-                                {
-                                    "text": "Yes. The project falls within an area that creates high controversy among the general public.",
-                                    "value": "Item 1",
-                                    "beneficence": 3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes. The project falls within an area that creates high controversy among a specific demographic while the general public is mostly neutral about it.",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Neutral. The project falls within an area that that has the potential to create controversy among the general public but hasn't so far.",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No. This project's area is not controversial.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
+                        "type": "radiogroup",
+                        "name": "question45",
+                        "title": "Βρίσκεται το έργο σε έναν τομέα έντονου δημόσιου ελέγχου (π.χ. λόγω ανησυχιών για την ιδιωτικότητα) ή/και συχνών νομικών διενέξεων;",
+                        "choices": [
+                            {
+                            "text": "Ναι. Το έργο εμπίπτει σε έναν τομέα που προκαλεί έντονη διαμάχη στο ευρύ κοινό.",
+                            "value": "Item 1",
+                            "beneficence": 3,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                            },
+                            {
+                            "text": "Ναι. Το έργο εμπίπτει σε έναν τομέα που προκαλεί έντονη διαμάχη σε συγκεκριμένο δημογραφικό, ενώ το ευρύ κοινό παραμένει ουδέτερο.",
+                            "value": "Item 3",
+                            "beneficence": 2,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                            },
+                            {
+                            "text": "Ουδέτερο. Το έργο εμπίπτει σε τομέα που ενδέχεται να προκαλέσει αντιδράσεις στο μέλλον αλλά δεν έχει προκαλέσει ακόμα.",
+                            "value": "Item 2",
+                            "beneficence": 1,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                            },
+                            {
+                            "text": "Όχι. Το έργο δεν ανήκει σε τομέα που θεωρείται αμφιλεγόμενος.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                            }
+                        ]
                         },
                         {
-                            "type": "boolean",
-                            "name": "question79",
-                            "title": "Are clients in this line of business particularly vulnerable?",
-                            "beneficenceTrue": 3,
-                            "non_maleficenceTrue": 0,
-                            "autonomyTrue": 0,
-                            "justiceTrue": 0,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 0,
-                            "explicabilityFalse": 0
+                        "type": "boolean",
+                        "name": "question79",
+                        "title": "Είναι οι πελάτες σε αυτόν τον τομέα δραστηριότητας ιδιαίτερα ευάλωτοι;",
+                        "beneficenceTrue": 3,
+                        "non_maleficenceTrue": 0,
+                        "autonomyTrue": 0,
+                        "justiceTrue": 0,
+                        "explicabilityTrue": 0,
+                        "beneficenceFalse": 0,
+                        "non_maleficenceFalse": 0,
+                        "autonomyFalse": 0,
+                        "justiceFalse": 0,
+                        "explicabilityFalse": 0
                         },
                         {
                             "type": "checkbox",
                             "name": "question80",
                             "visibleIf": "{question79} = true",
-                            "title": "Why is that ?",
+                            "title": "Γιατί συμβαίνει αυτό;",
                             "choices": [
-                                {
-                                    "text": "They are a part of a historically marginalised group (due to race, ethnicity, gender, sexual orientation, religious or political beliefs etc)",
-                                    "value": "Item 1",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "They are disabled/dealing with health issues",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "They are in a vulnerable emotional state / easily manipulated",
-                                    "value": "Item 3",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "They are children",
-                                    "value": "Item 4",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "They are not technologically literate",
-                                    "value": "Item 5",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Ανήκουν σε μια ιστορικά περιθωριοποιημένη ομάδα (λόγω φυλής, εθνότητας, φύλου, σεξουαλικού προσανατολισμού, θρησκευτικών ή πολιτικών πεποιθήσεων κ.λπ.)",
+                                "value": "Item 1",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 1,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Έχουν αναπηρίες ή προβλήματα υγείας",
+                                "value": "Item 2",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Βρίσκονται σε ευάλωτη συναισθηματική κατάσταση / εύκολα χειραγωγήσιμοι",
+                                "value": "Item 3",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Είναι παιδιά",
+                                "value": "Item 4",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Δεν έχουν τεχνολογική παιδεία",
+                                "value": "Item 5",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question84",
-                            "title": " Are the impacts resulting from the decision reversible? ",
+                            "title": "Είναι οι επιπτώσεις που προκύπτουν από την απόφαση αναστρέψιμες;",
                             "choices": [
-                                {
-                                    "text": "Very easily reversible",
-                                    "value": "Item 1",
-                                    "beneficence": -2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Easily reversible",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Neutral",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Difficult to reverse",
-                                    "value": "Item 4",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Very difficult to reverse",
-                                    "value": "Item 5",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Πολύ εύκολα αναστρέψιμες",
+                                "value": "Item 1",
+                                "beneficence": -2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εύκολα αναστρέψιμες",
+                                "value": "Item 2",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ουδέτερες",
+                                "value": "Item 3",
+                                "beneficence": 2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Δύσκολα αναστρέψιμες",
+                                "value": "Item 4",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Πολύ δύσκολα αναστρέψιμες",
+                                "value": "Item 5",
+                                "beneficence": 2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question85",
-                            "title": "Describe why the impacts resulting from the decision are as per selected option above. "
-                        },
-                        {
+                            "title": "Περιγράψτε γιατί οι επιπτώσεις που προκύπτουν από την απόφαση είναι σύμφωνες με την παραπάνω επιλεγμένη επιλογή."
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question89",
-                            "title": " How long will impacts from the decision last?",
+                            "title": "Πόσο θα διαρκέσουν οι επιπτώσεις από την απόφαση;",
                             "choices": [
-                                {
-                                    "text": "seconds",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "minutes",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "hours",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "days",
-                                    "value": "Item 4",
-                                    "beneficence": 3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "years",
-                                    "value": "Item 5",
-                                    "beneficence": 4,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "δευτερόλεπτα",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "λεπτά",
+                                "value": "Item 2",
+                                "beneficence": 1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "ώρες",
+                                "value": "Item 3",
+                                "beneficence": 2,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "ημέρες",
+                                "value": "Item 4",
+                                "beneficence": 3,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "χρόνια",
+                                "value": "Item 5",
+                                "beneficence": 4,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question90",
-                            "title": "Describe why the impacts resulting from the decision are as per selected option above. "
-                        },
-                        {
+                            "title": "Περιγράψτε γιατί οι επιπτώσεις που προκύπτουν από την απόφαση είναι σύμφωνες με την παραπάνω επιλεγμένη επιλογή."
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question93",
-                            "title": "The decision might have a negative impact on the autonomy of the persons involved in the following ways:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητική επίδραση στην αυτονομία των εμπλεκόμενων προσώπων με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Autonomy/agency loss",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Impersonation/identity theft",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "IP/copyright loss",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Personality rights loss",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Απώλεια αυτονομίας/ικανότητας επιλογής",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Προσποίηση/κλοπή ταυτότητας",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια πνευματικών δικαιωμάτων/IP",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια δικαιωμάτων προσωπικότητας",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question94",
-                            "title": "The decision might cause physical harm on the persons involved in the following ways:",
+                            "title": "Η απόφαση ενδέχεται να προκαλέσει σωματική βλάβη στα εμπλεκόμενα πρόσωπα με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Bodily injury",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of life",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Personal health deterioration",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Property damage",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Σωματική βλάβη",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια ζωής",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Επιδείνωση προσωπικής υγείας",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ζημιά σε περιουσία",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question95",
-                            "title": "The decision might have a negative psychological impact on the persons involved in the following ways:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητικές ψυχολογικές επιπτώσεις στα εμπλεκόμενα πρόσωπα με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Addiction",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Alienation/isolation",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Anxiety/distress",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Coercion/manipulation",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Dehumanisation/objectification",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Harassement/abuse/intimidation",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Over-reliance",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Radicalisation",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Self-harm",
-                                    "value": "Item 9",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Sexualization",
-                                    "value": "Item 10",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Trauma",
-                                    "value": "Item 11",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Εθισμός",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Αποξένωση/απομόνωση",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Άγχος/πίεση",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εξαναγκασμός/χειραγώγηση",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απανθρωποποίηση/αντικειμενοποίηση",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Παρενόχληση/κακοποίηση/εκφοβισμός",
+                                "value": "Item 6",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Υπερβολική εξάρτηση",
+                                "value": "Item 7",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ριζοσπαστικοποίηση",
+                                "value": "Item 8",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Αυτοτραυματισμός",
+                                "value": "Item 9",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Σεξουαλικοποίηση",
+                                "value": "Item 10",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Τραύμα",
+                                "value": "Item 11",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question92",
-                            "title": "The system might cause reputational harm to the persons involved in the following ways:",
+                            "title": "Το σύστημα ενδέχεται να προκαλέσει βλάβη στη φήμη των εμπλεκόμενων προσώπων με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Defamation/libel/slander",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of confidence/trust",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Δυσφήμηση/συκοφαντία/κακοήθης φήμη",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια εμπιστοσύνης/αξιοπιστίας",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question96",
-                            "title": "The decision might cause business or financial harm to the persons involved in the following of ways",
+                            "title": "Η απόφαση ενδέχεται να προκαλέσει επιχειρηματική ή οικονομική ζημιά στα εμπλεκόμενα άτομα με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Business operations / infrastructure damage",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Confidentiality loss",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Financial/earnings loss",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Livelihood loss",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Monopolisation",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Opportunity loss",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Ζημιά σε επιχειρησιακές λειτουργίες / υποδομές",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια εμπιστευτικότητας",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Οικονομική ζημιά / απώλεια εισοδήματος",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια βιοπορισμού",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Μονοπώληση",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια ευκαιριών",
+                                "value": "Item 6",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question97",
-                            "title": "The decision might have a negative impact on human rights and civil liberties in the following ways:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητικό αντίκτυπο στα ανθρώπινα δικαιώματα και τις πολιτικές ελευθερίες με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Benefits / entitlements loss",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Dignity loss",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Discrimination",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of freedom of speech/expression",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of freedom of assembly/association",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of social rights and access to public services",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of right to information",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of right to free elections",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of right to liberty and security",
-                                    "value": "Item 9",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Loss of right to due process",
-                                    "value": "Item 10",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Privacy loss",
-                                    "value": "Item 11",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Απώλεια παροχών / δικαιωμάτων",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια αξιοπρέπειας",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Διάκριση",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια ελευθερίας λόγου / έκφρασης",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια ελευθερίας συνάθροισης / συμμετοχής σε συλλόγους",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια κοινωνικών δικαιωμάτων και πρόσβασης σε δημόσιες υπηρεσίες",
+                                "value": "Item 6",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια δικαιώματος στην πληροφόρηση",
+                                "value": "Item 7",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια δικαιώματος σε ελεύθερες εκλογές",
+                                "value": "Item 8",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια δικαιώματος στην ελευθερία και την ασφάλεια",
+                                "value": "Item 9",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια δικαιώματος στη δίκαιη δίκη",
+                                "value": "Item 10",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Απώλεια ιδιωτικότητας",
+                                "value": "Item 11",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question98",
-                            "title": "The decision might have a negative political economic impact in these ways:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητικό πολιτικοοικονομικό αντίκτυπο με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Critical infrastructure damage",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Economic instability",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Power concentration",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Electoral interference",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Institutional trust loss",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Political instability",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Political manipulation",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Ζημιά σε κρίσιμες υποδομές",
+                                "value": "Item 1"
+                              },
+                              {
+                                "text": "Οικονομική αστάθεια",
+                                "value": "Item 2"
+                              },
+                              {
+                                "text": "Συγκέντρωση εξουσίας",
+                                "value": "Item 3"
+                              },
+                              {
+                                "text": "Παρέμβαση σε εκλογικές διαδικασίες",
+                                "value": "Item 4"
+                              },
+                              {
+                                "text": "Απώλεια εμπιστοσύνης στους θεσμούς",
+                                "value": "Item 5"
+                              },
+                              {
+                                "text": "Πολιτική αστάθεια",
+                                "value": "Item 6"
+                              },
+                              {
+                                "text": "Πολιτική χειραγώγηση",
+                                "value": "Item 7"
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question99",
-                            "title": "The decision might have a negative environmental impact in these ways:",
+                            "title": "Η απόφαση ενδέχεται να έχει αρνητικό περιβαλλοντικό αντίκτυπο με τους εξής τρόπους:",
                             "choices": [
-                                {
-                                    "text": "Biodiversity loss",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Carbon emissions",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Electronic waste",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Excessive energy consumption",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Excessive landfil",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Excessive water consumption",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Natural resource extraction",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Pollution",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Απώλεια βιοποικιλότητας",
+                                "value": "Item 1"
+                              },
+                              {
+                                "text": "Εκπομπές διοξειδίου του άνθρακα",
+                                "value": "Item 2"
+                              },
+                              {
+                                "text": "Ηλεκτρονικά απόβλητα",
+                                "value": "Item 3"
+                              },
+                              {
+                                "text": "Υπερβολική κατανάλωση ενέργειας",
+                                "value": "Item 4"
+                              },
+                              {
+                                "text": "Υπερβολική παραγωγή απορριμμάτων",
+                                "value": "Item 5"
+                              },
+                              {
+                                "text": "Υπερβολική κατανάλωση νερού",
+                                "value": "Item 6"
+                              },
+                              {
+                                "text": "Εξόρυξη φυσικών πόρων",
+                                "value": "Item 7"
+                              },
+                              {
+                                "text": "Ρύπανση",
+                                "value": "Item 8"
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question91",
-                            "title": "Does the system impact working conditions within the implementing authority?",
+                            "title": "Επηρεάζει το σύστημα τις συνθήκες εργασίας εντός του φορέα υλοποίησης;",
                             "choices": [
-                                {
-                                    "text": "The system create the risk of de-skilling your staff",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system promotes or requires new (digital) skills",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system requires special abilities not yet available in your existing staff.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system reduces the number of staff required in your administrative agency,",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Το σύστημα δημιουργεί τον κίνδυνο απώλειας δεξιοτήτων του προσωπικού",
+                                "value": "Item 1"
+                              },
+                              {
+                                "text": "Το σύστημα προωθεί ή απαιτεί νέες (ψηφιακές) δεξιότητες",
+                                "value": "Item 2"
+                              },
+                              {
+                                "text": "Το σύστημα απαιτεί ειδικές ικανότητες που δεν υπάρχουν ακόμα στο υπάρχον προσωπικό",
+                                "value": "Item 3"
+                              },
+                              {
+                                "text": "Το σύστημα μειώνει τον απαιτούμενο αριθμό υπαλλήλων στον διοικητικό σας φορέα",
+                                "value": "Item 4"
+                              }
                             ],
                             "showOtherItem": true
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question100",
-                            "title": "How could this system be unintentionally or intentionally misused?"
-                        }
+                            "title": "Πώς θα μπορούσε το σύστημα αυτό να χρησιμοποιηθεί λανθασμένα ή κακόβουλα;"
+                          }
+                          
                     ]
                 }
             ]
