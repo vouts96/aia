@@ -8425,1416 +8425,1416 @@ const json_questionnaire_gr = {
                           }
                         ]
                       },
-                        {
-                            "type": "radiogroup",
-                            "name": "question251",
-                            "title": "Did you establish a processes for third parties (e.g. suppliers, end-users, subjects, distributors/vendors or workers) or workers to report potential vulnerabilities, risks or biases in the AI system? ",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have formal channels and processes for third parties to report issues.",
-                                    "value": "Item 1",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We have informal channels for reporting, but no formal process.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Reporting is possible, but it is unclear how issues are addressed.",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we do not have processes for third parties to report issues.",
-                                    "value": "Item 4",
-                                    "beneficence": 3,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question256",
-                            "title": "Do you continuously survey the persons concerned to determine whether they understand the decisions of the system?",
-                            "choices": [
-                                {
-                                    "text": "Yes, we conduct regular surveys and feedback sessions to ensure understanding.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We occasionally survey users, but not consistently or comprehensively.",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Surveys are conducted informally, with no structured approach.",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we do not survey users about their understanding of the system's decisions.",
-                                    "value": "Item 4",
-                                    "beneficence": 3,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question252",
-                            "title": "Does this process foster revision of the risk management process?",
-                            "choices": [
-                                {
-                                    "text": "Yes, feedback is actively used to revise and improve risk management processes.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Feedback is considered, but revisions to risk management are infrequent or limited.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Feedback is collected, but it rarely leads to revisions in risk management.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, feedback does not influence the risk management process.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question253",
-                            "visibleIf": "{question252} anyof ['Item 1', 'Item 2', 'Item 3']",
-                            "title": "Describe this feedback process :"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question254",
-                            "title": "Is there a process established for end users that wish to challenge the decision/result the system generates? ",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have a formal appeals process with clear steps for challenging decisions.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We have an informal process for challenging decisions, but it is not well-documented.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Users can challenge decisions, but the process is unclear or inconsistent.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, there is no process for users to challenge decisions.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question255",
-                            "visibleIf": "{question254} anyof ['Item 1', 'Item 2', 'Item 3']",
-                            "title": "If yes, describe it."
-                        }
+                      {
+                        "type": "radiogroup",
+                        "name": "question251",
+                        "title": "Έχετε θεσπίσει διαδικασίες για τρίτα μέρη (π.χ. προμηθευτές, τελικούς χρήστες, υποκείμενα, διανομείς/πωλητές ή εργαζόμενους) ώστε να αναφέρουν πιθανά τρωτά σημεία, κινδύνους ή μεροληψίες στο σύστημα ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Ναι, διαθέτουμε επίσημα κανάλια και διαδικασίες για την αναφορά προβλημάτων από τρίτα μέρη.",
+                            "value": "Item 1",
+                            "beneficence": -1,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Διαθέτουμε ανεπίσημα κανάλια αναφοράς, αλλά όχι επίσημη διαδικασία.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Η αναφορά είναι δυνατή, αλλά δεν είναι σαφές πώς αντιμετωπίζονται τα ζητήματα.",
+                            "value": "Item 3",
+                            "beneficence": 2,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε διαδικασίες για τρίτα μέρη ώστε να αναφέρουν προβλήματα.",
+                            "value": "Item 4",
+                            "beneficence": 3,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question256",
+                        "title": "Παρακολουθείτε διαρκώς τα άτομα που επηρεάζονται για να προσδιορίσετε εάν κατανοούν τις αποφάσεις του συστήματος;",
+                        "choices": [
+                          {
+                            "text": "Ναι, πραγματοποιούμε τακτικές έρευνες και συνεδρίες ανατροφοδότησης για να διασφαλίσουμε την κατανόηση.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Περιστασιακά διεξάγουμε έρευνες στους χρήστες, αλλά όχι με συνέπεια ή πληρότητα.",
+                            "value": "Item 2",
+                            "beneficence": 1,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Οι έρευνες διεξάγονται ανεπίσημα, χωρίς δομημένη προσέγγιση.",
+                            "value": "Item 3",
+                            "beneficence": 2,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν διεξάγουμε έρευνες για την κατανόηση των αποφάσεων του συστήματος από τους χρήστες.",
+                            "value": "Item 4",
+                            "beneficence": 3,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question252",
+                        "title": "Αυτή η διαδικασία προάγει την αναθεώρηση της διαδικασίας διαχείρισης κινδύνου;",
+                        "choices": [
+                          {
+                            "text": "Ναι, η ανατροφοδότηση χρησιμοποιείται ενεργά για την αναθεώρηση και βελτίωση των διαδικασιών διαχείρισης κινδύνου.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Η ανατροφοδότηση λαμβάνεται υπόψη, αλλά οι αναθεωρήσεις είναι σπάνιες ή περιορισμένες.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Συλλέγεται ανατροφοδότηση, αλλά σπάνια οδηγεί σε αναθεώρηση της διαχείρισης κινδύνου.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, η ανατροφοδότηση δεν επηρεάζει τη διαδικασία διαχείρισης κινδύνου.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question253",
+                        "visibleIf": "{question252} anyof ['Item 1', 'Item 2', 'Item 3']",
+                        "title": "Περιγράψτε αυτή τη διαδικασία ανατροφοδότησης:"
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question254",
+                        "title": "Έχει θεσπιστεί διαδικασία για τελικούς χρήστες που επιθυμούν να αμφισβητήσουν την απόφαση/το αποτέλεσμα που παράγει το σύστημα;",
+                        "choices": [
+                          {
+                            "text": "Ναι, διαθέτουμε επίσημη διαδικασία προσφυγής με σαφή βήματα για την αμφισβήτηση αποφάσεων.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Υπάρχει ανεπίσημη διαδικασία αμφισβήτησης αποφάσεων, αλλά δεν είναι καλά τεκμηριωμένη.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Οι χρήστες μπορούν να αμφισβητήσουν αποφάσεις, αλλά η διαδικασία είναι ασαφής ή μη συνεπής.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν υπάρχει διαδικασία για να αμφισβητήσουν οι χρήστες αποφάσεις.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question255",
+                        "visibleIf": "{question254} anyof ['Item 1', 'Item 2', 'Item 3']",
+                        "title": "Αν ναι, περιγράψτε την."
+                      }                      
                     ]
                 },
                 {
                     "type": "panel",
                     "name": "panel22",
-                    "title": "Attacks and Security ",
+                    "title": "Επιθέσεις και Ασφάλεια",
                     "state": "expanded",
                     "elements": [
-                        {
-                            "type": "boolean",
-                            "name": "question264",
-                            "title": "Does the organisation have a specific person responsible for cyber security (CISO or equivalent role)?",
-                            "beneficenceTrue": 0,
-                            "non_maleficenceTrue": -2,
-                            "autonomyTrue": 0,
-                            "justiceTrue": 0,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 2,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 0,
-                            "explicabilityFalse": 0
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question265",
-                            "title": "What's the complexity of the system's deployment environment \n",
-                            "choices": [
-                                {
-                                    "text": "Simple environment, such as when the deployment environment is static, possible input options are limited, and there are few unexpected situations that the system must deal with gracefully. For example, a natural language processing system used in a controlled research environment.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Moderately complex environment, such as when the deployment environment varies,unexpected situations the system must deal with gracefully may occur, but when they do, there is little risk to people, and it is clear how to effectively mitigate issues. For example, a natural language processing system used in a corporate workplace where language is professional and communication norms change slowly.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Complex environment, such as when the deployment environment is dynamic, the system will be deployed in an open and unpredictable environment or may be subject to drifts in input distributions over time. There are many possible types of inputs, and inputs may significantly vary in quality. Time and attention may be at a premium in making decisions and it can be difficult to mitigate issues. For example, a natural language processing system used on a social media platform where language and communication norms change rapidly",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question266",
-                            "title": "Is there a dedicated team responsible for monitoring and mitigating AI-specific cybersecurity risks (e.g., adversarial attacks, model theft, data poisoning)?",
-                            "choices": [
-                                {
-                                    "text": "Fully established, with documented processes and dedicated staff",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Partially established, some monitoring but lacks formal processes",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "AI risks are handled by general cybersecurity teams, no specialized focus",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No formal responsibility assigned for AI security",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question267",
-                            "title": "How often is a risk assessment conducted for AI model threats (e.g., adversarial attacks, model inversion, membership inference)?\n",
-                            "choices": [
-                                {
-                                    "text": "Regularly (quarterly or before major updates) using structured methodologies",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Occasionally (once per year or only when issues arise)",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Informal assessments without structured methodology",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No AI-specific risk assessment is conducted",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question268",
-                            "title": " What fallback mechanisms are in place if the AI system fails or behaves unpredictably?",
-                            "choices": [
-                                {
-                                    "text": "Fully redundant fallback system, manual override, and alerting mechanisms",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Limited redundancy, with some fallback measures and manual intervention",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Manual intervention only, no automated fallback in place",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No fallback mechanisms, system fails without mitigation",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question269",
-                            "title": "How is model degradation or drift handled over time?",
-                            "choices": [
-                                {
-                                    "text": "Continuous monitoring with automated retraining and human oversight",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Periodic evaluation, retraining when needed",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Retraining only if major issues are detected",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No process in place to detect or mitigate model drift",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question270",
-                            "title": "What measures are in place to detect and mitigate adversarial attacks on the AI system?",
-                            "choices": [
-                                {
-                                    "text": "Robust adversarial defence techniques, continuous testing, and AI threat intelligence",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Some defences applied (e.g., input sanitization, noise filtering) but no adversarial testing",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Basic security measures (e.g., authentication) but no AI-specific defences",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No measures in place to address adversarial attacks",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question271",
-                            "title": "How is the AI system protected from model inversion or membership inference attacks?",
-                            "choices": [
-                                {
-                                    "text": "Differential privacy, federated learning, and advanced protection measures",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Basic privacy measures (e.g., limiting query access, access control)",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No dedicated protection, but logs are monitored for anomalies",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No protections against model inversion or membership inference",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question272",
-                            "title": " How is the AI system protected from data poisoning attacks?",
-                            "choices": [
-                                {
-                                    "text": "Robust validation pipelines, anomaly detection, and data provenance tracking",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Some validation, but no automated anomaly detection",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Basic checks, relies on data source integrity without verification",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No data validation or checks against poisoning",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question273",
-                            "title": " How are training datasets secured against unauthorized modifications?",
-                            "choices": [
-                                {
-                                    "text": "Version-controlled, cryptographically signed datasets with strict access controls",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Some version control, but limited access controls",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Basic security, but no cryptographic integrity verification",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No access control or integrity checks on training data",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question274",
-                            "title": "How is user behaviour monitored for potential misuse of the AI system?",
-                            "choices": [
-                                {
-                                    "text": "Automated behaviour analysis, anomaly detection, and alerting systems",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Manual reviews of logs, no automated anomaly detection",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Logging in place, but no active review of user behavior",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No monitoring for user misuse",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question275",
-                            "title": "What safeguards exist to prevent users from exploiting AI-generated outputs maliciously (e.g., prompt injection, biased outputs, data leakage)?",
-                            "choices": [
-                                {
-                                    "text": "Strict filtering, context-aware moderation, and human review where necessary",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Some filtering, but gaps in detecting emerging abuse patterns",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Basic safeguards, relies on end-user agreements for responsible use",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No safeguards beyond standard input validation",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question276",
-                            "title": " How are logs from AI interactions stored and analysed?",
-                            "choices": [
-                                {
-                                    "text": "Encrypted, tamper-proof logs with automated anomaly detection",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "Logs stored securely, but analysis is manual and infrequent",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Logs exist but are not regularly reviewed or analyzed",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No structured logging or analysis in place",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question277",
-                            "title": "What is the response plan for AI-related security incidents?",
-                            "choices": [
-                                {
-                                    "text": "Predefined, tested incident response with AI-specific considerations",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "General cybersecurity response plan, but no AI-specific elements",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Informal or ad-hoc response approach",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No incident response plan for AI-related threats",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question278",
-                            "title": " How frequently is red teaming or penetration testing conducted for AI security?",
-                            "choices": [
-                                {
-                                    "text": "Regularly (quarterly or after major changes) with AI-specific attack simulations",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Occasionally (yearly or irregularly) with some AI-specific testing",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Only generic cybersecurity tests, no AI-specific red teaming",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No red teaming or penetration testing for AI security",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question279",
-                            "title": "Who conducts security testing on the AI system?",
-                            "choices": [
-                                {
-                                    "text": "Dedicated internal and external experts specialized in AI security",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Internal security team with limited AI expertise",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "General IT security personnel with no AI-specific focus",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No formal security testing on the AI system",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question280",
-                            "title": "How is the AI system designed to handle external outages or disruptions (e.g., cloud failures, power loss)?",
-                            "choices": [
-                                {
-                                    "text": "Multi-region redundancy, automated failover, and contingency planning",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Some redundancy, but with potential downtime risks",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Manual recovery required in case of failure",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No failover or redundancy measures",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question281",
-                            "title": "How is AI model performance affected by changing operational conditions (e.g., system load, new data patterns)?",
-                            "choices": [
-                                {
-                                    "text": "Continuous monitoring with adaptive resource scaling and retraining",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Some monitoring, but manual intervention is required for adjustments",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Reactive approach, performance issues fixed after they occur",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No active monitoring for performance degradation",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question282",
-                            "title": " How is the AI system designed to ensure reproducibility of results across different runs and environments?",
-                            "choices": [
-                                {
-                                    "text": "Full version control of data, model, and training code with environment replication and deterministic execution",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Versioning is applied to models and data, but execution may have minor variations due to system dependencies",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Basic versioning exists, but no guarantees on reproducibility across different environments",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No formal measures to ensure reproducibility thus results may vary significantly between runs",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "page8",
-            "title": "Retirement Stage ",
-            "elements": [
-                {
-                    "type": "radiogroup",
-                    "name": "question283",
-                    "title": "Has the organization conducted a thorough risk assessment prior to decommissioning the AI system?",
-                    "choices": [
-                        {
-                            "text": "Comprehensive risk assessment completed, covering ethical, technical, and operational impacts",
+                      {
+                        "type": "boolean",
+                        "name": "question264",
+                        "title": "Διαθέτει ο οργανισμός συγκεκριμένο υπεύθυνο για την κυβερνοασφάλεια (CISO ή αντίστοιχο ρόλο);",
+                        "beneficenceTrue": 0,
+                        "non_maleficenceTrue": -2,
+                        "autonomyTrue": 0,
+                        "justiceTrue": 0,
+                        "explicabilityTrue": 0,
+                        "beneficenceFalse": 0,
+                        "non_maleficenceFalse": 2,
+                        "autonomyFalse": 0,
+                        "justiceFalse": 0,
+                        "explicabilityFalse": 0
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question265",
+                        "title": "Ποια είναι η πολυπλοκότητα του περιβάλλοντος ανάπτυξης του συστήματος;",
+                        "choices": [
+                          {
+                            "text": "Απλό περιβάλλον, όπως όταν το περιβάλλον ανάπτυξης είναι στατικό, οι δυνατές εισροές είναι περιορισμένες, και υπάρχουν λίγες απροσδόκητες καταστάσεις που πρέπει να διαχειριστεί σωστά το σύστημα. Για παράδειγμα, ένα σύστημα επεξεργασίας φυσικής γλώσσας που χρησιμοποιείται σε ελεγχόμενο ερευνητικό περιβάλλον.",
                             "value": "Item 1",
                             "beneficence": 0,
                             "non_maleficence": 0,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Partial risk assessment covering key risks but with gaps in ethical considerations",
-                            "value": "Item 2",
-                            "beneficence": 1,
-                            "non_maleficence": 1,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Basic assessment focusing only on operational risks, with minimal ethical or technical analysis",
-                            "value": "Item 3",
-                            "beneficence": 2,
-                            "non_maleficence": 2,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "No formal risk assessment conducted",
-                            "value": "Item 4",
-                            "beneficence": 4,
-                            "non_maleficence": 4,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question284",
-                    "title": "To what extent are stakeholders (e.g., end users, customers, affected communities) involved in the AI decommissioning process?\n",
-                    "choices": [
-                        {
-                            "text": "Stakeholders are fully engaged through consultations and feedback loops at all stages",
-                            "value": "Item 1",
-                            "beneficence": 0,
-                            "non_maleficence": 0,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Stakeholders are partially involved, with limited consultations on specific aspects",
-                            "value": "Item 2",
-                            "beneficence": 1,
-                            "non_maleficence": 0,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Stakeholders are minimally involved, with sporadic feedback gathering",
-                            "value": "Item 3",
-                            "beneficence": 2,
-                            "non_maleficence": 0,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Stakeholders are not consulted or informed",
-                            "value": "Item 4",
-                            "beneficence": 3,
-                            "non_maleficence": 0,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question285",
-                    "title": " How are personal data and other sensitive information handled during the decommissioning process?",
-                    "choices": [
-                        {
-                            "text": "Personal data is securely deleted following international best practices (e.g., GDPR-compliant deletion protocols)",
-                            "value": "Item 1",
-                            "beneficence": 0,
-                            "non_maleficence": 0,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Personal data is deleted, but no verification or audit process is in place",
+                          },
+                          {
+                            "text": "Μετρίως πολύπλοκο περιβάλλον, όπως όταν το περιβάλλον ανάπτυξης διαφέρει, ενδέχεται να εμφανιστούν απρόβλεπτες καταστάσεις, αλλά με μικρό κίνδυνο για άτομα και σαφείς τρόπους αντιμετώπισης. Για παράδειγμα, ένα σύστημα επεξεργασίας φυσικής γλώσσας που χρησιμοποιείται σε επαγγελματικό περιβάλλον εταιρείας.",
                             "value": "Item 2",
                             "beneficence": 0,
                             "non_maleficence": 1,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Personal data is archived indefinitely with no specific deletion plan",
+                          },
+                          {
+                            "text": "Πολύπλοκο περιβάλλον, όπως όταν το περιβάλλον είναι δυναμικό, ανοιχτό και απρόβλεπτο, με πιθανές μεταβολές στις εισροές. Για παράδειγμα, ένα σύστημα φυσικής γλώσσας που χρησιμοποιείται σε πλατφόρμα κοινωνικής δικτύωσης όπου οι γλωσσικοί και επικοινωνιακοί κανόνες αλλάζουν γρήγορα.",
                             "value": "Item 3",
                             "beneficence": 0,
                             "non_maleficence": 2,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "No action is taken to ensure proper handling or deletion of personal data",
-                            "value": "Item 4",
-                            "beneficence": 0,
-                            "non_maleficence": 3,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question286",
-                    "title": " How does the organization manage AI models and training data after decommissioning?",
-                    "choices": [
-                        {
-                            "text": "Models and data are securely archived for auditing, reproducibility, and compliance purposes",
-                            "value": "Item 1",
-                            "beneficence": 0,
-                            "non_maleficence": 0,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Models and data are archived, but security controls (e.g., encryption) are minimal",
-                            "value": "Item 2",
-                            "beneficence": 0,
-                            "non_maleficence": 1,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Models and data are retained with no formal archiving or security plan",
-                            "value": "Item 3",
-                            "beneficence": 0,
-                            "non_maleficence": 2,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Models and data are deleted without considering auditing or compliance needs",
-                            "value": "Item 4",
-                            "beneficence": 0,
-                            "non_maleficence": 3,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question287",
-                    "title": "What steps are taken to mitigate potential negative ethical impacts caused by the decommissioning of the AI system?",
-                    "choices": [
-                        {
-                            "text": "Ethical impacts are fully assessed and mitigation plans are developed, including for marginalized groups",
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question266",
+                        "title": "Υπάρχει εξειδικευμένη ομάδα υπεύθυνη για την παρακολούθηση και μετριασμό των κινδύνων κυβερνοασφάλειας που σχετίζονται με την ΤΝ (π.χ. adversarial attacks, model theft, data poisoning);",
+                        "choices": [
+                          {
+                            "text": "Πλήρως καθιερωμένη, με τεκμηριωμένες διαδικασίες και εξειδικευμένο προσωπικό",
                             "value": "Item 1",
                             "beneficence": 0,
                             "non_maleficence": -3,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Ethical impacts are partially assessed, with focus on high-risk areas but limited breadth",
+                          },
+                          {
+                            "text": "Μερικώς καθιερωμένη, γίνεται παρακολούθηση αλλά χωρίς επίσημες διαδικασίες",
                             "value": "Item 2",
                             "beneficence": 0,
                             "non_maleficence": -1,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Ethical risks are acknowledged but no concrete mitigation strategies are in place",
+                          },
+                          {
+                            "text": "Οι κίνδυνοι της ΤΝ αντιμετωπίζονται από τις γενικές ομάδες κυβερνοασφάλειας, χωρίς εξειδίκευση",
                             "value": "Item 3",
                             "beneficence": 0,
-                            "non_maleficence": 2,
+                            "non_maleficence": 0,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Ethical risks are not considered",
+                          },
+                          {
+                            "text": "Δεν υπάρχει επίσημη ανάθεση ευθύνης για την ασφάλεια της ΤΝ",
                             "value": "Item 4",
                             "beneficence": 0,
                             "non_maleficence": 3,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question288",
-                    "title": "How does the organization ensure continuity or provide alternatives for users dependent on the AI system?",
-                    "choices": [
-                        {
-                            "text": "Comprehensive transition plan includes equivalent services or manual processes, with user support",
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question267",
+                        "title": "Πόσο συχνά διενεργείται αξιολόγηση κινδύνου για απειλές στο μοντέλο ΤΝ (π.χ. επιθέσεις αντιπάλου, αντιστροφή μοντέλου, συμπερασμός συμμετοχής);",
+                        "choices": [
+                          {
+                            "text": "Τακτικά (ανά τρίμηνο ή πριν από σημαντικές ενημερώσεις) χρησιμοποιώντας δομημένες μεθοδολογίες",
                             "value": "Item 1",
                             "beneficence": 0,
                             "non_maleficence": -3,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Partial transition plan with some gaps in continuity for dependent users",
+                          },
+                          {
+                            "text": "Περιστασιακά (μία φορά το χρόνο ή μόνο όταν προκύψουν ζητήματα)",
                             "value": "Item 2",
-                            "beneficence": -1,
+                            "beneficence": 0,
                             "non_maleficence": -1,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Users are notified, but no specific alternative or support is provided",
+                          },
+                          {
+                            "text": "Άτυπες αξιολογήσεις χωρίς δομημένη μεθοδολογία",
                             "value": "Item 3",
-                            "beneficence": 2,
-                            "non_maleficence": 2,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "No continuity or alternative services are provided",
-                            "value": "Item 4",
-                            "beneficence": 3,
-                            "non_maleficence": 3,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question289",
-                    "title": "How are environmental considerations (e.g., energy consumption of servers) addressed during decommissioning?",
-                    "choices": [
-                        {
-                            "text": "Hardware is responsibly recycled, and energy use is minimized in accordance with sustainability goals",
-                            "value": "Item 1",
                             "beneficence": 0,
                             "non_maleficence": 0,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Some recycling or energy minimization efforts are made, but no formal strategy exists",
-                            "value": "Item 2",
-                            "beneficence": 1,
-                            "non_maleficence": 1,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Minimal effort to address environmental impact, with no formal measures taken",
-                            "value": "Item 3",
-                            "beneficence": 2,
-                            "non_maleficence": 2,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Environmental impact is not considered",
+                          },
+                          {
+                            "text": "Δεν πραγματοποιείται καμία αξιολόγηση κινδύνου ειδικά για ΤΝ",
                             "value": "Item 4",
-                            "beneficence": 3,
+                            "beneficence": 0,
                             "non_maleficence": 3,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question290",
-                    "title": "To what extent is the decommissioning process documented and made transparent?",
-                    "choices": [
-                        {
-                            "text": "The entire process is thoroughly documented and shared with internal and external stakeholders",
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question268",
+                        "title": "Ποιοι μηχανισμοί αντιμετώπισης εφαρμόζονται σε περίπτωση αποτυχίας ή απρόβλεπτης συμπεριφοράς του συστήματος ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Πλήρως πλεονασματικό σύστημα, χειροκίνητη παράκαμψη και μηχανισμοί ειδοποίησης",
                             "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Περιορισμένη πλεοναστικότητα με κάποιους μηχανισμούς και χειροκίνητη παρέμβαση",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μόνο χειροκίνητη παρέμβαση, χωρίς αυτοματοποιημένο σύστημα υποστήριξης",
+                            "value": "Item 3",
                             "beneficence": 0,
                             "non_maleficence": 0,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Partial documentation exists, but some steps are unclear or unavailable to stakeholders",
+                          },
+                          {
+                            "text": "Καμία εφεδρική λειτουργία, το σύστημα αποτυγχάνει χωρίς μετριασμό",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question269",
+                        "title": "Πώς αντιμετωπίζεται η υποβάθμιση ή η μετατόπιση του μοντέλου με την πάροδο του χρόνου;",
+                        "choices": [
+                          {
+                            "text": "Συνεχής παρακολούθηση με αυτοματοποιημένη επανεκπαίδευση και ανθρώπινη εποπτεία",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Περιοδική αξιολόγηση και επανεκπαίδευση όταν απαιτείται",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Επανεκπαίδευση μόνο εάν εντοπιστούν σημαντικά προβλήματα",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχει διαδικασία για ανίχνευση ή μετριασμό της υποβάθμισης",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question270",
+                        "title": "Ποια μέτρα εφαρμόζονται για την ανίχνευση και μετριασμό επιθέσεων αντιπάλου στο σύστημα ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Ισχυρές τεχνικές άμυνας, συνεχής δοκιμή και παρακολούθηση απειλών ΤΝ",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ορισμένα μέτρα (π.χ. καθαρισμός εισόδου, φίλτρα θορύβου) αλλά χωρίς δοκιμές αντιπάλου",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Βασικά μέτρα ασφάλειας (π.χ. έλεγχος ταυτότητας) χωρίς εξειδικευμένες άμυνες ΤΝ",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχουν μέτρα για την αντιμετώπιση επιθέσεων αντιπάλου",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question271",
+                        "title": "Πώς προστατεύεται το σύστημα ΤΝ από επιθέσεις αναστροφής μοντέλου ή συμπερασμού συμμετοχής;",
+                        "choices": [
+                          {
+                            "text": "Διαφορική ιδιωτικότητα, ομοσπονδιακή μάθηση και προηγμένα μέτρα προστασίας",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Βασικά μέτρα ιδιωτικότητας (π.χ. περιορισμένη πρόσβαση σε ερωτήματα, έλεγχος πρόσβασης)",
                             "value": "Item 2",
                             "beneficence": 0,
                             "non_maleficence": 1,
                             "autonomy": 0,
                             "justice": 0,
-                            "explicability": 1
-                        },
-                        {
-                            "text": "Minimal documentation is available, and it is not shared externally",
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Καμία ειδική προστασία, αλλά παρακολουθούνται τα logs για ανωμαλίες",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχουν μέτρα προστασίας από επιθέσεις αναστροφής μοντέλου ή συμπερασμού συμμετοχής",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question272",
+                        "title": "Πώς προστατεύεται το σύστημα ΤΝ από επιθέσεις δηλητηρίασης δεδομένων;",
+                        "choices": [
+                          {
+                            "text": "Ισχυρές διαδικασίες επικύρωσης, ανίχνευση ανωμαλιών και παρακολούθηση προέλευσης δεδομένων",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ορισμένη επικύρωση, αλλά χωρίς αυτοματοποιημένη ανίχνευση ανωμαλιών",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Βασικοί έλεγχοι, με εξάρτηση από την ακεραιότητα της πηγής δεδομένων χωρίς επαλήθευση",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχει επικύρωση ή έλεγχος κατά της δηλητηρίασης δεδομένων",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question273",
+                        "title": "Πώς διασφαλίζονται τα σύνολα εκπαίδευσης από μη εξουσιοδοτημένες τροποποιήσεις;",
+                        "choices": [
+                          {
+                            "text": "Δεδομένα με έλεγχο εκδόσεων, κρυπτογραφική υπογραφή και αυστηρός έλεγχος πρόσβασης",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ορισμένος έλεγχος εκδόσεων, αλλά περιορισμένα μέτρα ελέγχου πρόσβασης",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Βασική ασφάλεια χωρίς κρυπτογραφική επαλήθευση ακεραιότητας",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχουν έλεγχοι πρόσβασης ή επαληθεύσεις ακεραιότητας στα εκπαιδευτικά δεδομένα",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question274",
+                        "title": "Πώς παρακολουθείται η συμπεριφορά των χρηστών για πιθανή κακή χρήση του συστήματος ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Αυτόματη ανάλυση συμπεριφοράς, ανίχνευση ανωμαλιών και συστήματα ειδοποιήσεων",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Χειροκίνητες ανασκοπήσεις αρχείων καταγραφής, χωρίς αυτόματη ανίχνευση ανωμαλιών",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Υπάρχουν καταγραφές, αλλά δεν υπάρχει ενεργή ανασκόπηση της συμπεριφοράς των χρηστών",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχει παρακολούθηση για κακή χρήση από χρήστες",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question275",
+                        "title": "Ποια μέτρα υπάρχουν για την αποτροπή κακόβουλης χρήσης των εξόδων ΤΝ από τους χρήστες (π.χ. επιθέσεις injection, μεροληπτικά αποτελέσματα, διαρροή δεδομένων);",
+                        "choices": [
+                          {
+                            "text": "Αυστηρό φιλτράρισμα, μέτριαση με επίγνωση πλαισίου και ανθρώπινη επιθεώρηση όπου χρειάζεται",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Κάποιο φιλτράρισμα, αλλά υπάρχουν κενά στην ανίχνευση αναδυόμενων μοτίβων κακοποίησης",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Βασικά μέτρα προστασίας, βασιζόμαστε σε συμφωνίες τελικού χρήστη για υπεύθυνη χρήση",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχουν μέτρα προστασίας πέραν του βασικού ελέγχου εισόδου",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question276",
+                        "title": "Πώς αποθηκεύονται και αναλύονται τα logs από αλληλεπιδράσεις με το ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Κρυπτογραφημένα, μη παραποιήσιμα logs με αυτόματη ανίχνευση ανωμαλιών",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": -2
+                          },
+                          {
+                            "text": "Τα logs αποθηκεύονται με ασφάλεια, αλλά η ανάλυση γίνεται χειροκίνητα και σπάνια",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Τα logs υπάρχουν αλλά δεν ανασκοπούνται ή αναλύονται τακτικά",
                             "value": "Item 3",
                             "beneficence": 0,
                             "non_maleficence": 2,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 2
-                        },
-                        {
-                            "text": "No documentation of the decommissioning process exists",
+                          },
+                          {
+                            "text": "Δεν υπάρχει δομημένη καταγραφή ή ανάλυση",
                             "value": "Item 4",
                             "beneficence": 0,
                             "non_maleficence": 3,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 3
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question291",
-                    "title": " How are risks from third-party dependencies (e.g., APIs, external data sources) managed during decommissioning?",
-                    "choices": [
-                        {
-                            "text": "All third-party contracts and dependencies are reviewed and terminated in alignment with decommissioning",
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question277",
+                        "title": "Ποιο είναι το σχέδιο απόκρισης για περιστατικά ασφάλειας που σχετίζονται με την ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Προκαθορισμένο και δοκιμασμένο σχέδιο απόκρισης με ειδικές προβλέψεις για την ΤΝ",
                             "value": "Item 1",
                             "beneficence": 0,
-                            "non_maleficence": 0,
+                            "non_maleficence": -2,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Some third-party dependencies are reviewed, but gaps in termination plans exist",
-                            "value": "Item 2",
-                            "beneficence": 0,
-                            "non_maleficence": 1,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "No formal review of third-party dependencies, but termination is informally managed",
-                            "value": "Item 3",
-                            "beneficence": 0,
-                            "non_maleficence": 2,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "Third-party dependencies are ignored during decommissioning",
-                            "value": "Item 4",
-                            "beneficence": 0,
-                            "non_maleficence": 3,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        }
-                    ]
-                },
-                {
-                    "type": "radiogroup",
-                    "name": "question292",
-                    "title": "Is there a post-decommission review or audit to ensure all risks have been mitigated and lessons learned?",
-                    "choices": [
-                        {
-                            "text": "Comprehensive post-decommission review and audit conducted, with lessons learned applied to future projects",
-                            "value": "Item 1",
-                            "beneficence": 0,
-                            "non_maleficence": -3,
-                            "autonomy": 0,
-                            "justice": 0,
-                            "explicability": 0
-                        },
-                        {
-                            "text": "A basic review is conducted, but no formal audit or feedback loop exists",
+                          },
+                          {
+                            "text": "Γενικό σχέδιο απόκρισης για την κυβερνοασφάλεια, χωρίς στοιχεία ειδικά για την ΤΝ",
                             "value": "Item 2",
                             "beneficence": 0,
                             "non_maleficence": -1,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "Informal review conducted with no structured learning process",
+                          },
+                          {
+                            "text": "Άτυπη ή ad-hoc προσέγγιση απόκρισης",
                             "value": "Item 3",
                             "beneficence": 0,
-                            "non_maleficence": 1,
+                            "non_maleficence": 0,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        },
-                        {
-                            "text": "No review or audit is conducted after decommissioning",
+                          },
+                          {
+                            "text": "Δεν υπάρχει σχέδιο απόκρισης για απειλές που σχετίζονται με την ΤΝ",
                             "value": "Item 4",
                             "beneficence": 0,
                             "non_maleficence": 3,
                             "autonomy": 0,
                             "justice": 0,
                             "explicability": 0
-                        }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question278",
+                        "title": "Πόσο συχνά διεξάγεται red teaming ή δοκιμή διείσδυσης για την ασφάλεια της ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Τακτικά (ανά τρίμηνο ή μετά από μεγάλες αλλαγές) με προσομοιώσεις επιθέσεων ειδικά για ΤΝ",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Περιστασιακά (ετησίως ή μη τακτικά) με κάποια ειδικά τεστ για ΤΝ",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μόνο γενικές δοκιμές κυβερνοασφάλειας, χωρίς red teaming για ΤΝ",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν διεξάγεται καθόλου red teaming ή δοκιμή διείσδυσης για ΤΝ",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question279",
+                        "title": "Ποιος διεξάγει τον έλεγχο ασφάλειας του συστήματος ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Αφιερωμένοι εσωτερικοί και εξωτερικοί εμπειρογνώμονες με εξειδίκευση στην ασφάλεια ΤΝ",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Εσωτερική ομάδα ασφάλειας με περιορισμένη εμπειρία στην ΤΝ",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Γενικό προσωπικό πληροφορικής ασφάλειας χωρίς ειδική εστίαση στην ΤΝ",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν πραγματοποιείται επίσημος έλεγχος ασφάλειας στο σύστημα ΤΝ",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question280",
+                        "title": "Πώς έχει σχεδιαστεί το σύστημα ΤΝ για να αντιμετωπίζει εξωτερικές διακοπές ή διαταραχές (π.χ. αποτυχίες cloud, διακοπή ρεύματος);",
+                        "choices": [
+                          {
+                            "text": "Πλεονασμός σε πολλαπλές περιοχές, αυτόματη εναλλαγή και σχέδιο έκτακτης ανάγκης",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Κάποιος βαθμός πλεονασμού, αλλά με πιθανούς κινδύνους διακοπής",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Απαιτείται χειροκίνητη αποκατάσταση σε περίπτωση αποτυχίας",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχουν μέτρα εναλλαγής ή πλεονασμού",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 4,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question281",
+                        "title": "Πώς επηρεάζεται η απόδοση του μοντέλου ΤΝ από μεταβαλλόμενες συνθήκες λειτουργίας (π.χ. φόρτος συστήματος, νέα πρότυπα δεδομένων);",
+                        "choices": [
+                          {
+                            "text": "Συνεχής παρακολούθηση με προσαρμοστική κατανομή πόρων και επαναεκπαίδευση",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μερική παρακολούθηση, με ανάγκη χειροκίνητης παρέμβασης για προσαρμογές",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Αντιδραστική προσέγγιση, με διόρθωση προβλημάτων μετά την εμφάνισή τους",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχει ενεργή παρακολούθηση για πτώση της απόδοσης",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question282",
+                        "title": "Πώς έχει σχεδιαστεί το σύστημα ΤΝ ώστε να διασφαλίζεται η αναπαραγωγιμότητα των αποτελεσμάτων σε διαφορετικές εκτελέσεις και περιβάλλοντα;",
+                        "choices": [
+                          {
+                            "text": "Πλήρης έλεγχος εκδόσεων δεδομένων, μοντέλων και εκπαιδευτικού κώδικα με αναπαραγωγή περιβάλλοντος και ντετερμινιστική εκτέλεση",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Εφαρμόζεται έκδοση σε μοντέλα και δεδομένα, αλλά η εκτέλεση ενδέχεται να έχει μικρές διαφορές λόγω εξαρτήσεων του συστήματος",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Υπάρχει βασικός έλεγχος εκδόσεων, αλλά χωρίς εγγυήσεις για αναπαραγωγιμότητα σε διαφορετικά περιβάλλοντα",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δεν υπάρχουν επίσημα μέτρα για την εξασφάλιση αναπαραγωγιμότητας, επομένως τα αποτελέσματα μπορεί να διαφέρουν σημαντικά",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      }                      
                     ]
                 }
+            ]
+        },
+        {
+            "name": "page8",
+            "title": "Στάδιο Απόσυρσης",
+            "elements": [
+              {
+                "type": "radiogroup",
+                "name": "question283",
+                "title": "Έχει πραγματοποιήσει ο οργανισμός εμπεριστατωμένη εκτίμηση κινδύνου πριν από την απόσυρση του συστήματος ΤΝ;",
+                "choices": [
+                    {
+                        "text": "Ολοκληρωμένη εκτίμηση κινδύνου, καλύπτοντας ηθικές, τεχνικές και λειτουργικές επιπτώσεις",
+                        "value": "Item 1",
+                        "beneficence": 0,
+                        "non_maleficence": 0,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    },
+                    {
+                        "text": "Μερική εκτίμηση κινδύνου που καλύπτει βασικούς κινδύνους αλλά με κενά στις ηθικές εκτιμήσεις",
+                        "value": "Item 2",
+                        "beneficence": 1,
+                        "non_maleficence": 1,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    },
+                    {
+                        "text": "Βασική εκτίμηση που επικεντρώνεται μόνο σε λειτουργικούς κινδύνους, με ελάχιστη ηθική ή τεχνική ανάλυση",
+                        "value": "Item 3",
+                        "beneficence": 2,
+                        "non_maleficence": 2,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    },
+                    {
+                        "text": "Δεν πραγματοποιήθηκε καμία επίσημη εκτίμηση κινδύνου",
+                        "value": "Item 4",
+                        "beneficence": 4,
+                        "non_maleficence": 4,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    }
+                ]
+            },
+            {
+                "type": "radiogroup",
+                "name": "question284",
+                "title": "Σε ποιο βαθμό εμπλέκονται τα ενδιαφερόμενα μέρη (π.χ. τελικοί χρήστες, πελάτες, επηρεαζόμενες κοινότητες) στη διαδικασία απόσυρσης της ΤΝ;",
+                "choices": [
+                    {
+                        "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν πλήρως μέσω διαβουλεύσεων και κύκλων ανατροφοδότησης σε όλα τα στάδια",
+                        "value": "Item 1",
+                        "beneficence": 0,
+                        "non_maleficence": 0,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    },
+                    {
+                        "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν εν μέρει, με περιορισμένες διαβουλεύσεις για συγκεκριμένες πτυχές",
+                        "value": "Item 2",
+                        "beneficence": 1,
+                        "non_maleficence": 0,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    },
+                    {
+                        "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν ελάχιστα, με αποσπασματική συλλογή ανατροφοδότησης",
+                        "value": "Item 3",
+                        "beneficence": 2,
+                        "non_maleficence": 0,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    },
+                    {
+                        "text": "Τα ενδιαφερόμενα μέρη δεν ενημερώνονται ούτε συμμετέχουν",
+                        "value": "Item 4",
+                        "beneficence": 3,
+                        "non_maleficence": 0,
+                        "autonomy": 0,
+                        "justice": 0,
+                        "explicability": 0
+                    }
+                ]
+            },
+            {
+              "type": "radiogroup",
+              "name": "question285",
+              "title": "Πώς διαχειρίζονται τα προσωπικά δεδομένα και άλλες ευαίσθητες πληροφορίες κατά τη διαδικασία απόσυρσης;",
+              "choices": [
+                  {
+                      "text": "Τα προσωπικά δεδομένα διαγράφονται με ασφάλεια σύμφωνα με διεθνείς βέλτιστες πρακτικές (π.χ. πρωτόκολλα διαγραφής συμβατά με τον GDPR)",
+                      "value": "Item 1",
+                      "beneficence": 0,
+                      "non_maleficence": 0,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  },
+                  {
+                      "text": "Τα προσωπικά δεδομένα διαγράφονται, αλλά δεν υπάρχει διαδικασία επαλήθευσης ή ελέγχου",
+                      "value": "Item 2",
+                      "beneficence": 0,
+                      "non_maleficence": 1,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  },
+                  {
+                      "text": "Τα προσωπικά δεδομένα αρχειοθετούνται επ’ αόριστον χωρίς συγκεκριμένο σχέδιο διαγραφής",
+                      "value": "Item 3",
+                      "beneficence": 0,
+                      "non_maleficence": 2,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  },
+                  {
+                      "text": "Δεν λαμβάνεται κανένα μέτρο για την ορθή διαχείριση ή διαγραφή των προσωπικών δεδομένων",
+                      "value": "Item 4",
+                      "beneficence": 0,
+                      "non_maleficence": 3,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  }
+              ]
+          },
+          {
+              "type": "radiogroup",
+              "name": "question286",
+              "title": "Πώς διαχειρίζεται ο οργανισμός τα μοντέλα ΤΝ και τα δεδομένα εκπαίδευσης μετά την απόσυρση;",
+              "choices": [
+                  {
+                      "text": "Τα μοντέλα και τα δεδομένα αρχειοθετούνται με ασφάλεια για λόγους ελέγχου, αναπαραγωγιμότητας και συμμόρφωσης",
+                      "value": "Item 1",
+                      "beneficence": 0,
+                      "non_maleficence": 0,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  },
+                  {
+                      "text": "Τα μοντέλα και τα δεδομένα αρχειοθετούνται, αλλά τα μέτρα ασφαλείας (π.χ. κρυπτογράφηση) είναι ελάχιστα",
+                      "value": "Item 2",
+                      "beneficence": 0,
+                      "non_maleficence": 1,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  },
+                  {
+                      "text": "Τα μοντέλα και τα δεδομένα διατηρούνται χωρίς επίσημο σχέδιο αρχειοθέτησης ή ασφάλειας",
+                      "value": "Item 3",
+                      "beneficence": 0,
+                      "non_maleficence": 2,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  },
+                  {
+                      "text": "Τα μοντέλα και τα δεδομένα διαγράφονται χωρίς να λαμβάνονται υπόψη οι ανάγκες ελέγχου ή συμμόρφωσης",
+                      "value": "Item 4",
+                      "beneficence": 0,
+                      "non_maleficence": 3,
+                      "autonomy": 0,
+                      "justice": 0,
+                      "explicability": 0
+                  }
+              ]
+          },
+          {
+            "type": "radiogroup",
+            "name": "question287",
+            "title": "Ποια βήματα λαμβάνονται για την αντιμετώπιση πιθανών αρνητικών ηθικών επιπτώσεων λόγω της απόσυρσης του συστήματος ΤΝ;",
+            "choices": [
+                {
+                    "text": "Οι ηθικές επιπτώσεις αξιολογούνται πλήρως και αναπτύσσονται σχέδια μετριασμού, συμπεριλαμβανομένων για περιθωριοποιημένες ομάδες",
+                    "value": "Item 1",
+                    "beneficence": 0,
+                    "non_maleficence": -3,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Οι ηθικές επιπτώσεις αξιολογούνται μερικώς, με εστίαση σε περιοχές υψηλού κινδύνου αλλά με περιορισμένη έκταση",
+                    "value": "Item 2",
+                    "beneficence": 0,
+                    "non_maleficence": -1,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Οι ηθικοί κίνδυνοι αναγνωρίζονται αλλά δεν υπάρχουν συγκεκριμένες στρατηγικές μετριασμού",
+                    "value": "Item 3",
+                    "beneficence": 0,
+                    "non_maleficence": 2,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Οι ηθικοί κίνδυνοι δεν λαμβάνονται υπόψη",
+                    "value": "Item 4",
+                    "beneficence": 0,
+                    "non_maleficence": 3,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                }
+            ]
+        },
+        {
+            "type": "radiogroup",
+            "name": "question288",
+            "title": "Πώς διασφαλίζει ο οργανισμός τη συνέχεια ή παρέχει εναλλακτικές για τους χρήστες που εξαρτώνται από το σύστημα ΤΝ;",
+            "choices": [
+                {
+                    "text": "Πλήρες σχέδιο μετάβασης που περιλαμβάνει ισοδύναμες υπηρεσίες ή χειροκίνητες διαδικασίες με υποστήριξη χρηστών",
+                    "value": "Item 1",
+                    "beneficence": 0,
+                    "non_maleficence": -3,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Μερικό σχέδιο μετάβασης με κενά στη συνέχεια για εξαρτώμενους χρήστες",
+                    "value": "Item 2",
+                    "beneficence": -1,
+                    "non_maleficence": -1,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Οι χρήστες ειδοποιούνται αλλά δεν παρέχεται συγκεκριμένη εναλλακτική ή υποστήριξη",
+                    "value": "Item 3",
+                    "beneficence": 2,
+                    "non_maleficence": 2,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Δεν παρέχεται καμία συνέχεια ή εναλλακτική υπηρεσία",
+                    "value": "Item 4",
+                    "beneficence": 3,
+                    "non_maleficence": 3,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                }
+            ]
+        },
+        {
+            "type": "radiogroup",
+            "name": "question289",
+            "title": "Πώς αντιμετωπίζονται οι περιβαλλοντικές επιπτώσεις (π.χ. κατανάλωση ενέργειας από διακομιστές) κατά την απόσυρση;",
+            "choices": [
+                {
+                    "text": "Ο εξοπλισμός ανακυκλώνεται υπεύθυνα και η κατανάλωση ενέργειας ελαχιστοποιείται σύμφωνα με τους στόχους βιωσιμότητας",
+                    "value": "Item 1",
+                    "beneficence": 0,
+                    "non_maleficence": 0,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Γίνονται κάποιες προσπάθειες ανακύκλωσης ή μείωσης ενέργειας αλλά δεν υπάρχει επίσημη στρατηγική",
+                    "value": "Item 2",
+                    "beneficence": 1,
+                    "non_maleficence": 1,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Ελάχιστη προσπάθεια για την αντιμετώπιση του περιβαλλοντικού αντίκτυπου, χωρίς επίσημα μέτρα",
+                    "value": "Item 3",
+                    "beneficence": 2,
+                    "non_maleficence": 2,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                },
+                {
+                    "text": "Ο περιβαλλοντικός αντίκτυπος δεν λαμβάνεται υπόψη",
+                    "value": "Item 4",
+                    "beneficence": 3,
+                    "non_maleficence": 3,
+                    "autonomy": 0,
+                    "justice": 0,
+                    "explicability": 0
+                }
+            ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question290",
+          "title": "Σε ποιο βαθμό τεκμηριώνεται και καθίσταται διαφανής η διαδικασία απόσυρσης;",
+          "choices": [
+              {
+                  "text": "Ολόκληρη η διαδικασία τεκμηριώνεται πλήρως και κοινοποιείται σε εσωτερικούς και εξωτερικούς ενδιαφερόμενους",
+                  "value": "Item 1",
+                  "beneficence": 0,
+                  "non_maleficence": 0,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Υπάρχει μερική τεκμηρίωση, αλλά ορισμένα βήματα είναι ασαφή ή δεν είναι διαθέσιμα στους ενδιαφερόμενους",
+                  "value": "Item 2",
+                  "beneficence": 0,
+                  "non_maleficence": 1,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 1
+              },
+              {
+                  "text": "Διατίθεται ελάχιστη τεκμηρίωση και δεν κοινοποιείται εξωτερικά",
+                  "value": "Item 3",
+                  "beneficence": 0,
+                  "non_maleficence": 2,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 2
+              },
+              {
+                  "text": "Δεν υπάρχει τεκμηρίωση της διαδικασίας απόσυρσης",
+                  "value": "Item 4",
+                  "beneficence": 0,
+                  "non_maleficence": 3,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 3
+              }
+          ]
+      },
+      {
+          "type": "radiogroup",
+          "name": "question291",
+          "title": "Πώς διαχειρίζονται οι κίνδυνοι από εξαρτήσεις τρίτων (π.χ. APIs, εξωτερικές πηγές δεδομένων) κατά την απόσυρση;",
+          "choices": [
+              {
+                  "text": "Όλες οι συμβάσεις και εξαρτήσεις τρίτων επανεξετάζονται και τερματίζονται σύμφωνα με τη διαδικασία απόσυρσης",
+                  "value": "Item 1",
+                  "beneficence": 0,
+                  "non_maleficence": 0,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Ορισμένες εξαρτήσεις τρίτων επανεξετάζονται, αλλά υπάρχουν κενά στα σχέδια τερματισμού",
+                  "value": "Item 2",
+                  "beneficence": 0,
+                  "non_maleficence": 1,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Δεν υπάρχει επίσημη επανεξέταση εξαρτήσεων τρίτων, αλλά ο τερματισμός διαχειρίζεται ανεπίσημα",
+                  "value": "Item 3",
+                  "beneficence": 0,
+                  "non_maleficence": 2,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Οι εξαρτήσεις τρίτων αγνοούνται κατά την απόσυρση",
+                  "value": "Item 4",
+                  "beneficence": 0,
+                  "non_maleficence": 3,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              }
+          ]
+      },
+      {
+          "type": "radiogroup",
+          "name": "question292",
+          "title": "Υπάρχει επανεξέταση ή έλεγχος μετά την απόσυρση για τη διασφάλιση ότι έχουν μετριαστεί όλοι οι κίνδυνοι και ότι αντλήθηκαν μαθήματα;",
+          "choices": [
+              {
+                  "text": "Έχει διενεργηθεί πλήρης επανεξέταση και έλεγχος μετά την απόσυρση, με εφαρμογή των διδαγμάτων σε μελλοντικά έργα",
+                  "value": "Item 1",
+                  "beneficence": 0,
+                  "non_maleficence": -3,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Διενεργείται βασική επανεξέταση, αλλά δεν υπάρχει επίσημος έλεγχος ή κύκλος ανατροφοδότησης",
+                  "value": "Item 2",
+                  "beneficence": 0,
+                  "non_maleficence": -1,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Διενεργείται ανεπίσημη επανεξέταση χωρίς δομημένη διαδικασία μάθησης",
+                  "value": "Item 3",
+                  "beneficence": 0,
+                  "non_maleficence": 1,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              },
+              {
+                  "text": "Δεν διενεργείται καμία επανεξέταση ή έλεγχος μετά την απόσυρση",
+                  "value": "Item 4",
+                  "beneficence": 0,
+                  "non_maleficence": 3,
+                  "autonomy": 0,
+                  "justice": 0,
+                  "explicability": 0
+              }
+          ]
+      }      
             ]
         }
     ]
