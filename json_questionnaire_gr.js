@@ -374,74 +374,133 @@ const json_questionnaire_gr = {
                       {
                         "type": "checkbox",
                         "name": "question20",
-                        "title": "Πληροί το σύστημά σας κάποιο από τα παρακάτω κριτήρια εφαρμογής;",
-                        "validators": [{ "type": "expression" }],
+                        "title": "Πληροί το σύστημά σας οποιοδήποτε από τα παρακάτω κριτήρια πεδίου εφαρμογής;",
+                        "validators": [
+                          {
+                            "type": "expression"
+                          }
+                        ],
                         "choices": [
-                          { "text": "Το σύστημα διατίθεται στην αγορά ή τίθεται σε λειτουργία εντός της ΕΕ", "value": "Item 1" },
-                          { "text": "Η έξοδος του συστήματος χρησιμοποιείται εντός της ΕΕ", "value": "Item 2" },
-                          { "text": "Το σύστημα βρίσκεται σε χώρα εκτός ΕΕ όπου εφαρμόζεται το δίκαιο κράτους μέλους της ΕΕ λόγω διεθνούς δικαίου", "value": "Item 3" }
+                          {
+                            "text": "Το σύστημα διατίθεται στην αγορά/τίθεται σε λειτουργία εντός της ΕΕ",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Η έξοδος του συστήματος χρησιμοποιείται στην ΕΕ",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Το σύστημα βρίσκεται σε τρίτη χώρα όπου εφαρμόζεται το δίκαιο κράτους μέλους της ΕΕ δυνάμει του διεθνούς δημόσιου δικαίου",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
                         ],
                         "showNoneItem": true,
-                        "noneText": "Κανένα από τα παραπάνω"
+                        "noneText": "Καμία από τις παραπάνω"
                       },
                       {
                         "type": "checkbox",
                         "name": "question22",
-                        "title": "Εμπλέκεται το σύστημά σας σε κάποια από τις απαγορευμένες πρακτικές;",
+                        "title": "Ασχολείται το σύστημά σας με οποιαδήποτε από τις απαγορευμένες πρακτικές;",
                         "choices": [
-                          { "text": "Συστήματα βιομετρικής αναγνώρισης σε πραγματικό χρόνο (π.χ. κατηγοριοποίηση, προβλεπτική αστυνόμευση, αναγνώριση προσώπου, εξαιρέσεις ισχύουν για επιβολή νόμου και εθνική ασφάλεια)", "value": "Item 4" },
-                          { "text": "Αλγόριθμοι κοινωνικής αξιολόγησης που αξιολογούν άτομα βάσει χαρακτηριστικών ή συμπεριφοράς με επιβλαβείς συνέπειες", "value": "Item 5" },
-                          { "text": "Τακτικές χειραγώγησης που εκμεταλλεύονται ευάλωτα άτομα και παραμορφώνουν τη συμπεριφορά τους προκαλώντας βλάβη", "value": "Item 6" }
+                          {
+                            "text": "Συστήματα βιομετρικής σε πραγματικό χρόνο: π.χ. βιομετρική κατηγοριοποίηση, προγνωστική αστυνόμευση, επέκταση βάσεων δεδομένων αναγνώρισης προσώπου, απομακρυσμένη βιομετρική παρακολούθηση σε πραγματικό χρόνο (εξαιρέσεις ισχύουν για πρόληψη εγκλήματος και ποινικές έρευνες).",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Αλγόριθμοι κοινωνικής αξιολόγησης που μπορούν να χρησιμοποιηθούν για την αξιολόγηση ατόμων βάσει προσωπικών χαρακτηριστικών και/ή της συμπεριφοράς τους με τρόπο που θα μπορούσε να προκαλέσει βλάβη ή να οδηγήσει σε δυσμενή μεταχείριση.",
+                            "value": "Item 5",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Τακτικές χειραγώγησης που εκμεταλλεύονται ευπάθειες ατόμων ώστε να αλλοιώσουν τη συμπεριφορά τους με τρόπο που πιθανόν να προκαλέσει σωματική ή ψυχολογική βλάβη (π.χ. αναγνώριση συναισθημάτων, υπόγειες τεχνικές, χειραγώγηση, εξαπάτηση).",
+                            "value": "Item 6",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
                         ],
                         "showNoneItem": true,
-                        "noneText": "Κανένα από τα παραπάνω"
+                        "noneText": "Καμία από τις παραπάνω"
                       },
                       {
                         "type": "checkbox",
                         "name": "question24",
-                        "title": "Εμπίπτει το σύστημά σας σε κάποια από τις παρακάτω εξαιρούμενες κατηγορίες;",
+                        "title": "Εμπίπτει το σύστημά σας σε οποιαδήποτε από τις παρακάτω εξαιρούμενες κατηγορίες;",
                         "choices": [
-                          { "text": "Συστήματα ΤΝ για αποκλειστικά στρατιωτική χρήση", "value": "Item 4" },
-                          { "text": "Συστήματα ΤΝ από δημόσιες αρχές ή διεθνείς οργανισμούς τρίτων χωρών για δικαστική συνεργασία", "value": "Item 5" },
-                          { "text": "Έρευνα και ανάπτυξη ΤΝ", "value": "Item 6" },
-                          { "text": "Συστατικά ΤΝ με ανοικτές άδειες χρήσης", "value": "Item 7" },
-                          { "text": "Χρήση ΤΝ αποκλειστικά για προσωπικούς μη επαγγελματικούς σκοπούς", "value": "Item 8" }
+                          {
+                            "text": "Συστήματα τεχνητής νοημοσύνης που αναπτύχθηκαν και χρησιμοποιούνται αποκλειστικά για στρατιωτικούς σκοπούς",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Συστήματα ΤΝ που χρησιμοποιούνται από δημόσιες αρχές ή διεθνείς οργανισμούς σε τρίτες χώρες για την επιβολή του νόμου και δικαστική συνεργασία",
+                            "value": "Item 5",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δραστηριότητα έρευνας και ανάπτυξης ΤΝ",
+                            "value": "Item 6",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Συστατικά ΤΝ που παρέχονται υπό άδειες ελεύθερου και ανοιχτού κώδικα",
+                            "value": "Item 7",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Άτομα που χρησιμοποιούν ΤΝ αποκλειστικά για προσωπική μη επαγγελματική χρήση",
+                            "value": "Item 8",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
                         ],
                         "showNoneItem": true,
-                        "noneText": "Κανένα από τα παραπάνω"
-                      },
-                      {
-                        "type": "checkbox",
-                        "name": "question23",
-                        "title": "Εμπίπτει το σύστημά σας (ή το προϊόν όπου αποτελεί στοιχείο ασφαλείας) σε κάποια από τις παρακάτω κατηγορίες υψηλού κινδύνου;",
-                        "choices": [
-                          { "text": "Δίκυκλα, τρίκυκλα και τετράκυκλα", "value": "Item 5" },
-                          { "text": "Αυτοκίνητα και ρυμουλκούμενα", "value": "Item 9" },
-                          { "text": "Γεωργικά και δασικά οχήματα", "value": "Item 6" },
-                          { "text": "Διαλειτουργικότητα σιδηροδρομικών συστημάτων", "value": "Item 8" },
-                          { "text": "Ασφάλεια πολιτικής αεροπορίας", "value": "Item 4" },
-                          { "text": "Ναυτικός εξοπλισμός", "value": "Item 7" },
-                          { "text": "Μηχανήματα", "value": "Item 13" },
-                          { "text": "Παιχνίδια", "value": "Item 14" },
-                          { "text": "Σκάφη αναψυχής και προσωπικά σκάφη", "value": "Item 15" },
-                          { "text": "Ανελκυστήρες και εξαρτήματα ασφαλείας", "value": "Item 16" },
-                          { "text": "Εξοπλισμός για εκρηκτικά περιβάλλοντα", "value": "Item 17" },
-                          { "text": "Ραδιοεξοπλισμός", "value": "Item 18" },
-                          { "text": "Εξοπλισμός υπό πίεση", "value": "Item 19" },
-                          { "text": "Εναέριες εγκαταστάσεις", "value": "Item 20" },
-                          { "text": "Μέσα ατομικής προστασίας", "value": "Item 21" },
-                          { "text": "Συσκευές καύσης αερίων καυσίμων", "value": "Item 22" },
-                          { "text": "Ιατρικές συσκευές", "value": "Item 23" },
-                          { "text": "Βιομετρικά στοιχεία (εκτός απαγορευμένων πρακτικών)", "value": "Item 27" },
-                          { "text": "Κρίσιμες υποδομές", "value": "Item 28" },
-                          { "text": "Εκπαίδευση και επαγγελματική κατάρτιση", "value": "Item 29" },
-                          { "text": "Απασχόληση, διαχείριση εργαζομένων και αυτοαπασχόληση", "value": "Item 30" },
-                          { "text": "Πρόσβαση και χρήση βασικών ιδιωτικών και δημόσιων υπηρεσιών και παροχών", "value": "Item 31" },
-                          { "text": "Επιβολή του νόμου", "value": "Item 32" },
-                          { "text": "Μετανάστευση, άσυλο και έλεγχος συνόρων", "value": "Item 33" },
-                          { "text": "Δικαιοσύνη και δημοκρατικές διαδικασίες", "value": "Item 34" },
-                          { "text": "Κανένα από τα παραπάνω", "value": "Item 35" }
-                        ]
+                        "noneText": "Καμία από τις παραπάνω"
                       },
                       {
                         "type": "boolean",
@@ -3791,804 +3850,806 @@ const json_questionnaire_gr = {
         },
         {
             "name": "page4",
-            "title": "Development Stage : Data ",
+            "title": "Στάδιο Υλοποίησης: Δεδομένα ",
             "elements": [
                 {
                     "type": "panel",
                     "name": "panel10",
-                    "title": "Source and Documentation",
+                    "title": "Πηγή και Τεκμηρίωση",
                     "state": "expanded",
                     "elements": [
                         {
                             "type": "checkbox",
                             "name": "question224",
-                            "title": "Which of the following best describes this system's inputs and outputs?",
+                            "title": "Ποιο από τα παρακάτω περιγράφει καλύτερα τις εισόδους και εξόδους του συστήματος;",
                             "choices": [
-                                {
-                                    "text": "Structured data (e.g., databases, spreadsheets)",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Unstructured data (e.g., text, images, audio)",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Semi-structured data (e.g., JSON, XML)",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Real-time data streams (e.g., IoT sensors)",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Δομημένα δεδομένα (π.χ. βάσεις δεδομένων, υπολογιστικά φύλλα)",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Μη δομημένα δεδομένα (π.χ. κείμενο, εικόνες, ήχος)",
+                                "value": "Item 5",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ημι-δομημένα δεδομένα (π.χ. JSON, XML)",
+                                "value": "Item 6",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 1,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ροές δεδομένων σε πραγματικό χρόνο (π.χ. αισθητήρες IoT)",
+                                "value": "Item 7",
+                                "beneficence": 0,
+                                "non_maleficence": 2,
+                                "autonomy": 2,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "comment",
                             "name": "question116",
-                            "title": "Describe the kind of training/input data your system needs."
-                        },
-                        {
+                            "title": "Περιγράψτε το είδος των δεδομένων εκπαίδευσης/εισόδου που απαιτεί το σύστημά σας."
+                          },
+                          {
                             "type": "checkbox",
                             "name": "question226",
-                            "title": "Who was involved in the data selection process?",
+                            "title": "Ποιος συμμετείχε στη διαδικασία επιλογής δεδομένων;",
                             "choices": [
-                                {
-                                    "text": "Data scientists",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Domain experts",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Legal/compliance teams",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "External consultants",
-                                    "value": "Item 4",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Επιστήμονες δεδομένων",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": -1,
+                                "autonomy": 0,
+                                "justice": -1,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ειδικοί του τομέα",
+                                "value": "Item 2",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Νομικές/συμμορφωτικές ομάδες",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": -1,
+                                "autonomy": -1,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Εξωτερικοί σύμβουλοι",
+                                "value": "Item 4",
+                                "beneficence": -1,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "text",
                             "name": "question117",
-                            "title": "Who was in charge of the data selection process?"
-                        },
-                        {
+                            "title": "Ποιος ήταν υπεύθυνος για τη διαδικασία επιλογής δεδομένων;"
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question228",
-                            "title": "Is the training data reused or collected specifically for this application?",
+                            "title": "Τα δεδομένα εκπαίδευσης έχουν ανακυκλωθεί ή συλλέχθηκαν ειδικά για αυτή την εφαρμογή;",
                             "choices": [
-                                {
-                                    "text": "All data is publicly available",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "All data is collected specifically for this app",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "A mix of both",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                }
+                              {
+                                "text": "Όλα τα δεδομένα είναι δημόσια διαθέσιμα",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": -1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Όλα τα δεδομένα συλλέχθηκαν ειδικά για την εφαρμογή",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": -1,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Συνδυασμός και των δύο",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": -1,
+                                "explicability": 0
+                              }
                             ]
-                        },
-                        {
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question229",
-                            "title": "Will the system use data from multiple sources?",
+                            "title": "Θα χρησιμοποιήσει το σύστημα δεδομένα από πολλαπλές πηγές;",
                             "choices": [
-                                {
-                                    "text": "Yes, from internal sources",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, from external sources",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Yes, from a mix of both",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                }
+                              {
+                                "text": "Ναι, από εσωτερικές πηγές",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ναι, από εξωτερικές πηγές",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 2
+                              },
+                              {
+                                "text": "Ναι, από συνδυασμό εσωτερικών και εξωτερικών πηγών",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 1
+                              }
                             ],
                             "showNoneItem": true,
-                            "noneText": "No, from a single source"
-                        },
-                        {
+                            "noneText": "Όχι, από μία μόνο πηγή"
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question330",
-                            "title": "Will the system make direct use of data from devices belonging to citizens or economic operators?",
+                            "title": "Θα χρησιμοποιεί το σύστημα απευθείας δεδομένα από συσκευές που ανήκουν σε πολίτες ή οικονομικούς φορείς;",
                             "choices": [
-                                {
-                                    "text": "Yes, from IoT devices",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Yes, from mobile devices",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                  "text": "Yes, from both",
-                                  "value": "Item 3",
-                                  "beneficence": 0,
-                                  "non_maleficence": 1,
-                                  "autonomy": 1,
-                                  "justice": 0,
-                                  "explicability": 1
+                              {
+                                "text": "Ναι, από συσκευές IoT",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 1
+                              },
+                              {
+                                "text": "Ναι, από κινητές συσκευές",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 1,
+                                "justice": 0,
+                                "explicability": 0
+                              },
+                              {
+                                "text": "Ναι, και από τις δύο",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 1,
+                                "autonomy": 1,
+                                "justice": 0,
+                                "explicability": 1
                               }
                             ],
                             "showOtherItem": true,
                             "showNoneItem": true,
-                            "noneText": "No"
-                        },
-                        {
+                            "noneText": "Όχι"
+                          },
+                          {
                             "type": "radiogroup",
                             "name": "question334",
-                            "title": "Will the system require input data from Internet- or telephony-connected devices?",
+                            "title": "Θα απαιτεί το σύστημα δεδομένα εισόδου από συσκευές συνδεδεμένες στο διαδίκτυο ή στο τηλεφωνικό δίκτυο;",
                             "choices": [
-                                {
-                                    "text": "Yes, from IoT devices",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Yes, from sensors",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                  "text": "Yes, from both",
-                                  "value": "Item 3",
-                                  "beneficence": 0,
-                                  "non_maleficence": 0,
-                                  "autonomy": 0,
-                                  "justice": 0,
-                                  "explicability": 1
+                              {
+                                "text": "Ναι, από συσκευές IoT",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 1
+                              },
+                              {
+                                "text": "Ναι, από αισθητήρες",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 1
+                              },
+                              {
+                                "text": "Ναι, και από τα δύο",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 1
                               }
                             ],
                             "showNoneItem": true,
-                            "noneText": "No"
-                        },
-                        {
+                            "noneText": "Όχι"
+                          },
+                          {
                             "type": "comment",
                             "name": "question114",
-                            "title": "Name your data sources."
-                        }
+                            "title": "Κατονομάστε τις πηγές των δεδομένων σας."
+                          }
+                          
                     ]
                 },
                 {
                     "type": "panel",
-                    "name": "panel13",
-                    "title": "Privacy and Legality",
-                    "state": "expanded",
-                    "elements": [
-                        {
-                            "type": "boolean",
-                            "name": "question105",
-                            "title": "Is your system being trained, was it developed or is operated by using or processing personal data (including special categories of personal data)?",
-                            "beneficenceTrue": 0,
-                            "non_maleficenceTrue": 2,
-                            "autonomyTrue": 2,
-                            "justiceTrue": 0,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 0,
-                            "explicabilityFalse": 0
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question106",
-                            "title": "What is the highest security classification of the input data used by the system? ",
-                            "choices": [
-                                {
-                                    "text": "None",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Protected A",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Classified-Confidential",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Protected B-Protected C",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 3,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Secret-Top Secret",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 4,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question110",
-                            "title": "Rate the risks related to increased surveillance due to your data gathering process?",
-                            "choices": [
-                                {
-                                    "text": "High",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Moderate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Low",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question111",
-                            "title": "Explain your answer to the above question. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question125",
-                            "title": "Is the data anonymised or pseudonymised?",
-                            "choices": [
-                                {
-                                    "text": "Anonymised",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Pseudonymised",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Neither",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question107",
-                            "visibleIf": "{question125} = 'Item 1'",
-                            "title": "Which techniques are used for anonymisation?",
-                            "choices": [
-                                {
-                                    "text": "De-identification",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Field generalization",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Aggregation queries",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Differential privacy",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                              {
-                                  "text": "Federated learning/Secure aggregation",
-                                  "value": "Item 4",
-                                  "beneficence": 0,
-                                  "non_maleficence": 0,
-                                  "autonomy": -1,
-                                  "justice": 0,
-                                  "explicability": 0
-                              }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question108",
-                            "title": "Which techniques are used for pseudonymisation?",
-                            "choices": [
-                                {
-                                    "text": "Tokenization",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Hashing",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Encryption",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": -1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question129",
-                            "title": "Have the risks of re-identification been assessed?",
-                            "choices": [
-                                {
-                                    "text": "Yes, and they are low",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes and they are moderate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, and they are high",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, they haven't been assessed",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 3,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question131",
-                            "title": "Are all the variables considered for training the model necessary? ",
-                            "choices": [
-                                {
-                                    "text": "Yes, because the system would not work otherwise",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, because the system better/more accurate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, they are not strictly necessary",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 2,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question109",
-                            "title": "Does the system assume the use of special categories of personal data as defined in Article 9 of the GDPR?",
-                            "choices": [
-                                {
-                                    "text": "Racial or ethnic origin",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Political opinions",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Religious and philosophical beliefs",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Trade union membership",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Genetic data",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Biometric data",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Health data",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Sex life and sexual orientation",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showNoneItem": true
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question113",
-                            "title": "Does sensitive data meet one of the exceptions set out in Article 9 of the GDPR?",
-                            "choices": [
-                                {
-                                    "text": "Explicit consent",
-                                    "value": "Item 1",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Necessary for employment and social security purposes",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Protection of the vital interests of the data subject or of another natural person",
-                                    "value": "Item 3",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "In the course of legitimate activities by a foundation and similar bodies",
-                                    "value": "Item 4",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Related to personal data which are manifestly made public by the data subject",
-                                    "value": "Item 5",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Necessary for the establishment, exercise or defence of legal claims",
-                                    "value": "Item 6",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Necessary for reasons of substantial public interest, on the basis of union or Member State law",
-                                    "value": "Item 7",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Necessary for medicinal purposes or for the management of health systems and services",
-                                    "value": "Item 8",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Necessary for reasons of public interest in the area of public health",
-                                    "value": "Item 9",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Necessary for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes",
-                                    "value": "Item 10",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showNoneItem": true
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question156",
-                            "title": "Describe how the legal compliance with respect to data protection has been assessed."
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question151",
-                            "title": "Will the owners of the personal information used by the system have the right to withdraw consent ,the right to object and the right to be forgotten in the AI system? ",
-                            "choices": [
-                                {
-                                    "text": "Yes, at any time for any use case",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but only during specific timeframes and for specific use cases",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 4,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        }
+                        "name": "panel13",
+                        "title": "Απόρρητο και Νομιμότητα",
+                        "state": "expanded",
+                        "elements": [
+                            {
+                                "type": "boolean",
+                                "name": "question105",
+                                "title": "Το σύστημά σας εκπαιδεύεται, αναπτύχθηκε ή λειτουργεί χρησιμοποιώντας ή επεξεργαζόμενο προσωπικά δεδομένα (συμπεριλαμβανομένων ειδικών κατηγοριών προσωπικών δεδομένων);",
+                                "beneficenceTrue": 0,
+                                "non_maleficenceTrue": 2,
+                                "autonomyTrue": 2,
+                                "justiceTrue": 0,
+                                "explicabilityTrue": 0,
+                                "beneficenceFalse": 0,
+                                "non_maleficenceFalse": 0,
+                                "autonomyFalse": 0,
+                                "justiceFalse": 0,
+                                "explicabilityFalse": 0
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question106",
+                                "title": "Ποια είναι η υψηλότερη διαβάθμιση ασφαλείας των δεδομένων εισόδου που χρησιμοποιούνται από το σύστημα;",
+                                "choices": [
+                                    {
+                                        "text": "Καμία",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Προστατευμένο A",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Απόρρητο - Εμπιστευτικό",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 2,
+                                        "autonomy": 2,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Προστατευμένο B - Προστατευμένο C",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 3,
+                                        "autonomy": 3,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Απόρρητο - Άκρως Απόρρητο",
+                                        "value": "Item 5",
+                                        "beneficence": 0,
+                                        "non_maleficence": 4,
+                                        "autonomy": 4,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question110",
+                                "title": "Πώς αξιολογείτε τους κινδύνους που σχετίζονται με την αυξημένη επιτήρηση λόγω της διαδικασίας συλλογής δεδομένων σας;",
+                                "choices": [
+                                    {
+                                        "text": "Υψηλοί",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 2,
+                                        "autonomy": 2,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Μέτριοι",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Χαμηλοί",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "comment",
+                                "name": "question111",
+                                "title": "Εξηγήστε την απάντησή σας στην παραπάνω ερώτηση."
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question125",
+                                "title": "Είναι τα δεδομένα ανωνυμοποιημένα ή ψευδωνυμοποιημένα;",
+                                "choices": [
+                                    {
+                                        "text": "Ανωνυμοποιημένα",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ψευδωνυμοποιημένα",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ούτε το ένα ούτε το άλλο",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question107",
+                                "visibleIf": "{question125} = 'Item 1'",
+                                "title": "Ποιες τεχνικές χρησιμοποιούνται για την ανωνυμοποίηση;",
+                                "choices": [
+                                    {
+                                        "text": "Αποπροσωποποίηση",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Γενίκευση πεδίων",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Συγκεντρωτικά ερωτήματα",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Διαφορικό απόρρητο",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ομοσπονδιακή μάθηση/Ασφαλής συγκέντρωση",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ],
+                                "showOtherItem": true
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question108",
+                                "title": "Ποιες τεχνικές χρησιμοποιούνται για την ψευδωνυμοποίηση;",
+                                "choices": [
+                                    {
+                                        "text": "Tokenization (αντικατάσταση με σύμβολα)",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Hashing (κατακερματισμός)",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Encryption (κρυπτογράφηση)",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": -1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ],
+                                "showOtherItem": true
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question129",
+                                "title": "Έχουν αξιολογηθεί οι κίνδυνοι επαναπροσδιορισμού ταυτότητας;",
+                                "choices": [
+                                    {
+                                        "text": "Ναι, και είναι χαμηλοί",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ναι, και είναι μέτριοι",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ναι, και είναι υψηλοί",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 2,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Όχι, δεν έχουν αξιολογηθεί",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 3,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question131",
+                                "title": "Είναι όλες οι μεταβλητές που χρησιμοποιούνται για την εκπαίδευση του μοντέλου απαραίτητες;",
+                                "choices": [
+                                    {
+                                        "text": "Ναι, γιατί διαφορετικά το σύστημα δεν θα λειτουργούσε",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ναι, γιατί το σύστημα γίνεται καλύτερο/πιο ακριβές",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Όχι, δεν είναι αυστηρά απαραίτητες",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 2,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "checkbox",
+                                "name": "question109",
+                                "title": "Το σύστημα κάνει χρήση ειδικών κατηγοριών προσωπικών δεδομένων όπως ορίζονται στο Άρθρο 9 του GDPR;",
+                                "choices": [
+                                    {
+                                        "text": "Φυλετική ή εθνοτική καταγωγή",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Πολιτικές απόψεις",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Θρησκευτικές και φιλοσοφικές πεποιθήσεις",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Συμμετοχή σε συνδικαλιστικές οργανώσεις",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Γενετικά δεδομένα",
+                                        "value": "Item 5",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Βιομετρικά δεδομένα",
+                                        "value": "Item 6",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Δεδομένα υγείας",
+                                        "value": "Item 7",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Σεξουαλική ζωή και σεξουαλικός προσανατολισμός",
+                                        "value": "Item 8",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 1,
+                                        "explicability": 0
+                                    }
+                                ],
+                                "showNoneItem": true
+                            },
+                            {
+                                "type": "checkbox",
+                                "name": "question113",
+                                "title": "Καλύπτονται τα ευαίσθητα δεδομένα από κάποια από τις εξαιρέσεις του Άρθρου 9 του GDPR;",
+                                "choices": [
+                                    {
+                                        "text": "Ρητή συγκατάθεση",
+                                        "value": "Item 1",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Αναγκαία για σκοπούς απασχόλησης και κοινωνικής ασφάλισης",
+                                        "value": "Item 2",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Προστασία ζωτικών συμφερόντων του υποκειμένου ή άλλου φυσικού προσώπου",
+                                        "value": "Item 3",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Στα πλαίσια νόμιμων δραστηριοτήτων ιδρυμάτων ή αντίστοιχων φορέων",
+                                        "value": "Item 4",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Δημοσιευμένα από το ίδιο το υποκείμενο των δεδομένων",
+                                        "value": "Item 5",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Αναγκαία για νομικές αξιώσεις ή άμυνα",
+                                        "value": "Item 6",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Αναγκαία για σημαντικό δημόσιο συμφέρον βάσει ενωσιακού ή εθνικού δικαίου",
+                                        "value": "Item 7",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Αναγκαία για ιατρικούς σκοπούς ή διαχείριση συστημάτων υγείας",
+                                        "value": "Item 8",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Αναγκαία για δημόσια υγεία",
+                                        "value": "Item 9",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Αναγκαία για αρχειοθέτηση, επιστημονική/ιστορική έρευνα ή στατιστικούς σκοπούς",
+                                        "value": "Item 10",
+                                        "beneficence": -1,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ],
+                                "showNoneItem": true
+                            },
+                            {
+                                "type": "comment",
+                                "name": "question156",
+                                "title": "Περιγράψτε πώς αξιολογήθηκε η συμμόρφωση με τη νομοθεσία περί προστασίας δεδομένων."
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question151",
+                                "title": "Θα έχουν οι κάτοχοι των προσωπικών δεδομένων που χρησιμοποιούνται από το σύστημα το δικαίωμα ανάκλησης της συγκατάθεσης, το δικαίωμα εναντίωσης και το δικαίωμα στη λήθη στο σύστημα τεχνητής νοημοσύνης;",
+                                "choices": [
+                                    {
+                                        "text": "Ναι, οποιαδήποτε στιγμή και για οποιαδήποτε χρήση",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Ναι, αλλά μόνο σε συγκεκριμένα χρονικά διαστήματα και για συγκεκριμένες περιπτώσεις χρήσης",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 1,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Όχι",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 4,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            }
+                            
                     ]
                 },
                 {
                     "type": "panel",
                     "name": "panel12",
-                    "title": "Quality and Bias ",
+                    "title": "Ποιότητα και Προκατάληψη",
                     "state": "expanded",
                     "elements": [
                         {
                             "type": "radiogroup",
                             "name": "question115",
-                            "title": "Can the method of collecting data lead to bias?",
+                            "title": "Μπορεί η μέθοδος συλλογής δεδομένων να οδηγήσει σε προκατάληψη;",
                             "choices": [
                                 {
-                                    "text": "Yes, and we have identified specific biases (e.g., sampling bias, measurement bias)",
+                                    "text": "Ναι, και έχουμε εντοπίσει συγκεκριμένες προκαταλήψεις (π.χ. προκατάληψη δειγματοληψίας, προκατάληψη μέτρησης)",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4597,7 +4658,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Yes, but we are unsure of the specific biases",
+                                    "text": "Ναι, αλλά δεν είμαστε σίγουροι για τις συγκεκριμένες προκαταλήψεις",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4606,7 +4667,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No, we believe our data collection method is unbiased",
+                                    "text": "Όχι, πιστεύουμε ότι η μέθοδος συλλογής δεδομένων μας είναι αμερόληπτη",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4615,7 +4676,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "We have not assessed this",
+                                    "text": "Δεν το έχουμε αξιολογήσει",
                                     "value": "Item 4",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4629,15 +4690,15 @@ const json_questionnaire_gr = {
                             "type": "comment",
                             "name": "question118",
                             "visibleIf": "{question115} anyof ['Item 1', 'Item 2']",
-                            "title": "How did you combat this ?"
+                            "title": "Πώς το αντιμετωπίσατε;"
                         },
                         {
                             "type": "radiogroup",
                             "name": "question157",
-                            "title": "Did you analyse or annotate unstructured data (e.g., text, images, audio) for this system?",
+                            "title": "Αναλύσατε ή σχολιάσατε μη δομημένα δεδομένα (π.χ. κείμενο, εικόνες, ήχο) για αυτό το σύστημα;",
                             "choices": [
                                 {
-                                    "text": "Yes, and the annotation was done by trained professionals",
+                                    "text": "Ναι, και η σχολιασμός έγινε από εκπαιδευμένους επαγγελματίες",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": -1,
@@ -4646,7 +4707,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Yes, but the annotation was done by untrained individuals",
+                                    "text": "Ναι, αλλά η σχολιασμός έγινε από μη εκπαιδευμένα άτομα",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 1,
@@ -4655,7 +4716,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No, we did not analyse or annotate unstructured data",
+                                    "text": "Όχι, δεν αναλύσαμε ή σχολιάσαμε μη δομημένα δεδομένα",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 2,
@@ -4669,10 +4730,10 @@ const json_questionnaire_gr = {
                             "type": "radiogroup",
                             "name": "question124",
                             "visibleIf": "{question157} anyof ['Item 2', 'Item 1']",
-                            "title": "Is/was the quality of their work monitored?",
+                            "title": "Παρακολουθήθηκε/παρακολουθείται η ποιότητα της εργασίας τους;",
                             "choices": [
                                 {
-                                    "text": "Yes, through regular quality checks",
+                                    "text": "Ναι, μέσω τακτικών ελέγχων ποιότητας",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": -1,
@@ -4681,7 +4742,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Yes, but only occasionally",
+                                    "text": "Ναι, αλλά μόνο περιστασιακά",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 1,
@@ -4690,7 +4751,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No, their work is not monitored",
+                                    "text": "Όχι, η εργασία τους δεν παρακολουθείται",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 2,
@@ -4703,9 +4764,9 @@ const json_questionnaire_gr = {
                         {
                             "type": "boolean",
                             "name": "question112",
-                            "title": "Is the dataset dynamic (ie continuously fed with new data) or static (ie fixed and clearly defined) ?\n",
-                            "labelTrue": "Dynamic",
-                            "labelFalse": "Static",
+                            "title": "Είναι το σύνολο δεδομένων δυναμικό (δηλ. τροφοδοτείται συνεχώς με νέα δεδομένα) ή στατικό (δηλ. σταθερό και σαφώς ορισμένο);",
+                            "labelTrue": "Δυναμικό",
+                            "labelFalse": "Στατικό",
                             "beneficenceTrue": 0,
                             "non_maleficenceTrue": 0,
                             "autonomyTrue": 2,
@@ -4721,10 +4782,10 @@ const json_questionnaire_gr = {
                             "type": "radiogroup",
                             "name": "question152",
                             "visibleIf": "{question112} = true",
-                            "title": "If dynamic, what measures ensure the continuous quality of the data?",
+                            "title": "Αν είναι δυναμικό, ποια μέτρα διασφαλίζουν τη συνεχή ποιότητα των δεδομένων;",
                             "choices": [
                                 {
-                                    "text": "Automated data validation checks",
+                                    "text": "Αυτοματοποιημένοι έλεγχοι επικύρωσης δεδομένων",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4733,7 +4794,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Regular audits by data quality teams",
+                                    "text": "Τακτικοί έλεγχοι από ομάδες διασφάλισης ποιότητας δεδομένων",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4742,7 +4803,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Real-time anomaly detection systems",
+                                    "text": "Συστήματα ανίχνευσης ανωμαλιών σε πραγματικό χρόνο",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4751,7 +4812,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Manual review of incoming data",
+                                    "text": "Χειροκίνητος έλεγχος των εισερχόμενων δεδομένων",
                                     "value": "Item 4",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4760,24 +4821,24 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                  "text": "None",
-                                  "value": "Item 5",
-                                  "beneficence": 0,
-                                  "non_maleficence": 0,
-                                  "autonomy": 0,
-                                  "justice": 5,
-                                  "explicability": 0
-                              }
+                                    "text": "Κανένα",
+                                    "value": "Item 5",
+                                    "beneficence": 0,
+                                    "non_maleficence": 0,
+                                    "autonomy": 0,
+                                    "justice": 5,
+                                    "explicability": 0
+                                }
                             ],
                             "showOtherItem": true
                         },
                         {
                             "type": "radiogroup",
                             "name": "question119",
-                            "title": "Is the volume of data collected justified for the learning task?",
+                            "title": "Είναι ο όγκος των συλλεγόμενων δεδομένων δικαιολογημένος για την εκμάθηση του συστήματος;",
                             "choices": [
                                 {
-                                    "text": "Yes, we used the absolute minimum required for accuracy",
+                                    "text": "Ναι, χρησιμοποιήσαμε το ελάχιστο απαραίτητο για ακρίβεια",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4786,7 +4847,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Yes, we used a moderate amount",
+                                    "text": "Ναι, χρησιμοποιήσαμε μέτριο όγκο",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 1,
@@ -4795,7 +4856,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No, we used more data than necessary",
+                                    "text": "Όχι, χρησιμοποιήσαμε περισσότερα δεδομένα απ’ όσα ήταν απαραίτητα",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 2,
@@ -4804,7 +4865,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "We are unsure",
+                                    "text": "Δεν είμαστε σίγουροι",
                                     "value": "Item 4",
                                     "beneficence": 0,
                                     "non_maleficence": 3,
@@ -4817,10 +4878,10 @@ const json_questionnaire_gr = {
                         {
                             "type": "radiogroup",
                             "name": "question126",
-                            "title": "Are the data complete for the intended use case?",
+                            "title": "Είναι τα δεδομένα πλήρη για την προοριζόμενη χρήση;",
                             "choices": [
                                 {
-                                    "text": "Yes, all necessary data is present",
+                                    "text": "Ναι, όλα τα απαραίτητα δεδομένα υπάρχουν",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4829,7 +4890,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Partially, some data is missing but it does not significantly impact results",
+                                    "text": "Μερικώς, λείπουν κάποια δεδομένα αλλά δεν επηρεάζουν σημαντικά τα αποτελέσματα",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4838,7 +4899,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No, critical data is missing",
+                                    "text": "Όχι, λείπουν κρίσιμα δεδομένα",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4847,7 +4908,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "We are unsure",
+                                    "text": "Δεν είμαστε σίγουροι",
                                     "value": "Item 4",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4860,10 +4921,10 @@ const json_questionnaire_gr = {
                         {
                             "type": "radiogroup",
                             "name": "question127",
-                            "title": "Have you checked for uniqueness in the data?",
+                            "title": "Έχετε ελέγξει την μοναδικότητα των δεδομένων;",
                             "choices": [
                                 {
-                                    "text": "Yes, using automated tools (e.g., deduplication algorithms)",
+                                    "text": "Ναι, με χρήση αυτοματοποιημένων εργαλείων (π.χ. αλγόριθμοι αποδιπλοποίησης)",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4872,7 +4933,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Yes, through manual review",
+                                    "text": "Ναι, μέσω χειροκίνητου ελέγχου",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4881,7 +4942,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No",
+                                    "text": "Όχι",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4894,10 +4955,10 @@ const json_questionnaire_gr = {
                         {
                             "type": "radiogroup",
                             "name": "question128",
-                            "title": "Have you checked for accuracy in the data?",
+                            "title": "Έχετε ελέγξει την ακρίβεια των δεδομένων;",
                             "choices": [
                                 {
-                                    "text": "Yes, using automated validation tools",
+                                    "text": "Ναι, με τη χρήση αυτοματοποιημένων εργαλείων επικύρωσης",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4906,7 +4967,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Yes, through manual cross-referencing with reliable sources",
+                                    "text": "Ναι, μέσω χειροκίνητης διασταύρωσης με αξιόπιστες πηγές",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4915,7 +4976,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No",
+                                    "text": "Όχι",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4928,10 +4989,10 @@ const json_questionnaire_gr = {
                         {
                             "type": "radiogroup",
                             "name": "question132",
-                            "title": "Have you checked for timeliness and currency in the data?",
+                            "title": "Έχετε ελέγξει την επικαιρότητα και τη χρονική καταλληλότητα των δεδομένων;",
                             "choices": [
                                 {
-                                    "text": "Yes, we ensure data is up-to-date and relevant",
+                                    "text": "Ναι, διασφαλίζουμε ότι τα δεδομένα είναι επίκαιρα και σχετιζόμενα",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4940,7 +5001,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Partially, some data may be outdated",
+                                    "text": "Μερικώς, κάποια δεδομένα μπορεί να είναι παρωχημένα",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4949,7 +5010,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No",
+                                    "text": "Όχι",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4962,10 +5023,10 @@ const json_questionnaire_gr = {
                         {
                             "type": "radiogroup",
                             "name": "question145",
-                            "title": "Have you checked for consistency in the data?",
+                            "title": "Έχετε ελέγξει τη συνέπεια των δεδομένων;",
                             "choices": [
                                 {
-                                    "text": "Yes, using consistency checks (e.g., cross-field validation)",
+                                    "text": "Ναι, με χρήση ελέγχων συνέπειας (π.χ. διασταύρωση πεδίων)",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4974,7 +5035,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Partially, some inconsistencies remain",
+                                    "text": "Μερικώς, παραμένουν κάποιες ασυνέπειες",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4983,7 +5044,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No",
+                                    "text": "Όχι",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -4996,10 +5057,10 @@ const json_questionnaire_gr = {
                         {
                             "type": "radiogroup",
                             "name": "question146",
-                            "title": "Have you checked for relevance in the data?",
+                            "title": "Έχετε ελέγξει τη συνάφεια των δεδομένων;",
                             "choices": [
                                 {
-                                    "text": "Yes, all data is relevant to the task",
+                                    "text": "Ναι, όλα τα δεδομένα είναι σχετικά με την εργασία",
                                     "value": "Item 1",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -5008,7 +5069,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "Partially, some irrelevant data is included",
+                                    "text": "Μερικώς, υπάρχουν κάποια μη σχετικά δεδομένα",
                                     "value": "Item 2",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -5017,7 +5078,7 @@ const json_questionnaire_gr = {
                                     "explicability": 0
                                 },
                                 {
-                                    "text": "No",
+                                    "text": "Όχι",
                                     "value": "Item 3",
                                     "beneficence": 0,
                                     "non_maleficence": 0,
@@ -5028,4110 +5089,3342 @@ const json_questionnaire_gr = {
                             ]
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question147",
-                            "title": "Have you checked for representativeness in the data?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the data is representative of the real-world environment",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Partially, some groups or scenarios are underrepresented",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 2,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 5,
-                                    "explicability": 0
-                                }
-                            ]
+                          "type": "radiogroup",
+                          "name": "question147",
+                          "title": "Έχετε ελέγξει την αντιπροσωπευτικότητα των δεδομένων;",
+                          "choices": [
+                            {
+                              "text": "Ναι, τα δεδομένα είναι αντιπροσωπευτικά του πραγματικού περιβάλλοντος",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -1,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Μερικώς, ορισμένες ομάδες ή σενάρια υποεκπροσωπούνται",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 2,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Όχι",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 5,
+                              "explicability": 0
+                            }
+                          ]
                         },
                         {
-                            "type": "checkbox",
-                            "name": "question148",
-                            "visibleIf": "{question147} anyof ['Item 1', 'Item 2']",
-                            "title": "How did you ensure representativeness?",
-                            "choices": [
-                                {
-                                    "text": "Stratified sampling",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Oversampling underrepresented groups",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "External validation by domain experts",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true,
-                            "showNoneItem": true
+                          "type": "checkbox",
+                          "name": "question148",
+                          "visibleIf": "{question147} anyof ['Item 1', 'Item 2']",
+                          "title": "Πώς διασφαλίσατε την αντιπροσωπευτικότητα;",
+                          "choices": [
+                            {
+                              "text": "Δειγματοληψία κατά στρώματα",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -1,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Υπερεκπροσώπηση υποεκπροσωπούμενων ομάδων",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -1,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Εξωτερική επικύρωση από εμπειρογνώμονες",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -1,
+                              "explicability": 0
+                            }
+                          ],
+                          "showOtherItem": true,
+                          "showNoneItem": true
                         },
                         {
-                            "type": "checkbox",
-                            "name": "question122",
-                            "title": "Does the training data include data related to the particular characteristics of the individuals such as:",
-                            "choices": [
-                                {
-                                    "text": "sex",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "gender identity",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "race",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "colour",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "ethnic origin",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "social origin",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "genetic features",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "language",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "religion or belief",
-                                    "value": "Item 9",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "political or any other opinion",
-                                    "value": "Item 10",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "membership of a national minority",
-                                    "value": "Item 11",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "property",
-                                    "value": "Item 12",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "place of birth",
-                                    "value": "Item 13",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "disability",
-                                    "value": "Item 14",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "age",
-                                    "value": "Item 15",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "sexual orientation",
-                                    "value": "Item 16",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showNoneItem": true
+                          "type": "checkbox",
+                          "name": "question122",
+                          "title": "Περιλαμβάνουν τα δεδομένα εκπαίδευσης χαρακτηριστικά που σχετίζονται με:",
+                          "choices": [
+                            { "text": "φύλο", "value": "Item 1", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "ταυτότητα φύλου", "value": "Item 2", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "φυλή", "value": "Item 3", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "χρώμα", "value": "Item 4", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "εθνική καταγωγή", "value": "Item 5", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "κοινωνική προέλευση", "value": "Item 6", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "γενετικά χαρακτηριστικά", "value": "Item 7", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "γλώσσα", "value": "Item 8", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "θρησκεία ή πεποιθήσεις", "value": "Item 9", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "πολιτικές ή άλλες απόψεις", "value": "Item 10", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "συμμετοχή σε εθνική μειονότητα", "value": "Item 11", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "περιουσία", "value": "Item 12", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "τόπος γέννησης", "value": "Item 13", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "αναπηρία", "value": "Item 14", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "ηλικία", "value": "Item 15", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 },
+                            { "text": "σεξουαλικός προσανατολισμός", "value": "Item 16", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 1, "explicability": 0 }
+                          ],
+                          "showNoneItem": true
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question143",
-                            "visibleIf": "{question122} anyof ['Item 1', 'Item 2', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10', 'Item 11', 'Item 14', 'Item 13', 'Item 12', 'Item 15', 'Item 16', 'Item 3']",
-                            "title": "Has a study of the correlations between these particular characteristics and the rest of the training data been carried out to identify possible proxies?",
-                            "choices": [
-                                {
-                                    "text": "Yes, and we have mitigated their impact",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -5,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but no mitigation measures are in place",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -3,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 5,
-                                    "explicability": 0
-                                }
-                            ]
+                          "type": "radiogroup",
+                          "name": "question143",
+                          "visibleIf": "{question122} anyof ['Item 1', 'Item 2', 'Item 4', 'Item 5', 'Item 6', 'Item 7', 'Item 8', 'Item 9', 'Item 10', 'Item 11', 'Item 14', 'Item 13', 'Item 12', 'Item 15', 'Item 16', 'Item 3']",
+                          "title": "Έχει πραγματοποιηθεί μελέτη των συσχετίσεων μεταξύ αυτών των συγκεκριμένων χαρακτηριστικών και των υπόλοιπων δεδομένων εκπαίδευσης για τον εντοπισμό πιθανών δεικτών (proxies);",
+                          "choices": [
+                            {
+                              "text": "Ναι, και έχουμε μετριάσει τις επιπτώσεις τους",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -5,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Ναι, αλλά δεν έχουν ληφθεί μέτρα μετριασμού",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -3,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Όχι",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 5,
+                              "explicability": 0
+                            }
+                          ]
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question120",
-                            "title": "Has a discrimination/bias study been conducted for sensitive attributes?",
-                            "choices": [
-                                {
-                                    "text": "Yes, and bias was identified",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 2,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but no bias was identified",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 5,
-                                    "explicability": 0
-                                }
-                            ]
+                          "type": "radiogroup",
+                          "name": "question120",
+                          "title": "Έχει διεξαχθεί μελέτη διάκρισης/προκατάληψης για ευαίσθητα χαρακτηριστικά;",
+                          "choices": [
+                            {
+                              "text": "Ναι, και εντοπίστηκε προκατάληψη",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 2,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Ναι, αλλά δεν εντοπίστηκε προκατάληψη",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Όχι",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 5,
+                              "explicability": 0
+                            }
+                          ]
                         },
                         {
-                            "type": "comment",
-                            "name": "question144",
-                            "visibleIf": "{question120} anyof ['Item 2', 'Item 1']",
-                            "title": "Describe how the bias study has been carried out "
+                          "type": "comment",
+                          "name": "question144",
+                          "visibleIf": "{question120} anyof ['Item 2', 'Item 1']",
+                          "title": "Περιγράψτε πώς πραγματοποιήθηκε η μελέτη προκατάληψης"
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question121",
-                            "visibleIf": "{question120} anyof ['Item 1']",
-                            "title": "If bias was identified, what measures were taken to combat it?",
-                            "choices": [
-                                {
-                                    "text": "Rebalancing the dataset",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -2,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adjusting the model\u2019s weighting for sensitive attributes",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Using fairness-aware algorithms (e.g., adversarial debiasing)",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true,
-                            "showNoneItem": true
-                        }
+                          "type": "radiogroup",
+                          "name": "question121",
+                          "visibleIf": "{question120} anyof ['Item 1']",
+                          "title": "Εάν εντοπίστηκε προκατάληψη, ποια μέτρα ελήφθησαν για την αντιμετώπισή της;",
+                          "choices": [
+                            {
+                              "text": "Εξισορρόπηση του συνόλου δεδομένων",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -2,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Προσαρμογή της στάθμισης του μοντέλου για ευαίσθητα χαρακτηριστικά",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": -1,
+                              "explicability": 0
+                            },
+                            {
+                              "text": "Χρήση αλγορίθμων με επίγνωση δικαιοσύνης (π.χ. adversarial debiasing)",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                            }
+                          ],
+                          "showOtherItem": true,
+                          "showNoneItem": true
+                        }                        
                     ]
                 }
             ]
         },
         {
             "name": "page5",
-            "title": "Development Stage : Model ",
+            "title": "Στάσιο Υλοποίησης: Μοντέλο",
             "elements": [
                 {
                     "type": "panel",
                     "name": "panel14",
-                    "title": "Algorithm ",
+                    "title": "Αλγόριθμος",
                     "state": "expanded",
                     "elements": [
-                        {
-                            "type": "comment",
-                            "name": "question164",
-                            "title": "Describe in general, if possible in a non-technical manner, the technology/technologies you intend to use (This could include: (1) The date and the version of the system; (2) A description of hardware on which the system is intended to run; (3) Where the system is a component of products, photographs or illustrations showing external features, marking and internal layout of these products)"
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question167",
-                            "title": "Why was this algorithm chosen?"
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question168",
-                            "title": "How was it implemented (source code, libraries used, etc) ?"
-                        },
-                        {
-                            "type": "boolean",
-                            "name": "question186",
-                            "title": "Is the model based on some pre-existing similar model/tool/system?",
-                            "beneficenceTrue": 0,
-                            "non_maleficenceTrue": 0,
-                            "autonomyTrue": 0,
-                            "justiceTrue": 0,
-                            "explicabilityTrue": -2,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 0,
-                            "explicabilityFalse": 0
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question185",
-                            "visibleIf": "{question186} = true",
-                            "title": "If yes, describe the source of your model : "
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question169",
-                            "title": "We can divide the types of artificial intelligence based on the method used by intelligent agents to arrive at a solution. Check all that applies to your model:",
-                            "choices": [
-                                {
-                                    "text": "Search Method : Here the problem is represented by a set of states over which the intelligent agent performs a search.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Logic method : In this method, agents are designed that can form a cognitive representation of a complex world, use an inference process to derive new representations of that world, and use those new representations to decide what their next move will be.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Probabilistic Method : Here, unlike the previous two methods where decisions are based either on absolute knowledge of the conditions or on consideration of all possible scenarios in the face of uncertainty, probabilistic theories and laws are used so that agents convert uncertainty into degrees of belief on which to make decisions.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                },
-                                {
-                                    "text": "Machine Learning : Here we study how agents can improve their behavior through the diligent study of data and examples without explicit programming.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                },
-                                {
-                                    "text": "Physical environment interaction method : Here we consider how an agent can make inferences and act on them in the unfiltered real world.",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 3,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question170",
-                            "visibleIf": "{question169} allof ['Item 4']",
-                            "title": "If your model is using machine learning check all the methods that were used in its training :\n",
-                            "choices": [
-                                {
-                                    "text": "Supervised learning : Here the agent is trained on a tagged data set, i.e. each input data is accompanied by a corresponding output tag. The goal is for the agent to learn the mapping between inputs and outputs so that it can predict the output for new, unseen data.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Unsupervised learning : Here the data has no labels and it is the goal of the agent to extract some structure or pattern from the data and make inferences.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Reinforcement learning : Here learning is based on the agent's interaction with its environment. More specifically, the agent receives feedback in the form of rewards or penalties based on its actions and its goal is to discover a strategy that maximizes the cumulative reward over time.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question171",
-                            "visibleIf": "{question169} allof ['Item 5']",
-                            "title": "If your model is interacting with the physical environment check all that applies :",
-                            "choices": [
-                                {
-                                    "text": "Natural language processing : Here agents try to communicate in natural language with people and also learn by reading texts written in natural language.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Machine vision : Here agents are equipped with cameras and try to interpret visual information from their environment in order to recognize objects, make a decision or interact with their environment.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Robotics : Here agents are equipped with both sensors and physical action devices so that they can move and interact with the real world, making decisions based on their analyses of stimuli.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question173",
-                            "title": "What is the degree of automation of the system? ",
-                            "choices": [
-                                {
-                                    "text": "The system only makes recommendations to people already knowledgable in the field",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system makes recommendations to people who don't necessarily have the appropriate knowledge to contest them",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 1,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "The system makes decisions but has regular oversight from humans",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 2,
-                                    "justice": 2,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "The system makes decisions but in case of error or client complain a human can intervene and reverse the decision",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 3,
-                                    "justice": 3,
-                                    "explicability": 3
-                                },
-                                {
-                                    "text": "The system makes decisions and there are no human oversight that can reverse that",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 4,
-                                    "justice": 4,
-                                    "explicability": 4
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question165",
-                            "title": " How complicated is your model?",
-                            "choices": [
-                                {
-                                    "text": "Simple tasks, such as classification based on few features into a few categories with clear boundaries. For such decisions, humans could easily agree on the correct answer, and identify mistakes made by the system. For example, a natural language processing system that checks spelling in documents.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Moderately complex tasks, such as classification into a few categories that are subjective. Typically,ground truth is defined by most evaluators arriving at the same answer. For example, a natural language processing system that autocompletes a word or phrase as the user is typing.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Complex tasks, such as models based on many features, not easily interpretable by humans, resulting in highly variable predictions without clear boundaries between decision criteria. For such decisions, humans would have a difficult time agreeing on the best answer, and there may be no clearly incorrect answer. For example, a natural language processing system that generates prose based on user input prompts.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 4
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question172",
-                            "title": "What is your model used for ?",
-                            "choices": [
-                                {
-                                    "text": "Image and object recognition: Analyzing very large data sets to automate the recognition, classification, and context associated with an image or object.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Text and speech analysis: Analyzing large data sets to recognize, process, and tag text, speech, voice, and make recommendations based on the tagging",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Risk assessment: Analyzing very large data sets to identify patterns and recommend courses of action and in some cases trigger specific actions",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Content generation: Analyzing large data sets to categorize, process, triage, personalize, and serve specific content for specific contexts",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Process optimization and workflow automation: Analyzing large data sets to identify and anomalies, cluster patterns, predict outcomes or ways to optimize; and automate specific workflows",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                              ],
-                                "showOtherItem": true
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question166",
-                            "title": "How novel is your model?",
-                            "choices": [
-                                {
-                                    "text": "The system includes AI supported by basic research and has not yet been deployed to production systems at scale for similar uses.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "The system includes AI supported by evidence demonstrating feasibility for uses similar to this intended use in production systems.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "This is the first time that one or more system component(s) are to be validated in relevant environment(s) for the intended use. Operational conditions that can be supported have not yet been completely defined and evaluated.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "This is the first time the whole system will be validated in relevant environment(s) for the intended use. Operational conditions that can be supported will also be validated. Alternatively, nearly similar systems or nearly similar methods have been applied by other organizations with defined success.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                },
-                                {
-                                    "text": "The whole system has been deployed for all intended uses, and operational conditions have been qualified through testing and uses in production.",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 4
-                                }
-                            ]
-                        }
+                      {
+                        "type": "comment",
+                        "name": "question164",
+                        "title": "Περιγράψτε γενικά, ει δυνατόν με μη τεχνικό τρόπο, την τεχνολογία/τις τεχνολογίες που σκοπεύετε να χρησιμοποιήσετε (Αυτό θα μπορούσε να περιλαμβάνει: (1) Την ημερομηνία και την έκδοση του συστήματος· (2) Μια περιγραφή του υλικού στο οποίο προορίζεται να λειτουργήσει το σύστημα· (3) Όταν το σύστημα είναι συστατικό προϊόντων, φωτογραφίες ή εικόνες που δείχνουν εξωτερικά χαρακτηριστικά, σημάνσεις και εσωτερική διάταξη αυτών των προϊόντων)"
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question167",
+                        "title": "Γιατί επιλέχθηκε αυτός ο αλγόριθμος;"
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question168",
+                        "title": "Πώς υλοποιήθηκε (πηγαίος κώδικας, χρησιμοποιούμενες βιβλιοθήκες, κ.λπ.);"
+                      },
+                      {
+                        "type": "boolean",
+                        "name": "question186",
+                        "title": "Το μοντέλο βασίζεται σε κάποιο προϋπάρχον παρόμοιο μοντέλο/εργαλείο/σύστημα;",
+                        "beneficenceTrue": 0,
+                        "non_maleficenceTrue": 0,
+                        "autonomyTrue": 0,
+                        "justiceTrue": 0,
+                        "explicabilityTrue": -2,
+                        "beneficenceFalse": 0,
+                        "non_maleficenceFalse": 0,
+                        "autonomyFalse": 0,
+                        "justiceFalse": 0,
+                        "explicabilityFalse": 0
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question185",
+                        "visibleIf": "{question186} = true",
+                        "title": "Αν ναι, περιγράψτε την πηγή του μοντέλου σας:"
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "question169",
+                        "title": "Μπορούμε να διαχωρίσουμε τους τύπους τεχνητής νοημοσύνης με βάση τη μέθοδο που χρησιμοποιούν οι έξυπνοι πράκτορες για να φτάσουν σε μια λύση. Επιλέξτε όλα όσα ισχύουν για το μοντέλο σας:",
+                        "choices": [
+                          {
+                            "text": "Μέθοδος Αναζήτησης: Εδώ το πρόβλημα αναπαρίσταται από ένα σύνολο καταστάσεων πάνω στο οποίο ο έξυπνος πράκτορας εκτελεί αναζήτηση.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μέθοδος Λογικής: Σε αυτή τη μέθοδο, σχεδιάζονται πράκτορες που μπορούν να σχηματίσουν μια γνωσιακή αναπαράσταση ενός σύνθετου κόσμου, να χρησιμοποιήσουν μια διαδικασία εξαγωγής συμπερασμάτων για να παραγάγουν νέες αναπαραστάσεις και να αποφασίσουν τις ενέργειές τους με βάση αυτές.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Πιθανοκρατική Μέθοδος: Σε αντίθεση με τις δύο προηγούμενες μεθόδους, εδώ χρησιμοποιούνται θεωρίες και νόμοι πιθανοτήτων για να μετατρέψουν την αβεβαιότητα σε βαθμούς πεποίθησης πάνω στους οποίους βασίζονται οι αποφάσεις.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                          },
+                          {
+                            "text": "Μηχανική Μάθηση: Εδώ μελετάμε πώς οι πράκτορες μπορούν να βελτιώσουν τη συμπεριφορά τους μέσω της προσεκτικής μελέτης δεδομένων και παραδειγμάτων χωρίς ρητό προγραμματισμό.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                          },
+                          {
+                            "text": "Μέθοδος Αλληλεπίδρασης με το Φυσικό Περιβάλλον: Εξετάζουμε πώς ένας πράκτορας μπορεί να κάνει συμπεράσματα και να ενεργήσει πάνω σε αυτά στον ανεπεξέργαστο πραγματικό κόσμο.",
+                            "value": "Item 5",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 3,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ],
+                        "showOtherItem": true
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "question170",
+                        "visibleIf": "{question169} allof ['Item 4']",
+                        "title": "Αν το μοντέλο σας χρησιμοποιεί μηχανική μάθηση, επιλέξτε όλες τις μεθόδους που χρησιμοποιήθηκαν στην εκπαίδευσή του:",
+                        "choices": [
+                          {
+                            "text": "Επιβλεπόμενη μάθηση: Ο πράκτορας εκπαιδεύεται σε ένα επισημασμένο σύνολο δεδομένων, δηλ. κάθε είσοδος συνοδεύεται από την αντίστοιχη έξοδο.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μη επιβλεπόμενη μάθηση: Δεν υπάρχουν ετικέτες στα δεδομένα, και ο πράκτορας προσπαθεί να εξάγει δομές ή μοτίβα από αυτά.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 1,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Μάθηση μέσω ενίσχυσης: Η μάθηση βασίζεται στην αλληλεπίδραση του πράκτορα με το περιβάλλον του, λαμβάνοντας επιβραβεύσεις ή ποινές.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                          }
+                        ],
+                        "showOtherItem": true
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "question171",
+                        "visibleIf": "{question169} allof ['Item 5']",
+                        "title": "Αν το μοντέλο σας αλληλεπιδρά με το φυσικό περιβάλλον, επιλέξτε όλα όσα ισχύουν:",
+                        "choices": [
+                          {
+                            "text": "Επεξεργασία φυσικής γλώσσας: Οι πράκτορες προσπαθούν να επικοινωνούν και να μαθαίνουν μέσα από φυσική γλώσσα.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μηχανική όραση: Οι πράκτορες χρησιμοποιούν κάμερες για να κατανοήσουν και να αναγνωρίσουν οπτικά δεδομένα από το περιβάλλον.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ρομποτική: Οι πράκτορες διαθέτουν αισθητήρες και ενεργοποιητές για να κινούνται και να αλληλεπιδρούν φυσικά με το περιβάλλον.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ],
+                        "showOtherItem": true
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question173",
+                        "title": "Ποιος είναι ο βαθμός αυτοματοποίησης του συστήματος;",
+                        "choices": [
+                          {
+                            "text": "Το σύστημα κάνει μόνο προτάσεις σε άτομα με σχετική εξειδίκευση",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Το σύστημα κάνει προτάσεις σε άτομα που μπορεί να μην έχουν τις κατάλληλες γνώσεις για να τις αμφισβητήσουν",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 1,
+                            "justice": 1,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Το σύστημα παίρνει αποφάσεις αλλά υπόκειται σε τακτική ανθρώπινη εποπτεία",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 2,
+                            "justice": 2,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Το σύστημα παίρνει αποφάσεις, αλλά σε περίπτωση σφάλματος ή καταγγελίας, ένας άνθρωπος μπορεί να επέμβει και να τις ανατρέψει",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 3,
+                            "justice": 3,
+                            "explicability": 3
+                          },
+                          {
+                            "text": "Το σύστημα παίρνει αποφάσεις και δεν υπάρχει ανθρώπινη δυνατότητα ανατροπής",
+                            "value": "Item 5",
+                            "beneficence": 0,
+                            "non_maleficence": 4,
+                            "autonomy": 4,
+                            "justice": 4,
+                            "explicability": 4
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question165",
+                        "title": "Πόσο πολύπλοκο είναι το μοντέλο σας;",
+                        "choices": [
+                          {
+                            "text": "Απλές εργασίες, όπως ταξινόμηση βάσει λίγων χαρακτηριστικών με καθαρά όρια – π.χ., διόρθωση ορθογραφίας.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μετρίως πολύπλοκες εργασίες, όπως η υποκειμενική ταξινόμηση – π.χ., αυτόματη συμπλήρωση κειμένου.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Πολύπλοκες εργασίες, με πολλά χαρακτηριστικά, δύσκολα ερμηνεύσιμες, π.χ. δημιουργία κειμένου.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 4
+                          }
+                        ]
+                      },
+                      {
+                        "type": "checkbox",
+                        "name": "question172",
+                        "title": "Για ποιο σκοπό χρησιμοποιείται το μοντέλο σας;",
+                        "choices": [
+                          {
+                            "text": "Αναγνώριση εικόνων και αντικειμένων: Ανάλυση πολύ μεγάλων συνόλων δεδομένων για την αυτοματοποίηση της αναγνώρισης, ταξινόμησης και συσχέτισης περιεχομένου με εικόνες ή αντικείμενα.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ανάλυση κειμένου και ομιλίας: Ανάλυση μεγάλων συνόλων δεδομένων για την αναγνώριση, επεξεργασία και ετικετοποίηση κειμένου, φωνής και ομιλίας και τη δημιουργία προτάσεων βάσει της ετικετοποίησης.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Αξιολόγηση κινδύνου: Ανάλυση πολύ μεγάλων συνόλων δεδομένων για την αναγνώριση προτύπων και την πρόταση ενεργειών ή την πυροδότηση συγκεκριμένων ενεργειών.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Δημιουργία περιεχομένου: Ανάλυση μεγάλων συνόλων δεδομένων για την κατηγοριοποίηση, επεξεργασία, αξιολόγηση, εξατομίκευση και παροχή περιεχομένου ανάλογα με το πλαίσιο.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Βελτιστοποίηση διαδικασιών και αυτοματοποίηση ροής εργασιών: Ανάλυση δεδομένων για την ανίχνευση ανωμαλιών, εντοπισμό προτύπων, πρόβλεψη αποτελεσμάτων ή εντοπισμό τρόπων βελτιστοποίησης και αυτοματοποίησης ροών.",
+                            "value": "Item 5",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ],
+                        "showOtherItem": true
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question166",
+                        "title": "Πόσο καινοτόμο είναι το μοντέλο σας;",
+                        "choices": [
+                          {
+                            "text": "Το σύστημα περιλαμβάνει τεχνητή νοημοσύνη που βασίζεται σε βασική έρευνα και δεν έχει ακόμη αναπτυχθεί σε παραγωγικά συστήματα ευρείας κλίμακας για παρόμοιες χρήσεις.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Το σύστημα περιλαμβάνει τεχνητή νοημοσύνη που υποστηρίζεται από αποδείξεις σκοπιμότητας για παρόμοιες χρήσεις σε παραγωγικά περιβάλλοντα.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Είναι η πρώτη φορά που ένα ή περισσότερα συστατικά του συστήματος θα επικυρωθούν σε σχετικά περιβάλλοντα για τη συγκεκριμένη χρήση. Οι επιχειρησιακές συνθήκες δεν έχουν ακόμα πλήρως οριστεί ή αξιολογηθεί.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Είναι η πρώτη φορά που θα επικυρωθεί ολόκληρο το σύστημα σε σχετικά περιβάλλοντα για τη συγκεκριμένη χρήση. Οι επιχειρησιακές συνθήκες θα επικυρωθούν επίσης. Εναλλακτικά, παρόμοια συστήματα ή μέθοδοι έχουν εφαρμοστεί επιτυχώς από άλλους οργανισμούς.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                          },
+                          {
+                            "text": "Το σύστημα έχει ήδη αναπτυχθεί πλήρως για όλες τις προβλεπόμενες χρήσεις και έχει δοκιμαστεί σε παραγωγικές συνθήκες.",
+                            "value": "Item 5",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 4
+                          }
+                        ]
+                      }                      
                     ]
                 },
                 {
-                    "type": "panel",
-                    "name": "panel16",
-                    "title": "Fairness",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "panel16",
+                  "title": "Δικαιοσύνη",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question182",
+                      "title": "Ποιους τύπους δικαιοσύνης/μετρικών δικαιοσύνης έχετε εφαρμόσει;",
+                      "choices": [
                         {
-                            "type": "checkbox",
-                            "name": "question182",
-                            "title": "Which types of fairness/fairness metrics have you implemented ",
-                            "choices": [
-                                {
-                                    "text": "Individual fairness : Every individual should be treated like their peers regardless of their identity or the categories to which he or she belongs.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Group fairness : The system should produce equal or equivalent results for two different categories if they are summarised in a statistic.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fairness through unawareness : Under this approach it is considered legitimate for the algorithm to ignore sensitive characteristics (e.g. race, gender, ethnicity) when making decisions, thus assuming that fairness is achieved if these characteristics are not explicitly used in the decision making process. Of course, this approach has many critics as artificial algorithms can guess latent characteristics based on the rest thus continuing the bias (e.g. if the algorithm ends up being biased based on postcode this result may hide racial bias behind as people of the same race/ethnicity tend to live in nearby neighbourhoods)",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Equal outcome : Equal outcome justice or demographic equity is a group justice approach to decision-making systems that ensures that outcomes are distributed equally across different demographic groups separated by sensitive characteristics such as gender or ethnicity.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Equal opportunity : Ensures equal opportunities for people from different groups to succeed, but only between people with similar qualifications.",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Equal impact : Algorithmic decision making is done in a way that tries to ensure that the impact of a decision is distributed equally across different demographic groups.",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Statistical parity/Demographic parity: Ensures that individuals from different groups have the same probability of receiving a positive outcome.",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Equality of odds: Requires that the true positive rate and false positive rate are the same for different groups.",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Predictive parity :Ensures that the predicted positive outcome has the same precision across different groups.",
-                                    "value": "Item 9",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Treatment equality: Focuses on balancing the ratio of false positive rate to false negative rate across different groups.",
-                                    "value": "Item 10",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Intersectional fairness: Regardless of the combination of protected attributes, the probabilities of the outcomes will be similar. For example, the probability of being given a loan would be similar regardless of a protected group\u2019s intersecting combination of gender, race, and nationality.",
-                                    "value": "Item 11",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -2,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
+                          "text": "Ατομική δικαιοσύνη: Κάθε άτομο πρέπει να αντιμετωπίζεται όπως οι όμοιοί του, ανεξάρτητα από την ταυτότητά του ή τις κατηγορίες στις οποίες ανήκει.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
                         },
                         {
-                            "type": "comment",
-                            "name": "question183",
-                            "title": "Explain why did you choose that type of fairness/fairness metric."
+                          "text": "Ομαδική δικαιοσύνη: Το σύστημα θα πρέπει να παράγει ίσα ή ισοδύναμα αποτελέσματα για δύο διαφορετικές κατηγορίες, όταν αυτά συνοψίζονται σε μια στατιστική.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
                         },
                         {
-                            "type": "checkbox",
-                            "name": "question184",
-                            "title": "Which of these tools have you used?",
-                            "choices": [
-                                {
-                                    "text": "Fairlearn : Open-source Python library developed by Microsoft. It provides tools for assessing and mitigating unfairness in machine learning models. Fairlearn offers both fairness metrics and algorithms for reducing different types of biases. It also includes visualization tools to help interpret fairness metrics and mitigation results.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "AIF360 (AI Fairness 360) : A comprehensive toolkit from IBM designed to help you detect and mitigate bias in machine learning models. It includes a wide range of fairness metrics and bias mitigation algorithms, making it a great all-in-one solution.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fairness Indicators : A library developed by Google to assess the fairness of machine learning models. It provides tools for evaluating fairness metrics and visualizing disparities across different demographic groups. It works seamlessly with TensorFlow Extended and TensorFlow Model Analysis.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "FairComp : An open-source library for comparing different fairness interventions and metrics. It provides a standardized framework for evaluating the trade-offs between fairness and accuracy. It also enables benchmarking of models against various fairness metrics.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fairness Measures : Offers a collection of simple, easy-to-use tools to assess fairness issues. It\u2019s not as broad as some other libraries, but if you need a straightforward way to calculate fairness metrics like disparate impact or equal opportunity, this tool will get the job done.",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "FairTest : A testing toolkit designed to help you find discrimination in predictive models. It works by automatically scanning your model\u2019s outputs for signs of unfair treatment across different groups. It can help you find where problems lie.",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "FairML : Focuses on understanding how fairness issues affect your model\u2019s predictions. It helps you identify which variables might be contributing to biased outcomes. If you\u2019re looking to figure out where bias is sneaking in, FairML offers solid insights.",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Aequitas : Afairness auditing tool that helps you evaluate the impact of your machine learning models on different demographic groups. It provides reports on how fair your model\u2019s decisions are, making it easier for you to spot where bias is creeping in.",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Themis : A fairness testing library that focuses on individual fairness\u2014ensuring that similar individuals receive similar outcomes from your AI system. It\u2019s especially useful when you want to make sure your model treats people equitably at an individual level.",
-                                    "value": "Item 9",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Themis-ML : An extension of Themis, built specifically for machine learning models. It includes fairness measures and bias mitigation strategies tailored to common ML workflows. If you\u2019re using machine learning and need more granular fairness controls, this tool is for you.",
-                                    "value": "Item 10",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fairness Comparison: A benchmarking tool that allows you to compare different fairness metrics across models. It\u2019s a handy way to see how various models stack up in terms of bias and fairness before deciding which one to deploy.",
-                                    "value": "Item 11",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": -1,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
+                          "text": "Δικαιοσύνη μέσω αγνοίας: Σε αυτήν την προσέγγιση θεωρείται νόμιμο ο αλγόριθμος να αγνοεί ευαίσθητα χαρακτηριστικά (π.χ. φυλή, φύλο, εθνικότητα) κατά τη λήψη αποφάσεων, υποθέτοντας έτσι ότι η δικαιοσύνη επιτυγχάνεται εφόσον αυτά δεν χρησιμοποιούνται ρητά. Ωστόσο, αυτό επικρίνεται, καθώς οι αλγόριθμοι μπορούν να συναγάγουν κρυφά χαρακτηριστικά (π.χ. μέσω ταχυδρομικού κώδικα που συνδέεται με φυλή).",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
                         },
                         {
-                            "type": "boolean",
-                            "name": "question159",
-                            "title": "If the system has an interface with the public, did you assess whether that interface reflects the variety of digital literacy and its usability by those with special needs or disabilities or those at risk of exclusion?\n",
-                            "beneficenceTrue": 0,
-                            "non_maleficenceTrue": 0,
-                            "autonomyTrue": 0,
-                            "justiceTrue": -2,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 2,
-                            "explicabilityFalse": 0
+                          "text": "Ισότητα αποτελέσματος: Εξασφαλίζει ότι τα αποτελέσματα διανέμονται εξίσου σε διαφορετικές δημογραφικές ομάδες, βασιζόμενο σε ευαίσθητα χαρακτηριστικά όπως το φύλο ή η εθνικότητα.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
                         },
                         {
-                            "type": "boolean",
-                            "name": "question160",
-                            "visibleIf": "{question159} = true",
-                            "title": "if yes, did you involve or consult with persons concerned in need of assistive technology during the design and development stages or the system?",
-                            "beneficenceTrue": 0,
-                            "non_maleficenceTrue": 0,
-                            "autonomyTrue": 0,
-                            "justiceTrue": -2,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 2,
-                            "explicabilityFalse": 0
+                          "text": "Ισότητα ευκαιριών: Εξασφαλίζει ίσες ευκαιρίες για επιτυχία μεταξύ ατόμων από διαφορετικές ομάδες, εφόσον έχουν παρόμοια προσόντα.",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ισότητα αντίκτυπου: Οι αποφάσεις των αλγορίθμων λαμβάνονται με τρόπο που προσπαθεί να κατανείμει τον αντίκτυπο εξίσου μεταξύ διαφορετικών δημογραφικών ομάδων.",
+                          "value": "Item 6",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Στατιστική ισότητα/Δημογραφική ισότητα: Εξασφαλίζει ότι τα άτομα από διαφορετικές ομάδες έχουν την ίδια πιθανότητα να λάβουν θετική απόφαση.",
+                          "value": "Item 7",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ισότητα πιθανοτήτων: Απαιτεί ίσο ποσοστό θετικών και ψευδώς θετικών αποτελεσμάτων για διαφορετικές ομάδες.",
+                          "value": "Item 8",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ισοδυναμία προβλέψεων: Εξασφαλίζει ότι η ακρίβεια των προβλεπόμενων θετικών αποτελεσμάτων είναι ίδια σε διαφορετικές ομάδες.",
+                          "value": "Item 9",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ισότητα μεταχείρισης: Εστιάζει στην εξισορρόπηση της αναλογίας μεταξύ ψευδώς θετικών και ψευδώς αρνητικών αποτελεσμάτων σε διαφορετικές ομάδες.",
+                          "value": "Item 10",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Διατομεακή δικαιοσύνη: Ανεξάρτητα από τον συνδυασμό προστατευόμενων χαρακτηριστικών, οι πιθανότητες των αποτελεσμάτων παραμένουν παρόμοιες. Π.χ., η πιθανότητα να εγκριθεί ένα δάνειο δεν διαφέρει σημαντικά με βάση συνδυασμούς φύλου, φυλής και εθνικότητας.",
+                          "value": "Item 11",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -2,
+                          "explicability": 0
                         }
-                    ]
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question183",
+                      "title": "Εξηγήστε γιατί επιλέξατε αυτόν τον τύπο δικαιοσύνης/μετρική δικαιοσύνης."
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question184",
+                      "title": "Ποια από τα παρακάτω εργαλεία έχετε χρησιμοποιήσει;",
+                      "choices": [
+                        {
+                          "text": "Fairlearn: Βιβλιοθήκη Python ανοιχτού κώδικα από τη Microsoft για την αξιολόγηση και μείωση προκαταλήψεων σε μοντέλα μηχανικής μάθησης.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "AIF360 (AI Fairness 360): Εργαλειοθήκη της IBM για τον εντοπισμό και τη μείωση προκατάληψης σε μοντέλα μηχανικής μάθησης.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Fairness Indicators: Εργαλείο της Google για την αξιολόγηση της δικαιοσύνης με ενσωμάτωση στο TensorFlow.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "FairComp: Βιβλιοθήκη σύγκρισης παρεμβάσεων και μετρικών δικαιοσύνης.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Fairness Measures: Απλά εργαλεία για τη μέτρηση μετρικών όπως disparate impact ή equal opportunity.",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "FairTest: Εργαλείο που εντοπίζει διακρίσεις στα αποτελέσματα μοντέλων πρόβλεψης.",
+                          "value": "Item 6",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "FairML: Βοηθά στον εντοπισμό μεταβλητών που συνεισφέρουν σε προκατειλημμένα αποτελέσματα.",
+                          "value": "Item 7",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Aequitas: Εργαλείο ελέγχου δικαιοσύνης για εκτίμηση επιπτώσεων μοντέλων σε διαφορετικές ομάδες.",
+                          "value": "Item 8",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Themis: Βιβλιοθήκη για ελέγχους ατομικής δικαιοσύνης.",
+                          "value": "Item 9",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Themis-ML: Προέκταση του Themis ειδικά για μοντέλα μηχανικής μάθησης.",
+                          "value": "Item 10",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Fairness Comparison: Εργαλείο σύγκρισης διαφορετικών μετρικών δικαιοσύνης μεταξύ μοντέλων.",
+                          "value": "Item 11",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": -1,
+                          "explicability": 0
+                        }
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "question159",
+                      "title": "Εάν το σύστημα διαθέτει διεπαφή με το κοινό, αξιολογήσατε εάν αυτή αντανακλά την ποικιλομορφία ψηφιακού αλφαβητισμού και είναι προσβάσιμη σε άτομα με ειδικές ανάγκες ή σε κίνδυνο κοινωνικού αποκλεισμού;",
+                      "beneficenceTrue": 0,
+                      "non_maleficenceTrue": 0,
+                      "autonomyTrue": 0,
+                      "justiceTrue": -2,
+                      "explicabilityTrue": 0,
+                      "beneficenceFalse": 0,
+                      "non_maleficenceFalse": 0,
+                      "autonomyFalse": 0,
+                      "justiceFalse": 2,
+                      "explicabilityFalse": 0
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "question160",
+                      "visibleIf": "{question159} = true",
+                      "title": "Εάν ναι, συμβουλευτήκατε άτομα που χρειάζονται τεχνολογία υποβοήθησης κατά τον σχεδιασμό ή την ανάπτυξη του συστήματος;",
+                      "beneficenceTrue": 0,
+                      "non_maleficenceTrue": 0,
+                      "autonomyTrue": 0,
+                      "justiceTrue": -2,
+                      "explicabilityTrue": 0,
+                      "beneficenceFalse": 0,
+                      "non_maleficenceFalse": 0,
+                      "autonomyFalse": 0,
+                      "justiceFalse": 2,
+                      "explicabilityFalse": 0
+                    }
+                  ]
                 },
                 {
-                    "type": "panel",
-                    "name": "panel15",
-                    "title": "Explainability and Transparency",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "panel15",
+                  "title": "Επεξηγησιμότητα και Διαφάνεια",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "radiogroup",
+                      "name": "question174",
+                      "title": "Θα είναι ο αλγόριθμος διαθέσιμος ως ανοιχτός κώδικας;",
+                      "choices": [
                         {
-                            "type": "radiogroup",
-                            "name": "question174",
-                            "title": "Will the algorithm be available as open source?",
-                            "choices": [
-                                {
-                                    "text": "No",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 4
-                                },
-                                {
-                                    "text": "No, but other information about the algorithm (like system objectives, operating rules etc) will be available",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                  "text": "Yes",
-                                  "value": "Item 3",
-                                  "beneficence": 0,
-                                  "non_maleficence": 0,
-                                  "autonomy": 0,
-                                  "justice": 0,
-                                  "explicability": -2
-                              }
-                            ]
+                          "text": "Όχι",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 4
                         },
                         {
-                            "type": "boolean",
-                            "name": "question175",
-                            "title": "Will the algorithm be a trade secret?",
-                            "beneficenceTrue": 0,
-                            "non_maleficenceTrue": 0,
-                            "autonomyTrue": 0,
-                            "justiceTrue": 2,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 0,
-                            "explicabilityFalse": 0
+                          "text": "Όχι, αλλά άλλες πληροφορίες για τον αλγόριθμο (όπως στόχοι συστήματος, κανόνες λειτουργίας κ.λπ.) θα είναι διαθέσιμες",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question176",
-                            "title": "Does the model provide explainations for its reasoning? ",
-                            "choices": [
-                                {
-                                    "text": "Yes. It provides explanation to all the stakeholders (if its a loan application decision it provides explanation both to people whose loan got rejected/accepted and to the bank)",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "Yes. It provides explanation only part of the stakeholders (either only the clients or only the bank)",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "It doesn't provide any explanation",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 5
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question177",
-                            "title": "Does the model changes the specificity of the explanation according to the knowledge level of the recipient ?",
-                            "choices": [
-                                {
-                                    "text": "The system provides brief explanations appropriate to be read by people who are not technologically literate and have no specified knowledge of the field the system makes decisions for)",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "The system provides brief explanations appropriate to be read by people have no specified knowledge of the field the system makes decisions for but have basic understanding of what an artificial intelligence is.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "The system provides explanations for people knowledgable in the field the system makes decisions in.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "The systems provides explanation appropriate for its developers",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question178",
-                            "title": "Have the above  groups (general audiences, experts in the field, developers) been consulted/surveyed in the process of making the explanations the systems gives better",
-                            "choices": [
-                                {
-                                    "text": "We have tested the expandability of our model with experts in the field",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "No we have tested the expandability of our model with developers",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "We have tested the expandability of our model with general audiences",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question263",
-                            "title": "Do you provide any type of training / information about the system to the end users ?",
-                            "choices": [
-                                {
-                                    "text": "No, we don't provide that type of training",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 4
-                                },
-                                {
-                                    "text": "Yes, but its optional whether the end user will engage with the training or not",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Yes and its mandatory",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question179",
-                            "title": "Does the model know its limits?",
-                            "choices": [
-                                {
-                                    "text": "It can recognise when a prompt/task cannot be decided by its current expertise level",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "It can recognise when a prompt/task can be partially decided by its current expertise level",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                }
-                            ],
-                            "showNoneItem": true,
-                            "noneText": "It cannot do such thing"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question180",
-                            "title": "What's the degree of interaction level between the person that's receiving the explanation and the model?\n",
-                            "choices": [
-                                {
-                                    "text": "Declarative explanation : Here the systems provides an explanation, and there is no further interaction",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "One-way interaction : For this the explanation is determined based on a query or question input to the system",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "Two-way interaction : This models a conversation between people. The person can probe further, and the machine can probe back, ask clarifying questions, or provide new avenues of exploration.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -4
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question181",
-                            "title": "The explanation comes in the following formats :",
-                            "choices": [
-                                {
-                                    "text": "Graphical/ Visual",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "Verbal (Written or auditory)",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "Visual and auditory alerts (eg siren system )",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                }
-                            ]
+                          "text": "Ναι",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
                         }
-                    ]
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "question175",
+                      "title": "Ο αλγόριθμος θα θεωρείται εμπορικό απόρρητο;",
+                      "beneficenceTrue": 0,
+                      "non_maleficenceTrue": 0,
+                      "autonomyTrue": 0,
+                      "justiceTrue": 2,
+                      "explicabilityTrue": 0,
+                      "beneficenceFalse": 0,
+                      "non_maleficenceFalse": 0,
+                      "autonomyFalse": 0,
+                      "justiceFalse": 0,
+                      "explicabilityFalse": 0
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question176",
+                      "title": "Παρέχει το μοντέλο εξηγήσεις για τη συλλογιστική του;",
+                      "choices": [
+                        {
+                          "text": "Ναι. Παρέχει εξηγήσεις σε όλα τα ενδιαφερόμενα μέρη (π.χ. σε περίπτωση απόφασης για χορήγηση δανείου παρέχει εξήγηση τόσο στους απορριφθέντες/εγκριθέντες όσο και στην τράπεζα)",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Ναι. Παρέχει εξηγήσεις μόνο σε ορισμένα ενδιαφερόμενα μέρη (είτε μόνο στους πελάτες είτε μόνο στην τράπεζα)",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Δεν παρέχει καμία εξήγηση",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 5
+                        }
+                      ]
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question177",
+                      "title": "Το μοντέλο προσαρμόζει την εξειδίκευση της εξήγησης ανάλογα με το επίπεδο γνώσεων του αποδέκτη;",
+                      "choices": [
+                        {
+                          "text": "Το σύστημα παρέχει σύντομες εξηγήσεις κατάλληλες για άτομα χωρίς τεχνολογικό υπόβαθρο και χωρίς ειδικές γνώσεις στον τομέα",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Το σύστημα παρέχει σύντομες εξηγήσεις κατάλληλες για άτομα χωρίς γνώσεις στον τομέα αλλά με βασική κατανόηση του τι είναι η τεχνητή νοημοσύνη",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Το σύστημα παρέχει εξηγήσεις σε άτομα με γνώσεις στον τομέα εφαρμογής του συστήματος",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Το σύστημα παρέχει εξηγήσεις κατάλληλες για τους ίδιους τους προγραμματιστές του",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question178",
+                      "title": "Έγινε διαβούλευση/έρευνα με τις παραπάνω ομάδες (γενικό κοινό, ειδικούς, προγραμματιστές) για τη βελτίωση των εξηγήσεων του συστήματος;",
+                      "choices": [
+                        {
+                          "text": "Δοκιμάσαμε την επεξηγησιμότητα του μοντέλου μας με ειδικούς του πεδίου",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Όχι, δοκιμάσαμε την επεξηγησιμότητα του μοντέλου μόνο με προγραμματιστές",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Δοκιμάσαμε την επεξηγησιμότητα του μοντέλου μας με γενικό κοινό",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        }
+                      ]
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question263",
+                      "title": "Παρέχετε οποιουδήποτε είδους εκπαίδευση / πληροφόρηση για το σύστημα στους τελικούς χρήστες;",
+                      "choices": [
+                        {
+                          "text": "Όχι, δεν παρέχουμε αυτού του είδους εκπαίδευση",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 4
+                        },
+                        {
+                          "text": "Ναι, αλλά είναι προαιρετικό για τον τελικό χρήστη να την παρακολουθήσει",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
+                        },
+                        {
+                          "text": "Ναι, και είναι υποχρεωτική",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        }
+                      ]
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question179",
+                      "title": "Το μοντέλο γνωρίζει τα όριά του;",
+                      "choices": [
+                        {
+                          "text": "Μπορεί να αναγνωρίσει πότε ένα αίτημα/έργο δεν μπορεί να αντιμετωπιστεί με βάση το τρέχον επίπεδο γνώσης του",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Μπορεί να αναγνωρίσει πότε ένα αίτημα/έργο μπορεί να καλυφθεί μερικώς με βάση το επίπεδο γνώσης του",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        }
+                      ],
+                      "showNoneItem": true,
+                      "noneText": "Δεν μπορεί να κάνει κάτι τέτοιο"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question180",
+                      "title": "Ποιος είναι ο βαθμός αλληλεπίδρασης ανάμεσα στο άτομο που λαμβάνει την εξήγηση και το μοντέλο;",
+                      "choices": [
+                        {
+                          "text": "Δηλωτική εξήγηση: Το σύστημα παρέχει μια εξήγηση και δεν υπάρχει περαιτέρω αλληλεπίδραση",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Μονόδρομη αλληλεπίδραση: Η εξήγηση καθορίζεται με βάση ερώτηση ή αίτημα στο σύστημα",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Αμφίδρομη αλληλεπίδραση: Προσομοιάζει συνομιλία. Το άτομο μπορεί να εμβαθύνει και το σύστημα να ανταποκριθεί ή να ζητήσει διευκρινίσεις.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -4
+                        }
+                      ]
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question181",
+                      "title": "Η εξήγηση παρέχεται στις ακόλουθες μορφές:",
+                      "choices": [
+                        {
+                          "text": "Γραφικά/Οπτικά",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Λεκτικά (γραπτά ή ακουστικά)",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Οπτικές και ακουστικές ειδοποιήσεις (π.χ. σύστημα σειρήνας)",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
-                    "type": "panel",
-                    "name": "panel23",
-                    "title": "Traceability ",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "panel23",
+                  "title": "Ιχνηλασιμότητα",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "radiogroup",
+                      "name": "question262",
+                      "title": "Θα διατηρείτε αρχείο καταγραφής με όλες τις αλλαγές που έγιναν στο μοντέλο και στο σύστημα;",
+                      "choices": [
                         {
-                            "type": "radiogroup",
-                            "name": "question262",
-                            "title": "Will you maintain a log detailing all of the changes made to the model of and the system ?",
-                            "choices": [
-                                {
-                                    "text": "No",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 5
-                                },
-                                {
-                                    "text": "To some extent - Only for a brief period of time",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Yes",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
+                          "text": "Όχι",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 5
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question257",
-                            "title": "Can you trace back which data was used by the AI system to make a certain decision or recommendation? ",
-                            "choices": [
-                                {
-                                    "text": "No",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 5
-                                },
-                                {
-                                    "text": "To some extent - Only for a brief period of time",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Yes",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
+                          "text": "Μερικώς - Μόνο για σύντομο χρονικό διάστημα",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question258",
-                            "title": "Can you trace back which AI model, version or rules led to the decision(s) or recommendation(s) of the AI system?  ",
-                            "choices": [
-                                {
-                                    "text": "No",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 5
-                                },
-                                {
-                                    "text": "To some extent - Only for a brief period of time",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Yes",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question259",
-                            "title": "Did you put adequate logging practices in place to record the decision(s) or recommendation(s) of the AI system? ",
-                            "choices": [
-                                {
-                                    "text": "No",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 5
-                                },
-                                {
-                                    "text": "To some extent - Only for a brief period of time",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "Yes",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question260",
-                            "visibleIf": "{question259} anyof ['Item 2', 'Item 3']",
-                            "title": "Describe this practices :"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question261",
-                            "title": "Based on your previous answers how would you rate the traceability of your system?",
-                            "choices": [
-                                {
-                                    "text": "Non existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 5
-                                },
-                                {
-                                    "text": "Completely Inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": -3
-                                }
-                            ]
+                          "text": "Ναι",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         }
-                    ]
+                      ]
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question257",
+                      "title": "Μπορείτε να ανιχνεύσετε ποια δεδομένα χρησιμοποιήθηκαν από το σύστημα τεχνητής νοημοσύνης για να ληφθεί μια συγκεκριμένη απόφαση ή σύσταση;",
+                      "choices": [
+                        {
+                          "text": "Όχι",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 5
+                        },
+                        {
+                          "text": "Μερικώς - Μόνο για σύντομο χρονικό διάστημα",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
+                        },
+                        {
+                          "text": "Ναι",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question258",
+                      "title": "Μπορείτε να εντοπίσετε ποιο μοντέλο AI, ποια έκδοση ή ποιες κανόνες οδήγησαν στη λήψη απόφασης ή σύστασης από το σύστημα;",
+                      "choices": [
+                        {
+                          "text": "Όχι",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 5
+                        },
+                        {
+                          "text": "Μερικώς - Μόνο για σύντομο χρονικό διάστημα",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
+                        },
+                        {
+                          "text": "Ναι",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question259",
+                      "title": "Έχετε εφαρμόσει επαρκείς πρακτικές καταγραφής για την τεκμηρίωση των αποφάσεων ή συστάσεων του συστήματος τεχνητής νοημοσύνης;",
+                      "choices": [
+                        {
+                          "text": "Όχι",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 5
+                        },
+                        {
+                          "text": "Μερικώς - Μόνο για σύντομο χρονικό διάστημα",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
+                        },
+                        {
+                          "text": "Ναι",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question260",
+                      "visibleIf": "{question259} anyof ['Item 2', 'Item 3']",
+                      "title": "Περιγράψτε αυτές τις πρακτικές:"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question261",
+                      "title": "Με βάση τις προηγούμενες απαντήσεις σας, πώς θα αξιολογούσατε την ιχνηλασιμότητα του συστήματός σας;",
+                      "choices": [
+                        {
+                          "text": "Ανύπαρκτη",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 5
+                        },
+                        {
+                          "text": "Απολύτως ανεπαρκής",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 3
+                        },
+                        {
+                          "text": "Σχεδόν επαρκής",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 1
+                        },
+                        {
+                          "text": "Επαρκής",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Πλήρως επαρκής",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": -3
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
-                    "type": "panel",
-                    "name": "question187",
-                    "title": "Robustness and testing the tool ",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "question187",
+                  "title": "Ανθεκτικότητα και δοκιμή του εργαλείου",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question188",
+                      "title": "Έχει υποβληθεί το σύστημά σας στις ακόλουθες δοκιμές;",
+                      "choices": [
                         {
-                            "type": "checkbox",
-                            "name": "question188",
-                            "title": "Has your system undergone the following tests ?",
-                            "choices": [
-                                {
-                                    "text": "Regression testing: Regression testing is a type of testing that is used to find bugs in software that have already been fixed. This is done by running the software with different inputs and comparing the output to the expected output. This type of testing is used to verify that a software program continues to function properly after it has been modified or updated. This type of testing is typically performed after a new version of the software has been released, or after a change has been made to the code.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Functional testing: Functional testing is a type of testing that is used to verify that a system or software performs as expected. Load testing is a type of testing that is used to verify that a system or software can handle a heavy load or traffic. This type of testing is typically performed by running the software through a series of tests that exercise the various functions of the software.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Load testing: Load testing is a type of testing that is used to find bugs in software by running it with different inputs and checking if the output is as expected. It is used to verify that a software program is able to handle the load that is expected to be placed on it. This type of testing is typically done by running the software through a series of tests that simulate the load that the software will experience in production.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Stress testing: Stress testing involves subjecting a system to intense or extreme conditions in order to see how well it holds up. This can help to identify potential issues that may only arise under high levels of stress or strain.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Negative testing: Negative testing involves deliberately providing invalid or incorrect inputs to a system in order to see how it responds. This can help to uncover errors in input validation or handling that could lead to security vulnerabilities or data loss.",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fuzz testing: A fuzz test (also known as a fuzzing test) is a software testing technique, usually automated or semi-automated, that involves providing invalid, unexpected, or random data to the inputs of a computer program. The program is then monitored for exceptions such as crashes, failing built-in code assertions, or potential memory leaks. Fuzz testing is effective in finding coding errors and security vulnerabilities. This involves feeding random or invalid data into a system and seeing how it responds. This can help to find potential vulnerabilities in the system.",
-                                    "value": "Item 6",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Use case testing: Use case testing involves testing the system with realistic scenarios to see how it responds. This can help to identify potential usability issues.",
-                                    "value": "Item 7",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Security testing: Security Testing involves testing the system for security vulnerabilities. This can help to identify potential security risks.",
-                                    "value": "Item 8",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Black-box testing: Black-box testing is a method of software testing that examines the functionality of a software program without knowing the internal code structure. The tester is only aware of what the software is supposed to do but not how it does it. Black-box testing can be used to test the functionality of a software program, the usability of a user interface, and the compliance of a program with external standards.",
-                                    "value": "Item 9",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Mutation testing: Mutation testing is a type of software testing that involves modifying a program\u2019s source code or its inputs and then testing to see if the program still behaves as expected. The goal of mutation testing is to find faults in a program\u2019s code or inputs that can cause the program to produce incorrect results.",
-                                    "value": "Item 10",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fault injection testing: Fault injection testing is a method of testing software by Introducing faults into the software program to see if the program can detect and handle the faults. Fault injection can be used to test the robustness of a program\u2019s error-handling capabilities.",
-                                    "value": "Item 11",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
+                          "text": "Δοκιμή παλινδρόμησης (Regression testing): Είναι ένας τύπος δοκιμής που χρησιμοποιείται για τον εντοπισμό σφαλμάτων σε λογισμικό που έχουν ήδη διορθωθεί. Αυτό γίνεται εκτελώντας το λογισμικό με διαφορετικές εισόδους και συγκρίνοντας την έξοδο με την αναμενόμενη. Επαληθεύεται ότι το λογισμικό εξακολουθεί να λειτουργεί σωστά μετά από τροποποιήσεις ή ενημερώσεις.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         },
                         {
-                            "type": "checkbox",
-                            "name": "question189",
-                            "title": "Have you used any of the following testing tools?",
-                            "choices": [
-                                {
-                                    "text": "JUnit: JUnit is a popular open-source unit testing framework for Java. It is widely used in the Java development community and is well-suited for testing robustness. JUnit is easy to use and has a wide range of features, making it a good choice for robustness testing.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "TestNG: TestNG is another popular open-source unit testing framework for Java. Like JUnit, it is easy to use and has a wide range of features. TestNG is also well-suited for testing robustness.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Spock: Spock is a Groovy-based testing framework that can be used for testing Java applications. It has a concise and expressive syntax that makes it easy to write tests. Spock is also well-suited for testing robustness.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "JMeter: JMeter is a popular open-source performance testing tool. It can be used to test the performance of web applications under load. JMeter is easy to use and has a wide range of features, making it a good choice for robustness testing.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "LoadRunner: LoadRunner is a commercial performance testing tool from HP. It can be used to test the performance of web applications under load. LoadRunner is more expensive than JMeter but has more features and is better suited for enterprise applications.",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ],
-                            "showOtherItem": true
+                          "text": "Λειτουργική δοκιμή (Functional testing): Χρησιμοποιείται για την επαλήθευση ότι ένα σύστημα ή λογισμικό λειτουργεί όπως αναμένεται. Περιλαμβάνει και δοκιμές φόρτου.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή φόρτου (Load testing): Εκτελείται το λογισμικό υπό συνθήκες που προσομοιώνουν το φορτίο χρήσης που αναμένεται στην παραγωγή για να ελεγχθεί η αντοχή του.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή πίεσης (Stress testing): Υποβάλλεται το σύστημα σε ακραίες συνθήκες για να διαπιστωθεί η ανθεκτικότητά του.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Αρνητική δοκιμή (Negative testing): Εισάγονται σκόπιμα μη έγκυρες ή λανθασμένες εισόδους για να διαπιστωθεί πώς αντιδρά το σύστημα.",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή παραμόρφωσης (Fuzz testing): Εισάγεται τυχαία ή μη έγκυρη είσοδος για να εντοπιστούν ευπάθειες, όπως σφάλματα, διαρροές μνήμης κ.λπ.",
+                          "value": "Item 6",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή περιπτώσεων χρήσης (Use case testing): Δοκιμή με ρεαλιστικά σενάρια χρήσης για την αναγνώριση θεμάτων χρηστικότητας.",
+                          "value": "Item 7",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή ασφάλειας (Security testing): Έλεγχος για ευπάθειες ασφαλείας στο σύστημα.",
+                          "value": "Item 8",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή μαύρου κουτιού (Black-box testing): Ελέγχεται η λειτουργία του λογισμικού χωρίς γνώση του εσωτερικού κώδικα.",
+                          "value": "Item 9",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή μεταλλάξεων (Mutation testing): Τροποποιείται ο κώδικας ή οι είσοδοι για να διαπιστωθεί εάν το πρόγραμμα συνεχίζει να λειτουργεί σωστά.",
+                          "value": "Item 10",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Δοκιμή εισαγωγής σφαλμάτων (Fault injection testing): Εισάγονται σφάλματα σκόπιμα για να ελεγχθεί αν το πρόγραμμα μπορεί να τα ανιχνεύσει και να τα διαχειριστεί.",
+                          "value": "Item 11",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         }
-                    ]
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question189",
+                      "title": "Έχετε χρησιμοποιήσει κάποιο από τα παρακάτω εργαλεία δοκιμών;",
+                      "choices": [
+                        {
+                          "text": "JUnit: Δημοφιλές open-source πλαίσιο unit testing για Java. Είναι εύχρηστο με πολλές δυνατότητες, ιδανικό για έλεγχο ανθεκτικότητας.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "TestNG: Άλλο ένα open-source πλαίσιο δοκιμών για Java, εύχρηστο και κατάλληλο για ανθεκτικότητα.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Spock: Πλαίσιο δοκιμών βασισμένο σε Groovy για εφαρμογές Java. Διαθέτει περιεκτική και εκφραστική σύνταξη.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "JMeter: Open-source εργαλείο για δοκιμές απόδοσης, ιδανικό για web εφαρμογές υπό φορτίο.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "LoadRunner: Εμπορικό εργαλείο δοκιμών απόδοσης από την HP, κατάλληλο για enterprise εφαρμογές με περισσότερες δυνατότητες από το JMeter.",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ],
+                      "showOtherItem": true
+                    }
+                  ]
                 },
                 {
-                    "type": "panel",
-                    "name": "panel17",
-                    "title": "Ethical Considerations ",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "panel17",
+                  "title": "Ηθικές Εκτιμήσεις",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "comment",
+                      "name": "question190",
+                      "title": "Ποιο είναι το καλύτερο δυνατό σενάριο που θα μπορούσε να προκύψει από τη χρήση αυτού του συστήματος;"
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question191",
+                      "title": "Ποιο είναι το χειρότερο δυνατό σενάριο που θα μπορούσε να προκύψει από τη χρήση αυτού του συστήματος;"
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question193",
+                      "title": "Ποια είναι τα κοινωνικο-περιβαλλοντικά και τεχνικά προαπαιτούμενα που είναι απαραίτητα για την επιτυχία του συστήματος κατά τη λειτουργία του;"
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question220",
+                      "title": "Ποια είναι τα πιθανά εμπόδια/προκλήσεις για την επίτευξη του βέλτιστου σεναρίου;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question221",
+                      "title": "Έχετε δημιουργήσει μια επιτροπή δεοντολογίας για την Τεχνητή Νοημοσύνη ή έναν παρόμοιο μηχανισμό για να συζητήσετε συνολικά την ευθύνη και τις ηθικές πρακτικές, συμπεριλαμβανομένων πιθανών γκρίζων περιοχών;",
+                      "choices": [
                         {
-                            "type": "comment",
-                            "name": "question190",
-                            "title": "What is the best-case scenario that could arise from use of this system?"
+                          "text": "Ναι, και περιλάμβανε άτομα τόσο από τις ανθρωπιστικές επιστήμες όσο και άτομα με τεχνική γνώση για τις τεχνολογίες AI",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         },
                         {
-                            "type": "comment",
-                            "name": "question191",
-                            "title": "What is the worst-case scenario to arise from use of this system?"
+                          "text": "Ναι, αλλά περιλάμβανε μόνο άτομα με τεχνική γνώση για τις τεχνολογίες AI",
+                          "value": "Item 2",
+                          "beneficence": 1,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         },
                         {
-                            "type": "comment",
-                            "name": "question193",
-                            "title": "What kind of socio-environmental and technical requirements are necessary for the success of this system in operation? "
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question220",
-                            "title": "What are likely challenges/hurdles to achieving the best case scenario?"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question221",
-                            "title": "Did you establish an AI ethics review board or a similar mechanism to discuss the overall accountability and ethics practices including potential unclear grey areas?",
-                            "choices": [
-                                {
-                                    "text": "Yes, and it included people from both the humanities fields and people with technical knowledge about AI technologies",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, and it only included people with technical knowledge about AI technologies",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No",
-                                    "value": "Item 3",
-                                    "beneficence": 3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question192",
-                            "title": "How would you rate the risks to autonomy the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability "
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 5",
-                                    "text": "Autonomy/agency loss"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Impersonation/Identity theft"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "IP/copyright loss"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Personality rights loss"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question213",
-                            "title": "What measures have you taken to mitigate this risks?"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question203",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question194",
-                            "title": "How would you rate the physical damage risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Bodily injury"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Loss of life"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Personal health deterioration"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Property damage"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question212",
-                            "title": "What measures have you taken to mitigate this risks ?  "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question204",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question195",
-                            "title": "How would you rate the psychological risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Addiction"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Alienation/Isolation"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Anxiety/Distress"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Coersion/manipulation"
-                                },
-                                {
-                                    "value": "Row 5",
-                                    "text": "Dehumanisation/Objectification"
-                                },
-                                {
-                                    "value": "Row 6",
-                                    "text": "Harassment/Abuse/Intimidation"
-                                },
-                                {
-                                    "value": "Row 7",
-                                    "text": "Over-reliance"
-                                },
-                                {
-                                    "value": "Row 8",
-                                    "text": "Radicalisation"
-                                },
-                                {
-                                    "value": "Row 9",
-                                    "text": "Self-harm"
-                                },
-                                {
-                                    "value": "Row 10",
-                                    "text": "Sexualisation"
-                                },
-                                {
-                                    "value": "Row 11",
-                                    "text": "Trauma"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question214",
-                            "title": "What measures have you taken to mitigate this risks?"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question210",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question196",
-                            "title": "How would you rate the reputational risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Defamation/libel/slander"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Loss of confidence/trust"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question216",
-                            "title": "What measures have you taken to mitigate this risks ?  "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question209",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question197",
-                            "title": "How would you rate the financial  risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Business operations/infrastructure damage"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Confidentiality loss"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Livelihood loss"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Financial/earnings loss"
-                                },
-                                {
-                                    "value": "Row 5",
-                                    "text": "Increased competition"
-                                },
-                                {
-                                    "value": "Row 6",
-                                    "text": "Monopolisation"
-                                },
-                                {
-                                    "value": "Row 7",
-                                    "text": "Opportunity loss"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question217",
-                            "title": "What measures have you taken to mitigate this risks?"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question207",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question198",
-                            "title": "How would you rate the  risks to human rights and civil liberties the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Benefits/entitlements loss"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Dignity loss"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Discrimination"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Loss of freedom of speech/expression"
-                                },
-                                {
-                                    "value": "Row 5",
-                                    "text": "Loss of freedom of assembly/association"
-                                },
-                                {
-                                    "value": "Row 6",
-                                    "text": "Loss of social rights and access to public services"
-                                },
-                                {
-                                    "value": "Row 7",
-                                    "text": "Loss of right to information"
-                                },
-                                {
-                                    "value": "Row 8",
-                                    "text": "Loss of right to free elections"
-                                },
-                                {
-                                    "value": "Row 9",
-                                    "text": "Loss of right to liberty and security"
-                                },
-                                {
-                                    "value": "Row 10",
-                                    "text": "Loss of right to due process"
-                                },
-                                {
-                                    "value": "Row 11",
-                                    "text": "Privacy loss"
-                                },
-                                {
-                                    "value": "Row 12",
-                                    "text": "Denial of the right to seek asylum"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question218",
-                            "title": "What measures have you taken to mitigate this risks?"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question211",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question199",
-                            "title": "How would you rate the societal and cultural  risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Breach of ethics/values/norms"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Cheating/plagiarism"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Chilling effect"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Cultural dispossession"
-                                },
-                                {
-                                    "value": "Row 5",
-                                    "text": "Damage to public health"
-                                },
-                                {
-                                    "value": "Row 6",
-                                    "text": "Historical revisionism"
-                                },
-                                {
-                                    "value": "Row 7",
-                                    "text": "Information degradation"
-                                },
-                                {
-                                    "value": "Row 8",
-                                    "text": "Job loss/losses"
-                                },
-                                {
-                                    "value": "Row 9",
-                                    "text": "Labour exploitation"
-                                },
-                                {
-                                    "value": "Row 10",
-                                    "text": "Loss of creativity/critical thinking"
-                                },
-                                {
-                                    "value": "Row 11",
-                                    "text": "Stereotyping"
-                                },
-                                {
-                                    "value": "Row 12",
-                                    "text": "Public service delivery deterioration"
-                                },
-                                {
-                                    "value": "Row 13",
-                                    "text": "Societal destabilisation -"
-                                },
-                                {
-                                    "value": "Row 14",
-                                    "text": "Societal inequality"
-                                },
-                                {
-                                    "value": "Row 15",
-                                    "text": "Violence/armed conflict"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question219",
-                            "title": "What measures have you taken to mitigate this risks ?  "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question206",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question200",
-                            "title": "How would you rate the political and economic risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Critical infrastructure damage"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Economic instability"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Power concentration"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Electoral interference"
-                                },
-                                {
-                                    "value": "Row 5",
-                                    "text": "Institutional trust loss"
-                                },
-                                {
-                                    "value": "Row 6",
-                                    "text": "Political instability"
-                                },
-                                {
-                                    "value": "Row 7",
-                                    "text": "Political manipulation"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question202",
-                            "title": "What measures have you taken to mitigate this risks ?  "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question205",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "matrixdropdown",
-                            "name": "question201",
-                            "title": "How would you rate the environmental risks the system poses \n( Importance \u2013 How consequential is this harm for the well-being of stakeholders? Which are irremediable and serious  \nUrgency \u2013 How immediate is this threat?   \nDifficulty \u2013 How difficult will it be to mitigate this harm? \nDetectability \u2013 How perceivable is this harm given the current design?\nProbability - How possible is this harm to happen ? )\n",
-                            "columns": [
-                                {
-                                    "name": "Column 1",
-                                    "title": "Importance"
-                                },
-                                {
-                                    "name": "Column 2",
-                                    "title": "Urgency"
-                                },
-                                {
-                                    "name": "Column 3",
-                                    "title": "Difficulty"
-                                },
-                                {
-                                    "name": "Column 4",
-                                    "title": "Detectability"
-                                },
-                                {
-                                    "name": "Column 5",
-                                    "title": "Probability"
-                                }
-                            ],
-                            "choices": [
-                                {
-                                    "value": 1,
-                                    "weight": 1
-                                },
-                                {
-                                    "value": 2,
-                                    "weight": 2
-                                },
-                                {
-                                    "value": 3,
-                                    "weight": 3
-                                },
-                                {
-                                    "value": 4,
-                                    "weight": 4
-                                },
-                                {
-                                    "value": 5,
-                                    "weight": 5
-                                }
-                            ],
-                            "rows": [
-                                {
-                                    "value": "Row 1",
-                                    "text": "Biodiversity loss"
-                                },
-                                {
-                                    "value": "Row 2",
-                                    "text": "Carbon emissions"
-                                },
-                                {
-                                    "value": "Row 3",
-                                    "text": "Electronic waste"
-                                },
-                                {
-                                    "value": "Row 4",
-                                    "text": "Excessive energy consumption"
-                                },
-                                {
-                                    "value": "Row 5",
-                                    "text": "Excessive landfill"
-                                },
-                                {
-                                    "value": "Row 6",
-                                    "text": "Excessive water consumption"
-                                },
-                                {
-                                    "value": "Row 7",
-                                    "text": "Natural resource depletion"
-                                },
-                                {
-                                    "value": "Row 8",
-                                    "text": "Pollution"
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question215",
-                            "title": "What measures have you taken to mitigate this risks ?  "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question208",
-                            "title": "Based on how you answer to the above question would you rate this measures as :\n",
-                            "choices": [
-                                {
-                                    "text": "Non - existent",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Completely inadequate",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Almost Adequate",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Adequate",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Fully Adequate",
-                                    "value": "Item 5",
-                                    "beneficence": 0,
-                                    "non_maleficence": -4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
+                          "text": "Όχι",
+                          "value": "Item 3",
+                          "beneficence": 3,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question192",
+                      "title": "Πώς θα αξιολογούσατε τους κινδύνους για την αυτονομία που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές; \nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή; \nΔυσκολία – Πόσο δύσκολη θα είναι η μετρίαση αυτής της βλάβης; \nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη βάσει του τρέχοντος σχεδιασμού;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 5", "text": "Απώλεια αυτονομίας/ικανότητας λήψης αποφάσεων" },
+                        { "value": "Row 2", "text": "Πλαστοπροσωπία/Κλοπή ταυτότητας" },
+                        { "value": "Row 3", "text": "Απώλεια πνευματικών δικαιωμάτων/IP" },
+                        { "value": "Row 4", "text": "Απώλεια δικαιωμάτων προσωπικότητας" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question213",
+                      "title": "Ποια μέτρα έχετε λάβει για τη μείωση αυτών των κινδύνων;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question203",
+                      "title": "Με βάση τις απαντήσεις σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε αυτά τα μέτρα;",
+                      "choices": [
+                        { "text": "Ανύπαρκτα", "value": "Item 1", "beneficence": 0, "non_maleficence": 4, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως ανεπαρκή", "value": "Item 2", "beneficence": 0, "non_maleficence": 2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Σχεδόν επαρκή", "value": "Item 3", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Επαρκή", "value": "Item 4", "beneficence": 0, "non_maleficence": -2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως επαρκή", "value": "Item 5", "beneficence": 0, "non_maleficence": -4, "autonomy": 0, "justice": 0, "explicability": 0 }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question194",
+                      "title": "Πώς θα αξιολογούσατε τους κινδύνους σωματικής βλάβης που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές; \nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή; \nΔυσκολία – Πόσο δύσκολη θα είναι η μετρίαση αυτής της βλάβης; \nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη βάσει του τρέχοντος σχεδιασμού;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Σωματική βλάβη" },
+                        { "value": "Row 2", "text": "Απώλεια ζωής" },
+                        { "value": "Row 3", "text": "Επιδείνωση της προσωπικής υγείας" },
+                        { "value": "Row 4", "text": "Ζημιά σε περιουσία" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question212",
+                      "title": "Ποια μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question204",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε αυτά τα μέτρα;",
+                      "choices": [
+                        { "text": "Ανύπαρκτα", "value": "Item 1", "beneficence": 0, "non_maleficence": 4, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως ανεπαρκή", "value": "Item 2", "beneficence": 0, "non_maleficence": 2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Σχεδόν επαρκή", "value": "Item 3", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Επαρκή", "value": "Item 4", "beneficence": 0, "non_maleficence": -2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως επαρκή", "value": "Item 5", "beneficence": 0, "non_maleficence": -4, "autonomy": 0, "justice": 0, "explicability": 0 }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question195",
+                      "title": "Πώς θα αξιολογούσατε τους ψυχολογικούς κινδύνους που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές; \nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή; \nΔυσκολία – Πόσο δύσκολη θα είναι η μετρίαση αυτής της βλάβης; \nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη βάσει του τρέχοντος σχεδιασμού;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Εθισμός" },
+                        { "value": "Row 2", "text": "Αποξένωση/Απομόνωση" },
+                        { "value": "Row 3", "text": "Άγχος/Αναστάτωση" },
+                        { "value": "Row 4", "text": "Εξαναγκασμός/χειραγώγηση" },
+                        { "value": "Row 5", "text": "Απανθρωποποίηση/Αντικειμενοποίηση" },
+                        { "value": "Row 6", "text": "Παρενόχληση/Κακοποίηση/Εκφοβισμός" },
+                        { "value": "Row 7", "text": "Υπερεξάρτηση" },
+                        { "value": "Row 8", "text": "Ριζοσπαστικοποίηση" },
+                        { "value": "Row 9", "text": "Αυτοτραυματισμός" },
+                        { "value": "Row 10", "text": "Σεξουαλικοποίηση" },
+                        { "value": "Row 11", "text": "Τραύμα" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question214",
+                      "title": "Ποια μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question210",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε αυτά τα μέτρα;",
+                      "choices": [
+                        {
+                          "text": "Ανύπαρκτα",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως ανεπαρκή",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Σχεδόν επαρκή",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Επαρκή",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": -2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως επαρκή",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": -4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question196",
+                      "title": "Πώς θα αξιολογούσατε τους κινδύνους για τη φήμη που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές;\nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή;\nΔυσκολία – Πόσο δύσκολη θα είναι η μετρίαση αυτής της βλάβης;\nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη με βάση τον τρέχοντα σχεδιασμό;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Δυσφήμιση/συκοφαντία/συκοφαντική δυσφήμιση" },
+                        { "value": "Row 2", "text": "Απώλεια εμπιστοσύνης/πίστης" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question216",
+                      "title": "Ποια μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question209",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε αυτά τα μέτρα;",
+                      "choices": [
+                        {
+                          "text": "Ανύπαρκτα",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως ανεπαρκή",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Σχεδόν επαρκή",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Επαρκή",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": -2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως επαρκή",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": -4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question197",
+                      "title": "Πώς θα αξιολογούσατε τους χρηματοοικονομικούς κινδύνους που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές;\nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή;\nΔυσκολία – Πόσο δύσκολο θα είναι να μετριαστεί αυτή η βλάβη;\nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη με βάση τον τρέχοντα σχεδιασμό;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Ζημιά στις επιχειρησιακές λειτουργίες/υποδομές" },
+                        { "value": "Row 2", "text": "Απώλεια εμπιστευτικότητας" },
+                        { "value": "Row 3", "text": "Απώλεια μέσων διαβίωσης" },
+                        { "value": "Row 4", "text": "Χρηματοοικονομική ζημιά/απώλεια εσόδων" },
+                        { "value": "Row 5", "text": "Αυξημένος ανταγωνισμός" },
+                        { "value": "Row 6", "text": "Μονοπώληση" },
+                        { "value": "Row 7", "text": "Απώλεια ευκαιριών" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question217",
+                      "title": "Ποια μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question207",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε αυτά τα μέτρα;",
+                      "choices": [
+                        {
+                          "text": "Ανύπαρκτα",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως ανεπαρκή",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Σχεδόν επαρκή",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Επαρκή",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": -2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως επαρκή",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": -4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question198",
+                      "title": "Πώς θα αξιολογούσατε τους κινδύνους για τα ανθρώπινα δικαιώματα και τις πολιτικές ελευθερίες που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές;\nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή;\nΔυσκολία – Πόσο δύσκολο θα είναι να μετριαστεί αυτή η βλάβη;\nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη με βάση τον τρέχοντα σχεδιασμό;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Απώλεια παροχών/δικαιωμάτων" },
+                        { "value": "Row 2", "text": "Απώλεια αξιοπρέπειας" },
+                        { "value": "Row 3", "text": "Διάκριση" },
+                        { "value": "Row 4", "text": "Απώλεια ελευθερίας λόγου/έκφρασης" },
+                        { "value": "Row 5", "text": "Απώλεια ελευθερίας συνάθροισης/συλλογικής δράσης" },
+                        { "value": "Row 6", "text": "Απώλεια κοινωνικών δικαιωμάτων και πρόσβασης σε δημόσιες υπηρεσίες" },
+                        { "value": "Row 7", "text": "Απώλεια δικαιώματος στην πληροφόρηση" },
+                        { "value": "Row 8", "text": "Απώλεια δικαιώματος ελεύθερων εκλογών" },
+                        { "value": "Row 9", "text": "Απώλεια δικαιώματος στην ελευθερία και την ασφάλεια" },
+                        { "value": "Row 10", "text": "Απώλεια δικαιώματος στη δίκαιη δίκη/νομική διαδικασία" },
+                        { "value": "Row 11", "text": "Απώλεια ιδιωτικότητας" },
+                        { "value": "Row 12", "text": "Άρνηση του δικαιώματος ασύλου" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question218",
+                      "title": "Ποια μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question211",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε τα μέτρα που λάβατε:",
+                      "choices": [
+                        {
+                          "text": "Ανύπαρκτα",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως ανεπαρκή",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Σχεδόν επαρκή",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Επαρκή",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": -2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως επαρκή",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": -4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question199",
+                      "title": "Πώς θα αξιολογούσατε τους κοινωνικούς και πολιτισμικούς κινδύνους που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές;\nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή;\nΔυσκολία – Πόσο δύσκολο θα είναι να μετριαστεί αυτή η βλάβη;\nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη με βάση τον τρέχοντα σχεδιασμό;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Παραβίαση ηθικής/αξιών/κοινωνικών κανόνων" },
+                        { "value": "Row 2", "text": "Απάτη/λογοκλοπή" },
+                        { "value": "Row 3", "text": "Φαινόμενο αποτροπής έκφρασης (chilling effect)" },
+                        { "value": "Row 4", "text": "Πολιτιστική αποστέρηση" },
+                        { "value": "Row 5", "text": "Βλάβη στη δημόσια υγεία" },
+                        { "value": "Row 6", "text": "Αναθεώρηση της ιστορίας" },
+                        { "value": "Row 7", "text": "Υποβάθμιση της πληροφορίας" },
+                        { "value": "Row 8", "text": "Απώλεια θέσεων εργασίας" },
+                        { "value": "Row 9", "text": "Εκμετάλλευση εργατικού δυναμικού" },
+                        { "value": "Row 10", "text": "Απώλεια δημιουργικότητας/κριτικής σκέψης" },
+                        { "value": "Row 11", "text": "Στερεοτυπική αναπαράσταση" },
+                        { "value": "Row 12", "text": "Υποβάθμιση παροχής δημόσιων υπηρεσιών" },
+                        { "value": "Row 13", "text": "Αποσταθεροποίηση κοινωνίας" },
+                        { "value": "Row 14", "text": "Κοινωνική ανισότητα" },
+                        { "value": "Row 15", "text": "Βία/ένοπλες συγκρούσεις" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question219",
+                      "title": "Ποια μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question206",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε τα μέτρα που λάβατε;",
+                      "choices": [
+                        {
+                          "text": "Ανύπαρκτα",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως ανεπαρκή",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Σχεδόν επαρκή",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Επαρκή",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 2,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Πλήρως επαρκή",
+                          "value": "Item 5",
+                          "beneficence": 0,
+                          "non_maleficence": 4,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question200",
+                      "title": "Πώς θα αξιολογούσατε τους πολιτικούς και οικονομικούς κινδύνους που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές;\nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή;\nΔυσκολία – Πόσο δύσκολο θα είναι να μετριαστεί αυτή η βλάβη;\nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη με βάση τον τρέχοντα σχεδιασμό;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Ζημιά σε κρίσιμες υποδομές" },
+                        { "value": "Row 2", "text": "Οικονομική αστάθεια" },
+                        { "value": "Row 3", "text": "Συγκέντρωση εξουσίας" },
+                        { "value": "Row 4", "text": "Παρέμβαση σε εκλογικές διαδικασίες" },
+                        { "value": "Row 5", "text": "Απώλεια εμπιστοσύνης στους θεσμούς" },
+                        { "value": "Row 6", "text": "Πολιτική αστάθεια" },
+                        { "value": "Row 7", "text": "Πολιτική χειραγώγηση" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question202",
+                      "title": "Τι μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question205",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε τα μέτρα που λάβατε;",
+                      "choices": [
+                        { "text": "Ανύπαρκτα", "value": "Item 1", "beneficence": 0, "non_maleficence": 4, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως ανεπαρκή", "value": "Item 2", "beneficence": 0, "non_maleficence": 2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Σχεδόν επαρκή", "value": "Item 3", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Επαρκή", "value": "Item 4", "beneficence": 0, "non_maleficence": 2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως επαρκή", "value": "Item 5", "beneficence": 0, "non_maleficence": 4, "autonomy": 0, "justice": 0, "explicability": 0 }
+                      ]
+                    },
+                    {
+                      "type": "matrixdropdown",
+                      "name": "question201",
+                      "title": "Πώς θα αξιολογούσατε τους περιβαλλοντικούς κινδύνους που θέτει το σύστημα;\n(Σπουδαιότητα – Πόσο σημαντική είναι αυτή η βλάβη για την ευημερία των ενδιαφερομένων; Ποιες είναι ανεπανόρθωτες και σοβαρές;\nΆμεση ανάγκη – Πόσο άμεση είναι αυτή η απειλή;\nΔυσκολία – Πόσο δύσκολο θα είναι να μετριαστεί αυτή η βλάβη;\nΑνιχνευσιμότητα – Πόσο αντιληπτή είναι αυτή η βλάβη με βάση τον τρέχοντα σχεδιασμό;\nΠιθανότητα – Πόσο πιθανό είναι να συμβεί αυτή η βλάβη;)",
+                      "columns": [
+                        { "name": "Column 1", "title": "Σπουδαιότητα" },
+                        { "name": "Column 2", "title": "Άμεση ανάγκη" },
+                        { "name": "Column 3", "title": "Δυσκολία" },
+                        { "name": "Column 4", "title": "Ανιχνευσιμότητα" },
+                        { "name": "Column 5", "title": "Πιθανότητα" }
+                      ],
+                      "choices": [
+                        { "value": 1, "weight": 1 },
+                        { "value": 2, "weight": 2 },
+                        { "value": 3, "weight": 3 },
+                        { "value": 4, "weight": 4 },
+                        { "value": 5, "weight": 5 }
+                      ],
+                      "rows": [
+                        { "value": "Row 1", "text": "Απώλεια βιοποικιλότητας" },
+                        { "value": "Row 2", "text": "Εκπομπές άνθρακα" },
+                        { "value": "Row 3", "text": "Ηλεκτρονικά απόβλητα" },
+                        { "value": "Row 4", "text": "Υπερβολική κατανάλωση ενέργειας" },
+                        { "value": "Row 5", "text": "Υπερβολική απόρριψη σε χωματερές" },
+                        { "value": "Row 6", "text": "Υπερβολική κατανάλωση νερού" },
+                        { "value": "Row 7", "text": "Εξάντληση φυσικών πόρων" },
+                        { "value": "Row 8", "text": "Ρύπανση" }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question215",
+                      "title": "Τι μέτρα έχετε λάβει για να μετριάσετε αυτούς τους κινδύνους;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question208",
+                      "title": "Βάσει της απάντησής σας στην παραπάνω ερώτηση, πώς θα αξιολογούσατε τα μέτρα που λάβατε;",
+                      "choices": [
+                        { "text": "Ανύπαρκτα", "value": "Item 1", "beneficence": 0, "non_maleficence": 4, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως ανεπαρκή", "value": "Item 2", "beneficence": 0, "non_maleficence": 2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Σχεδόν επαρκή", "value": "Item 3", "beneficence": 0, "non_maleficence": 0, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Επαρκή", "value": "Item 4", "beneficence": 0, "non_maleficence": -2, "autonomy": 0, "justice": 0, "explicability": 0 },
+                        { "text": "Πλήρως επαρκή", "value": "Item 5", "beneficence": 0, "non_maleficence": -4, "autonomy": 0, "justice": 0, "explicability": 0 }
+                      ]
+                    }                    
                     ]
                 }
             ]
         },
         {
             "name": "page6",
-            "title": "Evaluation Stage ",
+            "title": "Στάδιο Αξιολόγησης",
             "elements": [
                 {
                     "type": "panel",
                     "name": "panel8",
-                    "title": "Testing ",
+                    "title": "Δοκιμή (Testing)",
                     "state": "expanded",
                     "elements": [
-                        {
-                            "type": "radiogroup",
-                            "name": "question70",
-                            "title": "Has the strategy for testing the AI model been defined?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the testing strategy is fully documented and includes detailed validation steps.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the testing strategy is only partially documented.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we do not have a defined testing strategy.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question241",
-                            "visibleIf": "{question70} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe it. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question242",
-                            "title": "Has the organization documented the AI model's performance in the testing environment?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the performance is fully documented with statistical metrics and analysis.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the documentation is incomplete or lacks detailed statistical analysis.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not documented the model's performance in the testing environment.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question244",
-                            "visibleIf": "{question242} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe the results. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question250",
-                            "title": " Has the model been tested for performance on extreme values and protected attributes?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the model has been thoroughly tested for extreme values and protected attributes.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the testing was limited and did not cover all edge cases.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, the model has not been tested for extreme values or protected attributes.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question318",
-                            "visibleIf": "{question250} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe the results. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question319",
-                            "title": "Have patterns of failure been identified (e.g., error curves, overfitting analysis, incorrect predictions)?",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have identified and documented all major failure patterns.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but only some failure patterns have been identified.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not identified any failure patterns.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question322",
-                            "visibleIf": "{question319} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe the results. "
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question329",
-                            "visibleIf": "{question319} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe the results. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question321",
-                            "title": "Have key failure modes been addressed?",
-                            "choices": [
-                                {
-                                    "text": "Yes, all key failure modes have been resolved or accounted for.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but only some key failure modes have been addressed.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not addressed any key failure modes.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question323",
-                            "title": "Does the model fulfil the established performance criteria levels?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the model meets all performance criteria levels.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but it only partially meets the performance criteria.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, but we are working to improve the model to meet the criteria.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, the model does not meet the performance criteria.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        }
+                      {
+                        "type": "radiogroup",
+                        "name": "question70",
+                        "title": "Έχει οριστεί η στρατηγική δοκιμών για το μοντέλο ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Ναι, η στρατηγική δοκιμών είναι πλήρως τεκμηριωμένη και περιλαμβάνει λεπτομερή βήματα επικύρωσης.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά η στρατηγική δοκιμών είναι μόνο μερικώς τεκμηριωμένη.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε ορισμένη στρατηγική δοκιμών.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question241",
+                        "visibleIf": "{question70} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τη στρατηγική."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question242",
+                        "title": "Έχει η οργάνωση τεκμηριώσει την απόδοση του μοντέλου ΤΝ στο περιβάλλον δοκιμών;",
+                        "choices": [
+                          {
+                            "text": "Ναι, η απόδοση είναι πλήρως τεκμηριωμένη με στατιστικές μετρήσεις και ανάλυση.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά η τεκμηρίωση είναι ελλιπής ή δεν περιλαμβάνει λεπτομερή στατιστική ανάλυση.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε τεκμηριώσει την απόδοση του μοντέλου στο περιβάλλον δοκιμών.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question244",
+                        "visibleIf": "{question242} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τα αποτελέσματα."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question250",
+                        "title": "Έχει το μοντέλο δοκιμαστεί για απόδοση σε ακραίες τιμές και προστατευμένα χαρακτηριστικά;",
+                        "choices": [
+                          {
+                            "text": "Ναι, το μοντέλο έχει δοκιμαστεί διεξοδικά για ακραίες τιμές και προστατευμένα χαρακτηριστικά.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά οι δοκιμές ήταν περιορισμένες και δεν κάλυψαν όλες τις οριακές περιπτώσεις.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, το μοντέλο δεν έχει δοκιμαστεί για ακραίες τιμές ή προστατευμένα χαρακτηριστικά.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question318",
+                        "visibleIf": "{question250} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τα αποτελέσματα."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question319",
+                        "title": "Έχουν εντοπιστεί πρότυπα αστοχίας (π.χ. καμπύλες σφαλμάτων, υπερεκπαίδευση, λανθασμένες προβλέψεις);",
+                        "choices": [
+                          {
+                            "text": "Ναι, έχουμε εντοπίσει και τεκμηριώσει όλα τα βασικά πρότυπα αστοχίας.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά έχουν εντοπιστεί μόνο κάποια πρότυπα αστοχίας.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε εντοπίσει κανένα πρότυπο αστοχίας.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question322",
+                        "visibleIf": "{question319} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τα αποτελέσματα."
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question329",
+                        "visibleIf": "{question319} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τα αποτελέσματα."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question321",
+                        "title": "Έχουν αντιμετωπιστεί οι βασικοί τρόποι αστοχίας;",
+                        "choices": [
+                          {
+                            "text": "Ναι, όλοι οι βασικοί τρόποι αστοχίας έχουν επιλυθεί ή ληφθεί υπόψη.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά έχουν αντιμετωπιστεί μόνο κάποιοι βασικοί τρόποι αστοχίας.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε αντιμετωπίσει κανέναν βασικό τρόπο αστοχίας.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 4,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question323",
+                        "title": "Πληροί το μοντέλο τα καθορισμένα επίπεδα κριτηρίων απόδοσης;",
+                        "choices": [
+                          {
+                            "text": "Ναι, το μοντέλο πληροί όλα τα κριτήρια απόδοσης.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά πληροί μόνο μερικώς τα κριτήρια απόδοσης.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, αλλά εργαζόμαστε για τη βελτίωση του μοντέλου ώστε να πληροί τα κριτήρια.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, το μοντέλο δεν πληροί τα κριτήρια απόδοσης.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 4,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      }                      
                     ]
                 },
                 {
                     "type": "panel",
                     "name": "panel27",
-                    "title": "Deploy",
+                    "title": "Ανάπτυξη",
                     "state": "expanded",
                     "elements": [
-                        {
-                            "type": "radiogroup",
-                            "name": "question324",
-                            "title": "Has the deployment strategy been documented?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the deployment strategy is fully documented.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the documentation is incomplete or lacks detail.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "No, we have not documented the deployment strategy.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question333",
-                            "visibleIf": "{question324} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe it. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question325",
-                            "title": "Has the serving strategy been documented?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the serving strategy is fully documented.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the documentation is incomplete or lacks detail.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "No, we have not documented the serving strategy.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question332",
-                            "visibleIf": "{question325} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe it. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question326",
-                            "title": "Have the risks associated with the serving and deployment strategies been identified?",
-                            "choices": [
-                                {
-                                    "text": "Yes, all risks have been identified and documented.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but only some risks have been identified.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not identified any risks.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question320",
-                            "visibleIf": "{question326} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe the results. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question327",
-                            "title": "Have the risks associated with the serving and deployment strategies been addressed?",
-                            "choices": [
-                                {
-                                    "text": "Yes, all risks have been resolved or accounted for.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but only some risks have been addressed.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not addressed any risks.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question331",
-                            "visibleIf": "{question327} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes , describe the results. "
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question328",
-                            "title": "Does the model fulfil the established performance criteria levels in the production environment?",
-                            "choices": [
-                                {
-                                    "text": "Yes, the model meets all performance criteria in production.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but it only partially meets the performance criteria in production.",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, but we are working to improve the model to meet the criteria.",
-                                    "value": "Item 5",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, the model does not meet the performance criteria in production.",
-                                    "value": "Item 4",
-                                    "beneficence": 3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        }
+                      {
+                        "type": "radiogroup",
+                        "name": "question324",
+                        "title": "Έχει τεκμηριωθεί η στρατηγική ανάπτυξης;",
+                        "choices": [
+                          {
+                            "text": "Ναι, η στρατηγική ανάπτυξης έχει τεκμηριωθεί πλήρως.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά η τεκμηρίωση είναι ελλιπής ή χωρίς λεπτομέρειες.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε τεκμηριώσει τη στρατηγική ανάπτυξης.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question333",
+                        "visibleIf": "{question324} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τη."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question325",
+                        "title": "Έχει τεκμηριωθεί η στρατηγική εξυπηρέτησης;",
+                        "choices": [
+                          {
+                            "text": "Ναι, η στρατηγική εξυπηρέτησης έχει τεκμηριωθεί πλήρως.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά η τεκμηρίωση είναι ελλιπής ή χωρίς λεπτομέρειες.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε τεκμηριώσει τη στρατηγική εξυπηρέτησης.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 2
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question332",
+                        "visibleIf": "{question325} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τη."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question326",
+                        "title": "Έχουν εντοπιστεί οι κίνδυνοι που σχετίζονται με τις στρατηγικές εξυπηρέτησης και ανάπτυξης;",
+                        "choices": [
+                          {
+                            "text": "Ναι, όλοι οι κίνδυνοι έχουν εντοπιστεί και τεκμηριωθεί.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά έχουν εντοπιστεί μόνο ορισμένοι κίνδυνοι.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε εντοπίσει κανέναν κίνδυνο.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question320",
+                        "visibleIf": "{question326} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τα αποτελέσματα."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question327",
+                        "title": "Έχουν αντιμετωπιστεί οι κίνδυνοι που σχετίζονται με τις στρατηγικές εξυπηρέτησης και ανάπτυξης;",
+                        "choices": [
+                          {
+                            "text": "Ναι, όλοι οι κίνδυνοι έχουν επιλυθεί ή ληφθεί υπόψη.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά έχουν αντιμετωπιστεί μόνο ορισμένοι κίνδυνοι.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε αντιμετωπίσει κανέναν κίνδυνο.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question331",
+                        "visibleIf": "{question327} anyof ['Item 1', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε τα αποτελέσματα."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question328",
+                        "title": "Πληροί το μοντέλο τα καθορισμένα επίπεδα απόδοσης στο περιβάλλον παραγωγής;",
+                        "choices": [
+                          {
+                            "text": "Ναι, το μοντέλο πληροί όλα τα κριτήρια απόδοσης στην παραγωγή.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Ναι, αλλά πληροί μόνο μερικώς τα κριτήρια απόδοσης στην παραγωγή.",
+                            "value": "Item 2",
+                            "beneficence": 1,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, αλλά εργαζόμαστε για να βελτιώσουμε το μοντέλο ώστε να πληροί τα κριτήρια.",
+                            "value": "Item 5",
+                            "beneficence": 2,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, το μοντέλο δεν πληροί τα κριτήρια απόδοσης στην παραγωγή.",
+                            "value": "Item 4",
+                            "beneficence": 3,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      }                      
                     ]
                 },
                 {
-                    "type": "panel",
-                    "name": "panel18",
-                    "title": "Compliance checks ",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "panel18",
+                  "title": "Έλεγχοι Συμμόρφωσης",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question222",
+                      "title": "Συμμορφώνεται το σύστημά σας με κάποιο πρότυπο IEEE;",
+                      "choices": [
                         {
-                            "type": "checkbox",
-                            "name": "question222",
-                            "title": "Does you system comply with any IEEE standards?",
-                            "choices": [
-                                {
-                                    "text": "IEEE CertifAIEd\u2122 (Certification program for assessing ethics of Autonomous Intelligent Systems (AIS) for their conformity to ethical privacy, transparency, accountability, and algorithmic bias criteria.)",
-                                    "value": "Item 2",
-                                    "beneficence": -4,
-                                    "non_maleficence": -4,
-                                    "autonomy": -4,
-                                    "justice": -4,
-                                    "explicability": -4
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "checkbox",
-                            "name": "question223",
-                            "title": "Does your AI comply with any ISO standards",
-                            "choices": [
-                                {
-                                    "text": "ISO/IEC TR 24028:2020 (Surveys approaches to establish trust in AI systems through transparency, explainability, controllability, etc., engineering pitfalls and typical associated threats and risks to AI systems and approaches to assess and achieve trustworthiness characteristics of AI systems.)",
-                                    "value": "Item 1",
-                                    "beneficence": -5,
-                                    "non_maleficence": -5,
-                                    "autonomy": -5,
-                                    "justice": -5,
-                                    "explicability": -5
-                                },
-                                {
-                                    "text": "ISO/IEC 42001:2023 (International standard that specifies requirements for establishing, implementing, maintaining, and continually improving an Artificial Intelligence Management System (AIMS) within organizations, ensuring responsible development and use of AI systems.)",
-                                    "value": "Item 2",
-                                    "beneficence": -3,
-                                    "non_maleficence": -3,
-                                    "autonomy": -3,
-                                    "justice": -3,
-                                    "explicability": -3
-                                },
-                                {
-                                    "text": "ISO/IEC DIS 42005 (International standard that provides guidance for organizations performing AI system impact assessments. It includes considerations for how and when to perform such assessments and at what stages of the AI system lifecycle, as well as how this process can be integrated into an organization\u2019s AI risk management system.)",
-                                    "value": "Item 3",
-                                    "beneficence": -3,
-                                    "non_maleficence": -3,
-                                    "autonomy": -3,
-                                    "justice": -3,
-                                    "explicability": -3
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question225",
-                            "title": "Has a Data Protection Impact Assessment been carried out ?",
-                            "choices": [
-                                {
-                                    "text": "Yes, a DPIA has been fully completed and documented.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the DPIA is incomplete or lacks detail.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": -3,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, but we are in the process of conducting a DPIA.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not conducted a DPIA.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question227",
-                            "title": "Does the AI comply with certain codes of conduct or best practices ?\n",
-                            "choices": [
-                                {
-                                    "text": "OECD AI Principles (Principles that encompass AI systems that uphold human rights and privacy, are equitable, transparent, explainable, resilient, secure, and safe while ensuring accountability among all involved actors.)",
-                                    "value": "Item 1",
-                                    "beneficence": -2,
-                                    "non_maleficence": -2,
-                                    "autonomy": -2,
-                                    "justice": -2,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "EU High-Level Expert Group on AI (HLEG AI) Guidelines (Guidelines for ethical and trustworthy AI practices.)",
-                                    "value": "Item 2",
-                                    "beneficence": -2,
-                                    "non_maleficence": -2,
-                                    "autonomy": -2,
-                                    "justice": -2,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "NIST AI Risk Management Framework (A risk management framework to better manage risks to individuals, organizations, and society associated with artificial intelligence (AI).)",
-                                    "value": "Item 3",
-                                    "beneficence": -2,
-                                    "non_maleficence": -2,
-                                    "autonomy": -2,
-                                    "justice": -2,
-                                    "explicability": -2
-                                }
-                            ],
-                            "showOtherItem": true
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question230",
-                            "title": "Has any other tool been used to assess the impact of the AI system?",
-                            "choices": [
-                                {
-                                    "text": "AI Verify Foundation (A framework and software toolkit designed for AI governance testing, validating the performance of AI systems based on a set of principles and aligning with AI governance frameworks such as those established by the European Union, OECD, and Singapore.)",
-                                    "value": "Item 1",
-                                    "beneficence": -1,
-                                    "non_maleficence": -1,
-                                    "autonomy": -1,
-                                    "justice": -1,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "IBM AI Fairness 360 (A toolkit to help detect and mitigate bias in AI models.)",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": -1,
-                                    "autonomy": -1,
-                                    "justice": -1,
-                                    "explicability": -1
-                                },
-                                {
-                                    "text": "Microsoft Responsible AI Toolbox (A suite of tools providing a collection of model and data exploration and evaluation of AI systems to help improve their approach.)",
-                                    "value": "Item 3",
-                                    "beneficence": -1,
-                                    "non_maleficence": -1,
-                                    "autonomy": -1,
-                                    "justice": -1,
-                                    "explicability": -1
-                                }
-                            ]
+                          "text": "IEEE CertifAIEd™ (Πρόγραμμα πιστοποίησης για την αξιολόγηση της ηθικής των Αυτόνομων Ευφυών Συστημάτων (AIS) ως προς την ιδιωτικότητα, διαφάνεια, λογοδοσία και τα κριτήρια μεροληψίας των αλγορίθμων.)",
+                          "value": "Item 2",
+                          "beneficence": -4,
+                          "non_maleficence": -4,
+                          "autonomy": -4,
+                          "justice": -4,
+                          "explicability": -4
                         }
-                    ]
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "checkbox",
+                      "name": "question223",
+                      "title": "Συμμορφώνεται η τεχνητή νοημοσύνη σας με κάποια πρότυπα ISO;",
+                      "choices": [
+                        {
+                          "text": "ISO/IEC TR 24028:2020 (Ανασκόπηση προσεγγίσεων για την εδραίωση εμπιστοσύνης σε συστήματα ΤΝ μέσω διαφάνειας, επεξηγησιμότητας, ελέγξιμότητας κ.λπ., τεχνικές παγίδες και συνήθεις απειλές/κινδύνους καθώς και προσεγγίσεις για αξιολόγηση και επίτευξη αξιόπιστων χαρακτηριστικών.)",
+                          "value": "Item 1",
+                          "beneficence": -5,
+                          "non_maleficence": -5,
+                          "autonomy": -5,
+                          "justice": -5,
+                          "explicability": -5
+                        },
+                        {
+                          "text": "ISO/IEC 42001:2023 (Διεθνές πρότυπο που ορίζει απαιτήσεις για την ίδρυση, εφαρμογή, συντήρηση και συνεχή βελτίωση ενός Συστήματος Διαχείρισης Τεχνητής Νοημοσύνης (AIMS).)",
+                          "value": "Item 2",
+                          "beneficence": -3,
+                          "non_maleficence": -3,
+                          "autonomy": -3,
+                          "justice": -3,
+                          "explicability": -3
+                        },
+                        {
+                          "text": "ISO/IEC DIS 42005 (Διεθνές πρότυπο που παρέχει καθοδήγηση για οργανισμούς που διενεργούν εκτιμήσεις επιπτώσεων συστημάτων ΤΝ, συμπεριλαμβανομένου πότε και πώς να τις πραγματοποιούν, σε ποια στάδια του κύκλου ζωής του συστήματος ΤΝ και πώς να τις ενσωματώνουν στο σύστημα διαχείρισης κινδύνων.)",
+                          "value": "Item 3",
+                          "beneficence": -3,
+                          "non_maleficence": -3,
+                          "autonomy": -3,
+                          "justice": -3,
+                          "explicability": -3
+                        }
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question225",
+                      "title": "Έχει πραγματοποιηθεί Εκτίμηση Αντικτύπου Προστασίας Δεδομένων (DPIA);",
+                      "choices": [
+                        {
+                          "text": "Ναι, η DPIA έχει ολοκληρωθεί πλήρως και τεκμηριωθεί.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ναι, αλλά η DPIA είναι ελλιπής ή δεν περιλαμβάνει λεπτομέρειες.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": -1,
+                          "autonomy": -3,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Όχι, αλλά είμαστε στη διαδικασία διενέργειας DPIA.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Όχι, δεν έχουμε διενεργήσει DPIA.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 1,
+                          "autonomy": 1,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question227",
+                      "title": "Συμμορφώνεται η ΤΝ με συγκεκριμένους κώδικες δεοντολογίας ή βέλτιστες πρακτικές;",
+                      "choices": [
+                        {
+                          "text": "Αρχές ΤΝ του ΟΟΣΑ (Αρχές που διασφαλίζουν την προστασία των ανθρωπίνων δικαιωμάτων, της ιδιωτικότητας, τη διαφάνεια, ανθεκτικότητα, ασφάλεια και λογοδοσία των ΤΝ συστημάτων).",
+                          "value": "Item 1",
+                          "beneficence": -2,
+                          "non_maleficence": -2,
+                          "autonomy": -2,
+                          "justice": -2,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Κατευθυντήριες Γραμμές της Ομάδας Εμπειρογνωμόνων Υψηλού Επιπέδου για ΤΝ της ΕΕ (HLEG AI).",
+                          "value": "Item 2",
+                          "beneficence": -2,
+                          "non_maleficence": -2,
+                          "autonomy": -2,
+                          "justice": -2,
+                          "explicability": -2
+                        },
+                        {
+                          "text": "Πλαίσιο Διαχείρισης Κινδύνου ΤΝ NIST (Πλαίσιο για τη διαχείριση κινδύνων που σχετίζονται με την ΤΝ).",
+                          "value": "Item 3",
+                          "beneficence": -2,
+                          "non_maleficence": -2,
+                          "autonomy": -2,
+                          "justice": -2,
+                          "explicability": -2
+                        }
+                      ],
+                      "showOtherItem": true
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question230",
+                      "title": "Έχει χρησιμοποιηθεί κάποιο άλλο εργαλείο για την αξιολόγηση του αντικτύπου του συστήματος ΤΝ;",
+                      "choices": [
+                        {
+                          "text": "AI Verify Foundation (Πλαίσιο και εργαλειοθήκη για τον έλεγχο της διακυβέρνησης ΤΝ, με ευθυγράμμιση σε πλαίσια της ΕΕ, ΟΟΣΑ και Σιγκαπούρης).",
+                          "value": "Item 1",
+                          "beneficence": -1,
+                          "non_maleficence": -1,
+                          "autonomy": -1,
+                          "justice": -1,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "IBM AI Fairness 360 (Εργαλειοθήκη για τον εντοπισμό και τη μείωση μεροληψίας σε μοντέλα ΤΝ).",
+                          "value": "Item 2",
+                          "beneficence": -1,
+                          "non_maleficence": -1,
+                          "autonomy": -1,
+                          "justice": -1,
+                          "explicability": -1
+                        },
+                        {
+                          "text": "Microsoft Responsible AI Toolbox (Σουίτα εργαλείων για αξιολόγηση μοντέλων και δεδομένων ΤΝ).",
+                          "value": "Item 3",
+                          "beneficence": -1,
+                          "non_maleficence": -1,
+                          "autonomy": -1,
+                          "justice": -1,
+                          "explicability": -1
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
-                    "type": "panel",
-                    "name": "panel19",
-                    "title": "Certification and Audits ",
-                    "state": "expanded",
-                    "elements": [
+                  "type": "panel",
+                  "name": "panel19",
+                  "title": "Πιστοποίηση και Έλεγχοι",
+                  "state": "expanded",
+                  "elements": [
+                    {
+                      "type": "radiogroup",
+                      "name": "question231",
+                      "title": "Έχετε δημιουργήσει λεπτομερείς μηχανισμούς που διευκολύνουν την δυνατότητα ελέγχου του συστήματος (π.χ. τεκμηρίωση της διαδικασίας ανάπτυξης, προέλευση δεδομένων εκπαίδευσης, παράπονα για αρνητικές επιπτώσεις και καταγραφή διαδικασιών του συστήματος);",
+                      "choices": [
                         {
-                            "type": "radiogroup",
-                            "name": "question231",
-                            "title": "Did you establish thorough mechanisms that facilitate the system\u2019s auditability (eg documentation of the development process, the sourcing of training data and complaints about negative impacts, and the logging of the system\u2019s processes)?\n",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have fully established and documented auditability mechanisms.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the mechanisms are incomplete or lack detail.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "No, but we are in the process of establishing auditability mechanisms.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No, we have not established any auditability mechanisms.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                }
-                            ]
+                          "text": "Ναι, έχουμε πλήρως καθιερώσει και τεκμηριώσει μηχανισμούς ελέγξιμότητας.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
                         },
                         {
-                            "type": "comment",
-                            "name": "question232",
-                            "visibleIf": "{question231} anyof ['Item 1', 'Item 2']",
-                            "title": "If yes, describe them."
+                          "text": "Ναι, αλλά οι μηχανισμοί είναι ελλιπείς ή χωρίς λεπτομέρειες.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 1
                         },
                         {
-                            "type": "radiogroup",
-                            "name": "question233",
-                            "title": "Can your system be audited by 3rd parties ?",
-                            "choices": [
-                                {
-                                    "text": "Yes, a third party can access all the information that an internal review would have.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but an internal audit would provide better insights.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "No, but we are working to make the system auditable by third parties.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No, the system cannot be audited by third parties.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                }
-                            ]
+                          "text": "Όχι, αλλά βρισκόμαστε στη διαδικασία δημιουργίας μηχανισμών ελέγξιμότητας.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
                         },
                         {
-                            "type": "boolean",
-                            "name": "question234",
-                            "title": "Did you foresee any kind of external guidance or third party auditing processes to oversee ethical concerns and accountability measures ?",
-                            "beneficenceTrue": -1,
-                            "non_maleficenceTrue": -1,
-                            "autonomyTrue": -1,
-                            "justiceTrue": -1,
-                            "explicabilityTrue": 0,
-                            "beneficenceFalse": 0,
-                            "non_maleficenceFalse": 0,
-                            "autonomyFalse": 0,
-                            "justiceFalse": 0,
-                            "explicabilityFalse": 0
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question235",
-                            "visibleIf": "{question234} = true",
-                            "title": "If yes,  which ones what are the results ?"
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question236",
-                            "title": "Have you researched and informed the stakeholders about the potential legal framework applicable to the AI system ?",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have fully researched and informed stakeholders about the legal framework.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Yes, but the research or communication to stakeholders is incomplete.",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not researched or informed stakeholders about the legal framework.",
-                                    "value": "Item 4",
-                                    "beneficence": 2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
+                          "text": "Όχι, δεν έχουμε δημιουργήσει καθόλου μηχανισμούς ελέγξιμότητας.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 3
                         }
-                    ]
-                }
+                      ]
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question232",
+                      "visibleIf": "{question231} anyof ['Item 1', 'Item 2']",
+                      "title": "Αν ναι, περιγράψτε τους."
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question233",
+                      "title": "Μπορεί το σύστημά σας να ελεγχθεί από τρίτους;",
+                      "choices": [
+                        {
+                          "text": "Ναι, τρίτος μπορεί να έχει πρόσβαση σε όλες τις πληροφορίες που έχει μια εσωτερική ανασκόπηση.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ναι, αλλά ένας εσωτερικός έλεγχος παρέχει καλύτερη εικόνα.",
+                          "value": "Item 2",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 1
+                        },
+                        {
+                          "text": "Όχι, αλλά εργαζόμαστε ώστε να μπορεί να ελεγχθεί από τρίτους.",
+                          "value": "Item 3",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 2
+                        },
+                        {
+                          "text": "Όχι, το σύστημα δεν μπορεί να ελεγχθεί από τρίτους.",
+                          "value": "Item 4",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 3
+                        }
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "question234",
+                      "title": "Έχετε προβλέψει οποιασδήποτε μορφής εξωτερική καθοδήγηση ή διαδικασία ελέγχου από τρίτους για την εποπτεία ηθικών ζητημάτων και μέτρων λογοδοσίας;",
+                      "beneficenceTrue": -1,
+                      "non_maleficenceTrue": -1,
+                      "autonomyTrue": -1,
+                      "justiceTrue": -1,
+                      "explicabilityTrue": 0,
+                      "beneficenceFalse": 0,
+                      "non_maleficenceFalse": 0,
+                      "autonomyFalse": 0,
+                      "justiceFalse": 0,
+                      "explicabilityFalse": 0
+                    },
+                    {
+                      "type": "comment",
+                      "name": "question235",
+                      "visibleIf": "{question234} = true",
+                      "title": "Αν ναι, ποιες είναι αυτές και ποια τα αποτελέσματα;"
+                    },
+                    {
+                      "type": "radiogroup",
+                      "name": "question236",
+                      "title": "Έχετε ερευνήσει και ενημερώσει τα ενδιαφερόμενα μέρη σχετικά με το ενδεχόμενο νομικό πλαίσιο που ισχύει για το σύστημα ΤΝ;",
+                      "choices": [
+                        {
+                          "text": "Ναι, έχουμε ερευνήσει πλήρως και ενημερώσει τους ενδιαφερόμενους για το νομικό πλαίσιο.",
+                          "value": "Item 1",
+                          "beneficence": 0,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Ναι, αλλά η έρευνα ή η ενημέρωση των ενδιαφερομένων είναι ελλιπής.",
+                          "value": "Item 2",
+                          "beneficence": 1,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        },
+                        {
+                          "text": "Όχι, δεν έχουμε ερευνήσει ούτε ενημερώσει τα ενδιαφερόμενα μέρη για το νομικό πλαίσιο.",
+                          "value": "Item 4",
+                          "beneficence": 2,
+                          "non_maleficence": 0,
+                          "autonomy": 0,
+                          "justice": 0,
+                          "explicability": 0
+                        }
+                      ]
+                    }
+                  ]
+                }                
             ]
         },
         {
             "name": "page7",
-            "title": "Operation Stage ",
+            "title": "Στάδιο Λειτουργίας",
             "elements": [
                 {
                     "type": "panel",
                     "name": "panel20",
-                    "title": "Continuous Monitoring and feedback ",
+                    "title": "Συνεχής Παρακολούθηση και Ανατροφοδότηση",
                     "state": "expanded",
                     "elements": [
-                        {
-                            "type": "radiogroup",
-                            "name": "question237",
-                            "title": "Do you have an arranged strategy for how to update the AI application continuously?",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have a fully documented and automated update strategy with regular intervals and version control.",
-                                    "value": "Item 1",
-                                    "beneficence": -2,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We have a partial strategy, with updates performed as needed but no formal schedule.",
-                                    "value": "Item 2",
-                                    "beneficence": -1,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Updates are performed ad-hoc, with no formal strategy or documentation.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we do not have a strategy for continuous updates.",
-                                    "value": "Item 4",
-                                    "beneficence": 3,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question238",
-                            "visibleIf": "{question237} anyof ['Item 2', 'Item 3', 'Item 1']",
-                            "title": "If yes, describe it  (frequency of updates and documentation of model changes)."
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question239",
-                            "title": "Do you have an arranged schedule and format of periodic reviews of the AI application with regard to ethical values and potential risks ?",
-                            "choices": [
-                                {
-                                    "text": "Yes, we conduct regular reviews (e.g., quarterly) using structured methodologies and ethical frameworks.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We conduct occasional reviews, but they are not consistently scheduled or documented.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Reviews are performed only when issues arise, with no formal schedule or format.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we do not conduct periodic reviews of ethical values or potential risks.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "comment",
-                            "name": "question240",
-                            "visibleIf": "{question239} anyof ['Item 1', 'Item 3', 'Item 2']",
-                            "title": "If yes describe it."
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question243",
-                            "title": "Do you inform end-users and subjects of existing or potential risks from using the system ?\n",
-                            "choices": [
-                                {
-                                    "text": "Yes, we provide comprehensive documentation and clear communication about all risks.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We provide some information about risks, but it may not cover all potential issues.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Risks are mentioned informally, but no structured communication is in place.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No, we do not inform end-users or subjects about risks.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question245",
-                            "title": "Do you inform all end-users and subjects that interact with the system's results that they were generated from an artificial intelligence ? ",
-                            "choices": [
-                                {
-                                    "text": "Yes, we clearly disclose that results are AI-generated in all interactions.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We disclose AI involvement in some contexts, but not consistently across all interactions.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 1,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Disclosure is minimal or only provided upon request.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 2,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No, we do not inform users that results are AI-generated.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 3,
-                                    "explicability": 3
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question246",
-                            "title": "Did you put in place a series of steps to monitor and document the AI's system's accuracy ",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have a robust monitoring system with regular accuracy checks and detailed documentation.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": -2,
-                                    "autonomy": 0,
-                                    "justice": -2,
-                                    "explicability": -2
-                                },
-                                {
-                                    "text": "We monitor accuracy occasionally, but documentation is incomplete or inconsistent.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Accuracy is checked informally, with no structured monitoring or documentation.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 2,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No, we do not monitor or document the AI system's accuracy.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 4,
-                                    "autonomy": 0,
-                                    "justice": 4,
-                                    "explicability": 4
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question247",
-                            "title": "Did you put processes in place to ensure that the level of accuracy of the AI system to be expected by end-users and/or subjects is properly communicated? ",
-                            "choices": [
-                                {
-                                    "text": "Yes, we clearly communicate expected accuracy levels and limitations to all users.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We provide some information about accuracy, but it may not be comprehensive or clear.",
-                                    "value": "Item 2",
-                                    "beneficence": 0,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 1
-                                },
-                                {
-                                    "text": "Accuracy expectations are mentioned informally, but no formal communication process exists.",
-                                    "value": "Item 3",
-                                    "beneficence": 0,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 2
-                                },
-                                {
-                                    "text": "No, we do not communicate accuracy expectations to users.",
-                                    "value": "Item 4",
-                                    "beneficence": 0,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 3
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question249",
-                            "title": "Did you consider whether the AI system's operation can invalidate the data or assumptions it was trained on, and how this might lead to adversarial effects (e.g. biased estimators, echo chambers etc.)?",
-                            "choices": [
-                                {
-                                    "text": "Yes, we have conducted thorough analysis and implemented safeguards to mitigate such risks.",
-                                    "value": "Item 5",
-                                    "beneficence": -1,
-                                    "non_maleficence": -1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "We have considered these risks but have not fully implemented safeguards.",
-                                    "value": "Item 6",
-                                    "beneficence": 1,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "These risks are acknowledged, but no formal analysis or mitigation is in place.",
-                                    "value": "Item 7",
-                                    "beneficence": 2,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "No, we have not considered these risks.",
-                                    "value": "Item 8",
-                                    "beneficence": 3,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
-                        {
-                            "type": "radiogroup",
-                            "name": "question248",
-                            "title": "Based on your answers to the previous questions, how would you rate the risk that the AI system's accuracy drops below intended level?",
-                            "choices": [
-                                {
-                                    "text": "Low risk: We have robust monitoring, communication, and mitigation strategies in place.",
-                                    "value": "Item 1",
-                                    "beneficence": 0,
-                                    "non_maleficence": 0,
-                                    "autonomy": 0,
-                                    "justice": 0,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Moderate risk: Some safeguards exist, but there are gaps in monitoring or communication.",
-                                    "value": "Item 2",
-                                    "beneficence": 1,
-                                    "non_maleficence": 1,
-                                    "autonomy": 0,
-                                    "justice": 1,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "High risk: Limited safeguards and monitoring, with significant potential for accuracy drops.",
-                                    "value": "Item 3",
-                                    "beneficence": 2,
-                                    "non_maleficence": 2,
-                                    "autonomy": 0,
-                                    "justice": 2,
-                                    "explicability": 0
-                                },
-                                {
-                                    "text": "Very high risk: No safeguards or monitoring in place, accuracy drops are likely.",
-                                    "value": "Item 4",
-                                    "beneficence": 3,
-                                    "non_maleficence": 3,
-                                    "autonomy": 0,
-                                    "justice": 3,
-                                    "explicability": 0
-                                }
-                            ]
-                        },
+                      {
+                        "type": "radiogroup",
+                        "name": "question237",
+                        "title": "Έχετε οργανωμένη στρατηγική για τη συνεχή ενημέρωση της εφαρμογής ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Ναι, έχουμε πλήρως τεκμηριωμένη και αυτοματοποιημένη στρατηγική ενημέρωσης με τακτικά διαστήματα και έλεγχο εκδόσεων.",
+                            "value": "Item 1",
+                            "beneficence": -2,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Έχουμε μερική στρατηγική, με ενημερώσεις κατά περίπτωση χωρίς επίσημο πρόγραμμα.",
+                            "value": "Item 2",
+                            "beneficence": -1,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Οι ενημερώσεις πραγματοποιούνται κατά περίπτωση, χωρίς επίσημη στρατηγική ή τεκμηρίωση.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε στρατηγική για συνεχή ενημέρωση.",
+                            "value": "Item 4",
+                            "beneficence": 3,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question238",
+                        "visibleIf": "{question237} anyof ['Item 2', 'Item 3', 'Item 1']",
+                        "title": "Αν ναι, περιγράψτε τη (συχνότητα ενημερώσεων και τεκμηρίωση αλλαγών μοντέλου)."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question239",
+                        "title": "Έχετε οργανωμένο πρόγραμμα και μορφή περιοδικών ανασκοπήσεων της εφαρμογής ΤΝ αναφορικά με ηθικές αξίες και δυνητικούς κινδύνους;",
+                        "choices": [
+                          {
+                            "text": "Ναι, πραγματοποιούμε τακτικές ανασκοπήσεις (π.χ. ανά τρίμηνο) χρησιμοποιώντας δομημένες μεθοδολογίες και ηθικά πλαίσια.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Πραγματοποιούμε περιστασιακές ανασκοπήσεις, αλλά δεν έχουν σταθερό χρονοδιάγραμμα ή τεκμηρίωση.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Οι ανασκοπήσεις πραγματοποιούνται μόνο όταν προκύψουν ζητήματα, χωρίς επίσημο πρόγραμμα ή μορφή.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν πραγματοποιούμε περιοδικές ανασκοπήσεις ηθικών αξιών ή δυνητικών κινδύνων.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "comment",
+                        "name": "question240",
+                        "visibleIf": "{question239} anyof ['Item 1', 'Item 3', 'Item 2']",
+                        "title": "Αν ναι, περιγράψτε το."
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question243",
+                        "title": "Ενημερώνετε τους τελικούς χρήστες και τα υποκείμενα για υπαρκτούς ή πιθανούς κινδύνους από τη χρήση του συστήματος;",
+                        "choices": [
+                          {
+                            "text": "Ναι, παρέχουμε πλήρη τεκμηρίωση και σαφή επικοινωνία για όλους τους κινδύνους.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Παρέχουμε κάποιες πληροφορίες για κινδύνους, αλλά ενδέχεται να μην καλύπτουν όλα τα πιθανά ζητήματα.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Οι κίνδυνοι αναφέρονται ανεπίσημα, χωρίς δομημένη επικοινωνία.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Όχι, δεν ενημερώνουμε τους τελικούς χρήστες ή τα υποκείμενα για κινδύνους.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question245",
+                        "title": "Ενημερώνετε όλους τους τελικούς χρήστες και υποκείμενα που αλληλεπιδρούν με τα αποτελέσματα του συστήματος ότι αυτά παράγονται από τεχνητή νοημοσύνη;",
+                        "choices": [
+                          {
+                            "text": "Ναι, αποκαλύπτουμε ξεκάθαρα ότι τα αποτελέσματα προέρχονται από ΤΝ σε όλες τις αλληλεπιδράσεις.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Αποκαλύπτουμε τη συμμετοχή της ΤΝ σε κάποιες περιπτώσεις, αλλά όχι με συνέπεια σε όλες τις αλληλεπιδράσεις.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 1,
+                            "justice": 0,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Η αποκάλυψη είναι ελάχιστη ή παρέχεται μόνο κατόπιν αιτήματος.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 2,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Όχι, δεν ενημερώνουμε τους χρήστες ότι τα αποτελέσματα προέρχονται από ΤΝ.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 3,
+                            "explicability": 3
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question246",
+                        "title": "Έχετε εφαρμόσει σειρά βημάτων για την παρακολούθηση και τεκμηρίωση της ακρίβειας του συστήματος ΤΝ;",
+                        "choices": [
+                          {
+                            "text": "Ναι, έχουμε ένα ισχυρό σύστημα παρακολούθησης με τακτικούς ελέγχους ακρίβειας και λεπτομερή τεκμηρίωση.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -2,
+                            "autonomy": 0,
+                            "justice": -2,
+                            "explicability": -2
+                          },
+                          {
+                            "text": "Παρακολουθούμε την ακρίβεια περιστασιακά, αλλά η τεκμηρίωση είναι ελλιπής ή ασυνεπής.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Η ακρίβεια ελέγχεται ανεπίσημα, χωρίς δομημένη παρακολούθηση ή τεκμηρίωση.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 2,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Όχι, δεν παρακολουθούμε ή τεκμηριώνουμε την ακρίβεια του συστήματος ΤΝ.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 4,
+                            "autonomy": 0,
+                            "justice": 4,
+                            "explicability": 4
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question247",
+                        "title": "Έχετε θέσει διαδικασίες για να διασφαλίσετε ότι το επίπεδο ακρίβειας του συστήματος ΤΝ, όπως αναμένεται από τους τελικούς χρήστες ή/και τα υποκείμενα, επικοινωνείται σωστά;",
+                        "choices": [
+                          {
+                            "text": "Ναι, επικοινωνούμε ξεκάθαρα τα αναμενόμενα επίπεδα ακρίβειας και τους περιορισμούς σε όλους τους χρήστες.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Παρέχουμε κάποιες πληροφορίες για την ακρίβεια, αλλά ίσως να μην είναι πλήρεις ή σαφείς.",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                          },
+                          {
+                            "text": "Οι προσδοκίες ακρίβειας αναφέρονται ανεπίσημα, χωρίς επίσημη διαδικασία επικοινωνίας.",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 2
+                          },
+                          {
+                            "text": "Όχι, δεν επικοινωνούμε τις προσδοκίες ακρίβειας στους χρήστες.",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question249",
+                        "title": "Λάβατε υπόψη αν η λειτουργία του συστήματος ΤΝ μπορεί να ακυρώσει τα δεδομένα ή τις υποθέσεις πάνω στις οποίες εκπαιδεύτηκε και πώς αυτό μπορεί να οδηγήσει σε αρνητικές επιπτώσεις (π.χ. μεροληπτικοί εκτιμητές, echo chambers κλπ.);",
+                        "choices": [
+                          {
+                            "text": "Ναι, έχουμε διεξάγει διεξοδική ανάλυση και εφαρμόσει μέτρα για τον περιορισμό τέτοιων κινδύνων.",
+                            "value": "Item 5",
+                            "beneficence": -1,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Έχουμε εξετάσει αυτούς τους κινδύνους αλλά δεν έχουμε εφαρμόσει πλήρως μέτρα προστασίας.",
+                            "value": "Item 6",
+                            "beneficence": 1,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Αυτοί οι κίνδυνοι αναγνωρίζονται, αλλά δεν υπάρχει επίσημη ανάλυση ή αντιμετώπιση.",
+                            "value": "Item 7",
+                            "beneficence": 2,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Όχι, δεν έχουμε λάβει υπόψη αυτούς τους κινδύνους.",
+                            "value": "Item 8",
+                            "beneficence": 3,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          }
+                        ]
+                      },
+                      {
+                        "type": "radiogroup",
+                        "name": "question248",
+                        "title": "Βάσει των απαντήσεών σας στις προηγούμενες ερωτήσεις, πώς θα αξιολογούσατε τον κίνδυνο η ακρίβεια του συστήματος ΤΝ να πέσει κάτω από το επιθυμητό επίπεδο;",
+                        "choices": [
+                          {
+                            "text": "Χαμηλός κίνδυνος: Έχουμε ισχυρές στρατηγικές παρακολούθησης, επικοινωνίας και μετριασμού.",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Μέτριος κίνδυνος: Υπάρχουν κάποια μέτρα προστασίας, αλλά υπάρχουν κενά στην παρακολούθηση ή την επικοινωνία.",
+                            "value": "Item 2",
+                            "beneficence": 1,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 1,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Υψηλός κίνδυνος: Περιορισμένα μέτρα προστασίας και παρακολούθησης, με σημαντική πιθανότητα πτώσης ακρίβειας.",
+                            "value": "Item 3",
+                            "beneficence": 2,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 2,
+                            "explicability": 0
+                          },
+                          {
+                            "text": "Πολύ υψηλός κίνδυνος: Δεν υπάρχουν μέτρα προστασίας ή παρακολούθησης, είναι πιθανές πτώσεις ακρίβειας.",
+                            "value": "Item 4",
+                            "beneficence": 3,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 3,
+                            "explicability": 0
+                          }
+                        ]
+                      },
                         {
                             "type": "radiogroup",
                             "name": "question251",

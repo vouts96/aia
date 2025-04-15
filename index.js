@@ -561,11 +561,17 @@ const savePdf = function(surveyData) {
     const maxYPosition = 250;
     const pageWidth = 180;
 
+    surveyPdf.addFont("NotoSans-Regular.ttf", "NotoSans", "normal");
+    surveyPdf.addFont("NotoSans-Bold.ttf", "NotoSans", "bold");
+    surveyPdf.addFont("NotoSans-Italic.ttf", "NotoSans", "italic");
+    surveyPdf.addFont("NotoSans-BoldItalic.ttf", "NotoSans", "bolditalic");
+
+
     const imgElement = document.getElementById('headerImage');
 
     // Cover Page
     surveyPdf.setFontSize(24);
-    surveyPdf.setFont('helvetica', 'bold');
+    surveyPdf.setFont('NotoSans', 'bold');
     surveyPdf.setTextColor('#333');
     surveyPdf.text("Algorithmic Impact Assessment", surveyPdf.internal.pageSize.getWidth() / 2, 60, { align: 'center' });
 
@@ -585,7 +591,7 @@ const savePdf = function(surveyData) {
     }
 
     surveyPdf.setFontSize(12);
-    surveyPdf.setFont('helvetica', 'normal');
+    surveyPdf.setFont('NotoSans', 'normal');
     surveyPdf.text(`Generated on: ${new Date().toLocaleDateString()}`, surveyPdf.internal.pageSize.getWidth() / 2, 130, { align: 'center' });
     
 
@@ -599,7 +605,7 @@ const savePdf = function(surveyData) {
       ) => {
         surveyPdf.setFontSize(fontSize);
         surveyPdf.setTextColor(color);
-        surveyPdf.setFont('helvetica', fontStyle);
+        surveyPdf.setFont('NotoSans', fontStyle);
       
         const lines = surveyPdf.splitTextToSize(text, pageWidth);
       
@@ -617,21 +623,21 @@ const savePdf = function(surveyData) {
           parts.forEach(part => {
             if (part.startsWith('***') && part.endsWith('***')) {
               const styledText = part.slice(3, -3);
-              surveyPdf.setFont('helvetica', 'bolditalic');
+              surveyPdf.setFont('NotoSans', 'bolditalic');
               surveyPdf.text(styledText, x, yPosition);
               x += surveyPdf.getTextWidth(styledText + ' ');
             } else if (part.startsWith('**') && part.endsWith('**')) {
               const styledText = part.slice(2, -2);
-              surveyPdf.setFont('helvetica', 'bold');
+              surveyPdf.setFont('NotoSans', 'bold');
               surveyPdf.text(styledText, x, yPosition);
               x += surveyPdf.getTextWidth(styledText + ' ');
             } else if (part.startsWith('*') && part.endsWith('*')) {
               const styledText = part.slice(1, -1);
-              surveyPdf.setFont('helvetica', 'italic');
+              surveyPdf.setFont('NotoSans', 'italic');
               surveyPdf.text(styledText, x, yPosition);
               x += surveyPdf.getTextWidth(styledText + ' ');
             } else {
-              surveyPdf.setFont('helvetica', fontStyle);
+              surveyPdf.setFont('NotoSans', fontStyle);
               surveyPdf.text(part, x, yPosition);
               x += surveyPdf.getTextWidth(part + ' ');
             }
@@ -640,7 +646,7 @@ const savePdf = function(surveyData) {
           yPosition += lineHeight;
         });
       
-        surveyPdf.setFont('helvetica', 'normal'); // reset
+        surveyPdf.setFont('NotoSans', 'normal'); // reset
       };
       
       
@@ -744,8 +750,8 @@ const savePdf = function(surveyData) {
             head: [["Beneficence", "Non-maleficence", "Autonomy", "Justice", "Explicability"]],
             body: [[`${question.beneficence}`, `${question.non_maleficence}`, `${question.autonomy}`, `${question.justice}`, `${question.explicability}`]],
             margin: { top: 20, left: 20, right: 20 },
-            styles: { fontSize: 12 },
-            headStyles: { fillColor: [13, 59, 62], textColor: 255 },
+            styles: { font: 'NotoSans', fontSize: 12 },
+            headStyles: { font: 'NotoSans', fillColor: [13, 59, 62], textColor: 255 },
             alternateRowStyles: { fillColor: [245, 250, 250] },
             startY: yPosition
         });
@@ -809,8 +815,9 @@ const savePdf = function(surveyData) {
             head: [["Subsection", "Questions", "Total Score"]],
             body: tableBody,
             startY: yPosition,
-            styles: { fontSize: 12 },
+            styles: { font: 'NotoSans', fontSize: 12 },
             headStyles: {
+                font: 'NotoSans',
                 fillColor: [13, 59, 62],
                 textColor: 255,
                 fontStyle: 'bold'
@@ -876,8 +883,9 @@ const savePdf = function(surveyData) {
         head: [["Category", "Score", "Percentage"]],
         body: totalTableBody,
         startY: yPosition,
-        styles: { fontSize: 12 },
+        styles: { font: 'NotoSans', fontSize: 12 },
         headStyles: {
+            font: 'NotoSans',
             fillColor: [13, 59, 62], 
           textColor: 255,
           fontStyle: 'bold'
