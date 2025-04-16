@@ -5301,7 +5301,7 @@ const json_questionnaire_gr = {
         },
         {
             "name": "page5",
-            "title": "Στάσιο Υλοποίησης: Μοντέλο",
+            "title": "Στάδιο Υλοποίησης: Μοντέλο",
             "elements": [
                 {
                     "type": "panel",

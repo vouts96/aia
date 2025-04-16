@@ -550,7 +550,7 @@ const calculateScore = function(surveyData, surveyJson) {
 };
 
 
-const savePdf = function(surveyData) {
+const savePdf = function(surveyData, lang) {
     const { jsPDF } = window.jspdf;
     const surveyPdf = new jsPDF();
     const titleFontSize = 20;
@@ -974,18 +974,63 @@ const savePdf = function(surveyData) {
 
             // Send request to your LLM API
             let llmAnalysis = "Loading analysis failed.";
-            try {
-                const response = await fetch("https://147.102.74.178:5001/generate", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ input: stringPayload }) 
-                });
+            if(lang === 'en'){
+                try {
+                    document.getElementById("loaderTop").style.display = "block";
+                    document.getElementById("loaderBottom").style.display = "block";
+                    document.getElementById("savePdfButton").disabled = true;
+                    document.querySelector(".closeButton").disabled = true;
+                    document.getElementById("savePdfButton").classList.add("blurred");
+                    document.querySelector(".closeButton").classList.add("blurred");
 
-                const data = await response.json();
-                llmAnalysis = data.response || "No analysis returned.";
-            } catch (err) {
-                console.error("LLM request failed:", err);
+                    const response = await fetch("https://147.102.74.178:5001/generate", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ input: stringPayload }) 
+                    });
+    
+                    const data = await response.json();
+                    llmAnalysis = data.response || "No analysis returned.";
+                } catch (err) {
+                    console.error("LLM request failed:", err);
+                }
+                finally {
+                    // Hide the loader after fetch finishes
+                    document.getElementById("loader").style.display = "none";
+                }
             }
+            else if(lang === 'gr'){
+                try {
+                    document.getElementById("loaderTop").style.display = "block";
+                    document.getElementById("loaderBottom").style.display = "block";
+                    document.getElementById("savePdfButton").disabled = true;
+                    document.querySelector(".closeButton").disabled = true;
+                    document.getElementById("savePdfButton").classList.add("blurred");
+                    document.querySelector(".closeButton").classList.add("blurred");
+
+                    
+                    const response = await fetch("https://147.102.74.178:5002/generate", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ input: stringPayload }) 
+                    });
+    
+                    const data = await response.json();
+                    llmAnalysis = data.response || "No analysis returned.";
+                } catch (err) {
+                    console.error("LLM request failed:", err);
+                }
+                finally {
+                    // Hide the loader after fetch finishes
+                    document.getElementById("loaderTop").style.display = "none";
+                    document.getElementById("loaderBottom").style.display = "none";
+                    document.getElementById("savePdfButton").disabled = false;
+                    document.querySelector(".closeButton").disabled = false;
+                    document.getElementById("savePdfButton").classList.remove("blurred");
+                    document.querySelector(".closeButton").classList.remove("blurred");
+                  }
+            }
+            
 
             // Add LLM section to the PDF
             yPosition += lineHeight;
@@ -1062,7 +1107,7 @@ function SurveyComponent() {
   
     const handleSavePdf = () => {
         if (surveyData) {
-            savePdf(surveyData);  // Pass the whole surveyData to savePdf
+            savePdf(surveyData, lang);  // Pass the whole surveyData to savePdf
         }
     };
 
