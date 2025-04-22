@@ -661,18 +661,36 @@ const savePdf = function(surveyData, lang) {
 
     // Initializing Bookmarks
     surveyPdf.outline = surveyPdf.internal.outline || surveyPdf.outline;
-    const rootBookmark = surveyPdf.outline.add(null, "Survey Results", { pageNumber: 1 });
+    const rootBookmark = surveyPdf.outline.add(
+        null,
+        lang === "gr" ? "Αποτελέσματα Ερωτηματολογίου" : "Survey Results",
+        { pageNumber: 1 }
+      );
+      
     
     let yPosition = 20;
     surveyPdf.addPage()
     // Explanation Page
-    surveyPdf.outline.add(rootBookmark, "Assessment Explanation", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+    let explanationTitle;
+    let explanationText;
 
-    addWrappedText("Assessment Explanation", titleFontSize, '#0D3B3E', 'bold')
-    yPosition += lineHeight;
-
-    // Explanation text in English
-    addWrappedText(
+    if (lang === "gr") {
+    explanationTitle = "Επεξήγηση Αξιολόγησης";
+    explanationText =
+        "Η αξιοπιστία ενός συστήματος ΤΝ έχει οριστεί με διάφορους τρόπους από διαφορετικούς ερευνητές. Για παράδειγμα, το CapAI ορίζει ένα αξιόπιστο σύστημα ως αυτό που είναι νόμιμο, ηθικό και τεχνικά ανθεκτικό. Εν τω μεταξύ, το National Institute of Standards and Technology περιγράφει την αξιόπιστη ΤΝ ως έγκυρη, αξιόπιστη, ασφαλή, ανθεκτική, υπόλογη, διαφανή, επεξηγήσιμη, φιλική προς την ιδιωτικότητα και δίκαιη.\n\n" +
+        "Σε αυτήν την αξιολόγηση εφαρμόζουμε τις πέντε αρχές που πρότειναν οι Floridi και Cowls στο άρθρο “A Unified Framework of Five Principles for AI in Society”:\n\n" +
+        "• **Beneficence**: Προώθηση της ευημερίας, της αξιοπρέπειας και της βιωσιμότητας. Η ΤΝ πρέπει να ωφελεί την ανθρωπότητα και το περιβάλλον.\n\n" +
+        "• **Non-maleficence**: Αποφυγή ζημιάς στην ιδιωτικότητα, την ασφάλεια ή κατάχρησης. Η ΤΝ πρέπει να ελαχιστοποιεί τους κινδύνους και να αποτρέπει την κατάχρηση.\n\n" +
+        "• **Autonomy**: Διασφάλιση ότι οι άνθρωποι διατηρούν τον έλεγχο και την τελική απόφαση έναντι των συστημάτων ΤΝ.\n\n" +
+        "• **Justice**: Προώθηση της ισότητας και αποφυγή διακρίσεων. Η ΤΝ πρέπει να υποστηρίζει τη διαφορετικότητα και τη δίκαιη κατανομή των ωφελειών.\n\n" +
+        "• **Explicability**: Διασφάλιση ότι τα συστήματα ΤΝ είναι διαφανή, επεξηγήσιμα και υπόλογα.\n\n" +
+        "Κάθε ερώτηση πολλαπλής επιλογής βαθμολογείται με πέντε βάρη (από -5 έως 5), ένα για κάθε αρχή, με βάση το πόσο ευθυγραμμίζεται η απάντηση με την υπεύθυνη ανάπτυξη ΤΝ.\n\n" +
+        "Στις ερωτήσεις μίας επιλογής, το χαμηλότερο βάρος αντιπροσωπεύει την πιο ευθυγραμμισμένη απάντηση. Στις πολλαπλής επιλογής, τα βάρη προστίθενται — θετικά (περισσότερος κίνδυνος) ή αρνητικά (περισσότερες δικλείδες ασφαλείας). Ουδέτερες απαντήσεις έχουν βάρος 0.\n\n" +
+        "Εξαίρεση αποτελεί ο ηθικός πίνακας κινδύνου στο στάδιο \"Ανάπτυξη Μοντέλου\", όπου η **Non-maleficence** βαθμολογείται ως γινόμενο παραγόντων κινδύνου (Σπουδαιότητα, Επείγον, Δυσκολία, Ανιχνευσιμότητα, Πιθανότητα), κανονικοποιημένο με συντελεστή 0.5.\n\n" +
+        "Τα τελικά αποτελέσματα περιλαμβάνουν απόλυτες τιμές και κανονικοποιημένα ποσοστά ανά αρχή, ώστε να απεικονίζεται με σαφήνεια η συμμόρφωση με τις αρχές υπεύθυνης ανάπτυξης ΤΝ.";
+    } else {
+    explanationTitle = "Assessment Explanation";
+    explanationText =
         "The reliability of an AI system has been defined in various ways by different researchers. For example, CapAI defines a trustworthy system as one that is legal, ethical, and technically robust. Meanwhile, the National Institute of Standards and Technology describes trustworthy AI as valid, reliable, secure, resilient, accountable, transparent, explainable, privacy-enhancing, and fair.\n\n" +
         "In this evaluation, we apply the five principles proposed by Floridi and Cowls in “A Unified Framework of Five Principles for AI in Society”:\n\n" +
         "• **Beneficence**: Promoting well-being, dignity, and sustainability. AI should benefit humanity and the environment.\n\n" +
@@ -683,10 +701,21 @@ const savePdf = function(surveyData, lang) {
         "Each multiple-choice question is scored using 5 weights (ranging from -5 to 5), one for each metric, depending on how compliant the answer is with responsible AI development practices.\n\n" +
         "For single-choice questions, the lowest weight represents the most aligned answer. In multi-select questions, weights add up — either positively (more risk) or negatively (more safeguards). Neutral responses receive a weight of 0.\n\n" +
         "An exception applies to the ethical risk matrix used in the \"Model Development Stage\", where the **Non-maleficence** metric receives a product of several risk factors (Importance, Urgency, Difficulty, Detectability, Probability), normalized by 0.5.\n\n" +
-        "Final results include both absolute values and normalized percentages per metric to clearly show alignment with ideal AI development standards.",
-        12
+        "Final results include both absolute values and normalized percentages per metric to clearly show alignment with ideal AI development standards.";
+    }
+
+    surveyPdf.outline.add(
+        rootBookmark,
+        explanationTitle,
+        { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber }
       );
       
+      addWrappedText(explanationTitle, titleFontSize, '#0D3B3E', 'bold');
+      yPosition += lineHeight;
+      
+      addWrappedText(explanationText, 12);
+      
+
       
     // --------------------------------
 
@@ -735,7 +764,7 @@ const savePdf = function(surveyData, lang) {
         let formattedQuestionName = question.name.replace(/([a-zA-Z]+)(\d+)/, (_, word, num) =>
             `${word.charAt(0).toUpperCase() + word.slice(1)} ${num}`
         );   
-        addWrappedText(`${formattedQuestionName}: ${question.title}`, subtitleFontSize, 'black');
+        addWrappedText(`${formattedQuestionName}: ${question.title}`, 14, 'black');
         
         if (Array.isArray(question.answer)) {
             addWrappedText(`Answer:`, textFontSize, 'black', 'bold');
@@ -766,8 +795,15 @@ const savePdf = function(surveyData, lang) {
 
     yPosition += 2 * lineHeight;
 
-    addWrappedText("Conclusional Results", titleFontSize, '#0D3B3E', 'bold');
-    surveyPdf.outline.add(rootBookmark, "Conclusional Results", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+    if(lang === 'gr'){
+        addWrappedText("Συμπεριληπτικά Αποτελέσματα", titleFontSize, '#0D3B3E', 'bold');
+        surveyPdf.outline.add(rootBookmark, "Συμπεριληπτικά Αποτελέσματα", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+    }
+    else if(lang === 'en'){
+        addWrappedText("Conclusional Results", titleFontSize, '#0D3B3E', 'bold');
+        surveyPdf.outline.add(rootBookmark, "Conclusional Results", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+    }
+    
 
 
     // Grouped Results
@@ -875,7 +911,8 @@ const savePdf = function(surveyData, lang) {
       
 
       yPosition += lineHeight;
-      addWrappedText(`Summarized Results`, subtitleFontSize, '#1C5C5E', 'bold');
+      if(lang === 'gr') addWrappedText(`Περιληπτικά Αποτελέσματα`, subtitleFontSize, '#1C5C5E', 'bold');
+      else if(lang === 'en') addWrappedText(`Summarized Results`, subtitleFontSize, '#1C5C5E', 'bold');
       
 
       // Render the table
@@ -983,7 +1020,7 @@ const savePdf = function(surveyData, lang) {
                     document.getElementById("savePdfButton").classList.add("blurred");
                     document.querySelector(".closeButton").classList.add("blurred");
 
-                    const response = await fetch("https://147.102.74.178:5001/generate", {
+                    const response = await fetch("https://gpu.dslab.ece.ntua.gr:5001/generate", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ input: stringPayload }) 
@@ -996,7 +1033,12 @@ const savePdf = function(surveyData, lang) {
                 }
                 finally {
                     // Hide the loader after fetch finishes
-                    document.getElementById("loader").style.display = "none";
+                    document.getElementById("loaderTop").style.display = "none";
+                    document.getElementById("loaderBottom").style.display = "none";
+                    document.getElementById("savePdfButton").disabled = false;
+                    document.querySelector(".closeButton").disabled = false;
+                    document.getElementById("savePdfButton").classList.remove("blurred");
+                    document.querySelector(".closeButton").classList.remove("blurred");
                 }
             }
             else if(lang === 'gr'){
@@ -1009,7 +1051,7 @@ const savePdf = function(surveyData, lang) {
                     document.querySelector(".closeButton").classList.add("blurred");
 
                     
-                    const response = await fetch("https://147.102.74.178:5002/generate", {
+                    const response = await fetch("https://gpu.dslab.ece.ntua.gr:5002/generate", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ input: stringPayload }) 
@@ -1034,8 +1076,15 @@ const savePdf = function(surveyData, lang) {
 
             // Add LLM section to the PDF
             yPosition += lineHeight;
-            addWrappedText("LLM Ethical Analysis", titleFontSize, '#0D3B3E', 'bold');
-            surveyPdf.outline.add(rootBookmark, "LLM Ethical Analysis", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+            if(lang === 'gr'){
+                addWrappedText("Ηθική Ανάλυση μέσω LLM", titleFontSize, '#0D3B3E', 'bold');
+                surveyPdf.outline.add(rootBookmark, "Ηθική Ανάλυση μέσω LLM", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+            }
+            else if(lang === 'en'){
+                addWrappedText("LLM Ethical Analysis", titleFontSize, '#0D3B3E', 'bold');
+                surveyPdf.outline.add(rootBookmark, "LLM Ethical Analysis", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });
+            }
+            
 
             const llmLines = llmAnalysis.split("\n");
             llmLines.forEach(line => {
@@ -1115,22 +1164,42 @@ function SurveyComponent() {
         setIsSurveyCompleted(false); // Close the modal
     };
   
-    return (
-      <>
-        <SurveyReact.Survey model={survey} />
-        
-        {isSurveyCompleted && (
-          <div id="savePdfModal">
-           <div className="modal-content">
-            <h3>Thank you for completing the survey!</h3>
-            <p>Would you like to save your results as a PDF?</p>
-            <button onClick={handleSavePdf} id="savePdfButton">Save as PDF</button>
-            <button onClick={handleCloseModal} className="closeButton">Close</button>
-           </div>
-          </div>
-        )}
-      </>
-    );
+    if(lang === 'gr'){
+        return (
+            <>
+              <SurveyReact.Survey model={survey} />
+              
+              {isSurveyCompleted && (
+                <div id="savePdfModal">
+                 <div className="modal-content">
+                  <h3>Ευχαριστούμε που ολοκληρώσατε την έρευνα!</h3>
+                  <p>Θα θέλατε να αποθηκεύσετε τα αποτελέσματά σας ως PDF?</p>
+                  <button onClick={handleSavePdf} id="savePdfButton" style={{marginRight: "10px"}}>Αποθήκευση ως PDF</button>
+                  <button onClick={handleCloseModal} className="closeButton">Κλείσιμο</button>
+                 </div>
+                </div>
+              )}
+            </>
+          );
+    }
+    else if(lang === 'en'){
+        return (
+        <>
+            <SurveyReact.Survey model={survey} />
+            
+            {isSurveyCompleted && (
+            <div id="savePdfModal">
+            <div className="modal-content">
+                <h3>Thank you for completing the survey!</h3>
+                <p>Would you like to save your results as a PDF?</p>
+                <button onClick={handleSavePdf} id="savePdfButton" style={{marginRight: "10px"}}>Save as PDF</button>
+                <button onClick={handleCloseModal} className="closeButton">Close</button>
+            </div>
+            </div>
+            )}
+        </>
+        );
+    }
 }
 
 // Rendering the component
