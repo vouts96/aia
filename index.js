@@ -40,6 +40,8 @@ const calculateScore = function(surveyData, surveyJson) {
         return null;
     };
     
+    // JSON Objsect for prefilling form 
+    let prefillData = {};
 
     // Iterate through the survey data responses
     Object.keys(surveyData).forEach(question => {
@@ -71,6 +73,9 @@ const calculateScore = function(surveyData, surveyJson) {
         let questionJustice = 0;
         let questionExplicability = 0;
         let questionAnswer = '';
+        let answerValue = null;
+        let answerValueJSON = {};
+        let answerValueArray = [];
 
         // Handle different question types using a switch-case
         switch (questionElement.type) {
@@ -90,8 +95,10 @@ const calculateScore = function(surveyData, surveyJson) {
                             questionAutonomy += choice.autonomy;
                             questionJustice += choice.justice;
                             questionExplicability += choice.explicability;
+                            answerValueArray.push(choice.value)
                         }
                     });
+                    answerValue = answerValueArray
                 } else {
                     const choice = questionElement.choices.find(choice => choice.value === response);
                     questionAnswer = choice ? choice.text : response;  // Store text instead of value
@@ -102,10 +109,12 @@ const calculateScore = function(surveyData, surveyJson) {
                         questionAutonomy += choice.autonomy;
                         questionJustice += choice.justice;
                         questionExplicability += choice.explicability;
+                        answerValue = choice.value
                     }
                 }
                 questionDetails.push({
                     name: question,
+                    answerValue: answerValue,
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
@@ -242,6 +251,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     questionJustice += questionElement.justiceTrue;
                     questionExplicability += questionElement.explicabilityTrue;
                     questionAnswer = "True/Yes";
+                    answerValue = response;
                 } else if (response === false) {
                     questionBeneficence += questionElement.beneficenceFalse
                     questionNonMaleficence += questionElement.non_maleficenceFalse
@@ -249,9 +259,11 @@ const calculateScore = function(surveyData, surveyJson) {
                     questionJustice += questionElement.justiceFalse
                     questionExplicability += questionElement.explicabilityFalse
                     questionAnswer = "False/No";
+                    answerValue = response;
                 }
                 questionDetails.push({
                     name: question,
+                    answerValue: answerValue,
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
@@ -340,8 +352,10 @@ const calculateScore = function(surveyData, surveyJson) {
             case "text":
             case "comment":
                 questionAnswer = response;
+                answerValue = response;
                 questionDetails.push({
                     name: question,
+                    answerValue: answerValue,
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
@@ -379,6 +393,7 @@ const calculateScore = function(surveyData, surveyJson) {
                         multipleTextAutonomy += 0;
                         multipleTextJustice += 0;
                         multipleTextExplicability += 0;
+                        answerValueJSON[item.name] = itemAnswer; 
                     }
                 });
                 questionBeneficence = multipleTextBeneficence;
@@ -386,8 +401,10 @@ const calculateScore = function(surveyData, surveyJson) {
                 questionAutonomy = multipleTextAutonomy;
                 questionJustice = multipleTextJustice;
                 questionExplicability = multipleTextExplicability;
+                answerValue = answerValueJSON;
                 questionDetails.push({
                     name: question,
+                    answerValue: answerValueJSON,
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
@@ -471,6 +488,9 @@ const calculateScore = function(surveyData, surveyJson) {
                 let matrixDropdownExplicability = 0;
                 let matrixDropdownAnswer = ''
                 let matrixWeight = 0;
+
+                let matrixPrefill = {};
+
                 Object.keys(response).forEach(row => {
                     const columnResponses = response[row];
                     // Find row text
@@ -480,6 +500,7 @@ const calculateScore = function(surveyData, surveyJson) {
                     matrixDropdownAnswer += `${rowText}:\n`;
 
                     let rowWeight = 1;
+                    matrixPrefill[row] = {};
                     Object.keys(columnResponses).forEach(columnName => {
 
                         const columnValue = columnResponses[columnName];
@@ -490,6 +511,8 @@ const calculateScore = function(surveyData, surveyJson) {
 
                         matrixDropdownAnswer += `  ${columnText}: ${columnValue || 'No answer'}\n`;
 
+                        matrixPrefill[row][columnName] = columnValue;
+
                         const choice = questionElement.choices.find(choice => choice.value === columnValue); 
                                     
                                     
@@ -499,6 +522,9 @@ const calculateScore = function(surveyData, surveyJson) {
                     });
                     matrixWeight += rowWeight;
                 });
+
+                answerValue = matrixPrefill;
+
                 questionBeneficence = 0;
                 questionNonMaleficence = matrixWeight * 0.5;
                 questionAutonomy = 0;
@@ -506,6 +532,7 @@ const calculateScore = function(surveyData, surveyJson) {
                 questionExplicability = 0;
                 questionDetails.push({
                     name: question,
+                    answerValue: answerValue,
                     title: questionElement.title,
                     type: questionElement.type,
                     page: questionPageTitle,
@@ -531,6 +558,8 @@ const calculateScore = function(surveyData, surveyJson) {
         }
 
         // Log question data to the console
+        console.log(`Question Name: ${question}`);
+        console.log(`Answer Value: ${answerValue}`)
         console.log(`Question: ${questionElement.title}`);
         console.log(`Answer Type: ${questionElement.type}`);
         console.log(`Page: ${questionPageTitle}`);
@@ -542,9 +571,11 @@ const calculateScore = function(surveyData, surveyJson) {
         console.log(`Justice: ${questionJustice}`);
         console.log(`Explicability: ${questionExplicability}`);
         console.log("-------------------------------");
+
+        prefillData[question] = answerValue;
     });
 
-
+    console.log("Prefill JSON:", JSON.stringify(prefillData));
 
     return { beneficence, non_maleficence, autonomy, justice, explicability, totalScore: beneficence + non_maleficence + autonomy + justice + explicability, questionDetails };
 };
