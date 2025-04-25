@@ -1,72 +1,64 @@
-/* Styles for the modal pop-up */
-#savePdfModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
+/* --- Modal Backdrop --- */
+#savePdfModal,
 #uploadJSONModal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.45);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 10000;
 }
 
+/* --- Modal Box --- */
+#savePdfModal .modal-content,
 #uploadJSONModal .modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  max-width: 90%;
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
-  width: 300px;
 }
 
-#savePdfModal .modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-  width: 300px;
-}
-
-/* Style for the Save as PDF button */
-#savePdfButton {
-  background-color: #4CAF50; /* Green */
+/* --- Primary Action Button --- */
+#savePdfButton,
+.jsonButton {
+  background-color: #2e8b8b; /* Your loader teal */
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 22px;
+  margin-bottom: 12px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-bottom: 10px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+#savePdfButton:hover,
+.jsonButton:hover {
+  background-color: #257373;
 }
 
-/* Style for the Close button (red background) */
+/* --- Close Button --- */
 .closeButton {
-  background-color: #f44336; /* Red */
+  background-color: #c44545;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 14px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-
-.jsonButton{
-  background-color: #3639f4; /* Red */
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+.closeButton:hover {
+  background-color: #a93636;
 }

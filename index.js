@@ -1255,7 +1255,7 @@ function SurveyComponent() {
             <>
                 <div id="uploadJSONModal">
                     <div className="modal-content">
-                        <p>Θα θέλατε να προσυμπληρώσετε τη φόρμα?</p>
+                        <p>Θα θέλατε να προσυμπληρώσετε τη φόρμα;</p>
                         <button onClick={triggerUpload} className="jsonButton" style={{ marginRight: "10px" }}>
                             Ανέβασμα JSON αρχείου
                         </button>
@@ -1279,9 +1279,9 @@ function SurveyComponent() {
                 <div id="savePdfModal">
                     <div className="modal-content">
                         <h3>Ευχαριστούμε που ολοκληρώσατε την έρευνα!</h3>
-                        <p>Θα θέλατε να αποθηκεύσετε τα αποτελέσματά σας ως PDF?</p>
+                        <p>Θα θέλατε να αποθηκεύσετε τα αποτελέσματά σας ως PDF;</p>
                         <button onClick={handleSavePdf} id="savePdfButton">Αποθήκευση ως PDF</button>
-                        <p>Θα θέλατε να αποθηκεύσετε τις απαντήσεις σας σε μορφή JSON για μελλοντική χρήση?</p>
+                        <p>Θα θέλατε να αποθηκεύσετε τις απαντήσεις σας σε μορφή JSON για μελλοντική χρήση;</p>
                         <button onClick={handleSaveJSON} className="jsonButton">Αποθήκευση απαντήσεων σε μορφή JSON</button>
                         <br/><br/>
                         <button onClick={handleCloseModal} className="closeButton">Κλείσιμο</button> 
