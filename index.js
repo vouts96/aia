@@ -575,11 +575,23 @@ const calculateScore = function(surveyData, surveyJson) {
         prefillData[question] = answerValue;
     });
 
-    console.log("Prefill JSON:", JSON.stringify(prefillData));
+    //console.log("Prefill JSON:", JSON.stringify(prefillData));
 
-    return { beneficence, non_maleficence, autonomy, justice, explicability, totalScore: beneficence + non_maleficence + autonomy + justice + explicability, questionDetails };
+    return { beneficence, non_maleficence, autonomy, justice, explicability, totalScore: beneficence + non_maleficence + autonomy + justice + explicability, questionDetails, prefillData };
 };
 
+const saveJSON = function(surveyData, fileName = "prefill_data.json"){
+    const jsonStr = JSON.stringify(surveyData.prefillData); // Pretty print
+    const blob = new Blob([jsonStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = fileName;
+    link.click();
+
+    URL.revokeObjectURL(url); // Clean up
+}
 
 const savePdf = function(surveyData, lang) {
     const { jsPDF } = window.jspdf;
@@ -680,11 +692,6 @@ const savePdf = function(surveyData, lang) {
         surveyPdf.setFont('NotoSans', 'normal'); // reset
       };
       
-      
-      
-      
-      
-
     // Function to calculate percentage of total metric
     const calculatePercentage = (score, min, max) => {
         return ((score - min) / (max - min)) * 100;
@@ -1044,12 +1051,7 @@ const savePdf = function(surveyData, lang) {
             let llmAnalysis = "Loading analysis failed.";
             if(lang === 'en'){
                 try {
-                    document.getElementById("loaderTop").style.display = "block";
-                    document.getElementById("loaderBottom").style.display = "block";
-                    document.getElementById("savePdfButton").disabled = true;
-                    document.querySelector(".closeButton").disabled = true;
-                    document.getElementById("savePdfButton").classList.add("blurred");
-                    document.querySelector(".closeButton").classList.add("blurred");
+                    handleDisableButtons();
 
                     const response = await fetch("https://gpu.dslab.ece.ntua.gr:5001/generate", {
                     method: "POST",
@@ -1064,22 +1066,12 @@ const savePdf = function(surveyData, lang) {
                 }
                 finally {
                     // Hide the loader after fetch finishes
-                    document.getElementById("loaderTop").style.display = "none";
-                    document.getElementById("loaderBottom").style.display = "none";
-                    document.getElementById("savePdfButton").disabled = false;
-                    document.querySelector(".closeButton").disabled = false;
-                    document.getElementById("savePdfButton").classList.remove("blurred");
-                    document.querySelector(".closeButton").classList.remove("blurred");
+                    handleEnableButtons();
                 }
             }
             else if(lang === 'gr'){
                 try {
-                    document.getElementById("loaderTop").style.display = "block";
-                    document.getElementById("loaderBottom").style.display = "block";
-                    document.getElementById("savePdfButton").disabled = true;
-                    document.querySelector(".closeButton").disabled = true;
-                    document.getElementById("savePdfButton").classList.add("blurred");
-                    document.querySelector(".closeButton").classList.add("blurred");
+                    handleDisableButtons();
 
                     
                     const response = await fetch("https://gpu.dslab.ece.ntua.gr:5002/generate", {
@@ -1095,12 +1087,7 @@ const savePdf = function(surveyData, lang) {
                 }
                 finally {
                     // Hide the loader after fetch finishes
-                    document.getElementById("loaderTop").style.display = "none";
-                    document.getElementById("loaderBottom").style.display = "none";
-                    document.getElementById("savePdfButton").disabled = false;
-                    document.querySelector(".closeButton").disabled = false;
-                    document.getElementById("savePdfButton").classList.remove("blurred");
-                    document.querySelector(".closeButton").classList.remove("blurred");
+                    handleEnableButtons();
                   }
             }
             
@@ -1124,11 +1111,11 @@ const savePdf = function(surveyData, lang) {
 
             // Step 3: Add chart to PDF
             yPosition += lineHeight;
-            surveyPdf.addImage(chartImage, 'PNG', chartX, yPosition, chartWidth, chartHeight);
-            yPosition += chartHeight + 10;
+            //surveyPdf.addImage(chartImage, 'PNG', chartX, yPosition, chartWidth, chartHeight);
+            //yPosition += chartHeight + 10;
 
             // Optional: Save or continue PDF generation
-            surveyPdf.save("survey_results_with_chart.pdf");
+            surveyPdf.save("survey_results.pdf");
         }
         },
         plugins: {
@@ -1161,6 +1148,37 @@ const savePdf = function(surveyData, lang) {
     //surveyPdf.save("survey_results.pdf");
 };
 
+function handleDisableButtons(){
+    document.getElementById("loaderTop").style.display = "block";
+    document.getElementById("loaderBottom").style.display = "block";
+    document.getElementById("savePdfButton").disabled = true;
+    document.getElementById("savePdfButton").classList.add("blurred");
+    document.querySelector(".closeButton").disabled = true;
+    document.querySelectorAll('.jsonButton').forEach(btn => {
+        btn.disabled = true;
+        btn.classList.add("blurred");
+    });
+    document.querySelectorAll('.closeButton').forEach(btn => {
+        btn.disabled = true;
+        btn.classList.add("blurred");
+    });
+}
+
+function handleEnableButtons(){
+    document.getElementById("loaderTop").style.display = "none";
+    document.getElementById("loaderBottom").style.display = "none";
+    document.getElementById("savePdfButton").disabled = false;
+    document.getElementById("savePdfButton").classList.remove("blurred");
+    document.querySelector(".closeButton").disabled = false;
+    document.querySelectorAll('.jsonButton').forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove("blurred");
+    });
+    document.querySelectorAll('.closeButton').forEach(btn => {
+        btn.disabled = false;
+        btn.classList.remove("blurred");
+    });
+}
 
 function SurveyComponent() {
     const params = new URLSearchParams(window.location.search);
@@ -1180,8 +1198,8 @@ function SurveyComponent() {
     const [isSurveyCompleted, setIsSurveyCompleted] = React.useState(false); // Track survey completion
   
     survey.onComplete.add((sender, options) => {
-        const { beneficence, non_maleficence, autonomy, justice, explicability, totalScore, questionDetails } = calculateScore(sender.data, json_q);
-        setSurveyData({ beneficence, non_maleficence, autonomy, justice, explicability, totalScore, questionDetails }); // Set both total score and question details
+        const { beneficence, non_maleficence, autonomy, justice, explicability, totalScore, questionDetails, prefillData } = calculateScore(sender.data, json_q);
+        setSurveyData({ beneficence, non_maleficence, autonomy, justice, explicability, totalScore, questionDetails, prefillData }); // Set both total score and question details
         setIsSurveyCompleted(true); // Mark the survey as completed
     });
   
@@ -1194,20 +1212,80 @@ function SurveyComponent() {
     const handleCloseModal = () => {
         setIsSurveyCompleted(false); // Close the modal
     };
+
+    const handleSaveJSON = () => {
+        if (surveyData) {
+            saveJSON(surveyData)  // Pass the whole surveyData to saveJSON
+        }
+    }
+
+    // This function just opens the file picker
+    const triggerUpload = () => {
+        document.getElementById('uploadJSON').click();
+    };
+    
+    // This function reads the file
+    const handleUploadJSON = (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+    
+        const reader = new FileReader();
+        reader.onload = (e) => {
+        try {
+            const uploadedData = JSON.parse(e.target.result);
+            console.log("Uploaded prefill data:", uploadedData);
+            survey.mergeData(uploadedData);  // <- Pre-fill the survey
+        } catch (error) {
+            console.error("Failed to parse JSON:", error);
+            alert("Το αρχείο δεν είναι έγκυρο JSON.");
+        }
+        };
+        reader.readAsText(file);
+        handleCloseJSONModal();
+    };
+
+    const handleCloseJSONModal = () => {
+        document.getElementById('uploadJSONModal').style.display = "none"
+    }
+  
+      
   
     if(lang === 'gr'){
         return (
             <>
+                <div id="uploadJSONModal">
+                    <div className="modal-content">
+                        <p>Θα θέλατε να προσυμπληρώσετε τη φόρμα?</p>
+                        <button onClick={triggerUpload} className="jsonButton" style={{ marginRight: "10px" }}>
+                            Ανέβασμα JSON αρχείου
+                        </button>
+                        <button onClick={handleCloseJSONModal} className="closeButton">Κλείσιμο</button>
+
+                        {/* Hidden file input */}
+                        <input
+                        type="file"
+                        id="uploadJSON"
+                        accept=".json"
+                        style={{ display: "none" }}
+                        onChange={handleUploadJSON}
+                        />
+                    </div>
+                </div>
+
               <SurveyReact.Survey model={survey} />
+              
               
               {isSurveyCompleted && (
                 <div id="savePdfModal">
-                 <div className="modal-content">
-                  <h3>Ευχαριστούμε που ολοκληρώσατε την έρευνα!</h3>
-                  <p>Θα θέλατε να αποθηκεύσετε τα αποτελέσματά σας ως PDF?</p>
-                  <button onClick={handleSavePdf} id="savePdfButton" style={{marginRight: "10px"}}>Αποθήκευση ως PDF</button>
-                  <button onClick={handleCloseModal} className="closeButton">Κλείσιμο</button>
-                 </div>
+                    <div className="modal-content">
+                        <h3>Ευχαριστούμε που ολοκληρώσατε την έρευνα!</h3>
+                        <p>Θα θέλατε να αποθηκεύσετε τα αποτελέσματά σας ως PDF?</p>
+                        <button onClick={handleSavePdf} id="savePdfButton">Αποθήκευση ως PDF</button>
+                        <p>Θα θέλατε να αποθηκεύσετε τις απαντήσεις σας σε μορφή JSON για μελλοντική χρήση?</p>
+                        <button onClick={handleSaveJSON} className="jsonButton">Αποθήκευση απαντήσεων σε μορφή JSON</button>
+                        <br/><br/>
+                        <button onClick={handleCloseModal} className="closeButton">Κλείσιμο</button> 
+                    </div>
                 </div>
               )}
             </>
@@ -1216,16 +1294,38 @@ function SurveyComponent() {
     else if(lang === 'en'){
         return (
         <>
+            <div id="uploadJSONModal">
+                    <div className="modal-content">
+                        <p>Would you like to prefill the survey?</p>
+                        <button onClick={triggerUpload} className="jsonButton" style={{ marginRight: "10px" }}>
+                            Upload JSON file
+                        </button>
+                        <button onClick={handleCloseJSONModal} className="closeButton">Close</button>
+
+                        {/* Hidden file input */}
+                        <input
+                        type="file"
+                        id="uploadJSON"
+                        accept=".json"
+                        style={{ display: "none" }}
+                        onChange={handleUploadJSON}
+                        />
+                    </div>
+                </div>
+
             <SurveyReact.Survey model={survey} />
             
             {isSurveyCompleted && (
             <div id="savePdfModal">
-            <div className="modal-content">
-                <h3>Thank you for completing the survey!</h3>
-                <p>Would you like to save your results as a PDF?</p>
-                <button onClick={handleSavePdf} id="savePdfButton" style={{marginRight: "10px"}}>Save as PDF</button>
-                <button onClick={handleCloseModal} className="closeButton">Close</button>
-            </div>
+                <div className="modal-content">
+                    <h3>Thank you for completing the survey!</h3>
+                    <p>Would you like to save your results as a PDF?</p>
+                    <button onClick={handleSavePdf} id="savePdfButton">Save as PDF</button>
+                    <p>Would you like to save your answers as a JSON for future use?</p>
+                    <button onClick={handleSaveJSON} className="jsonButton">Save answer values as JSON</button>
+                    <br/><br/>
+                    <button onClick={handleCloseModal} className="closeButton">Close</button>
+                </div>
             </div>
             )}
         </>
