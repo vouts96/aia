@@ -10809,434 +10809,471 @@ const json_questionnaire_en = {
           "title": "Retirement Stage ",
           "elements": [
               {
-                  "type": "radiogroup",
-                  "name": "question283",
-                  "title": "Has the organization conducted a thorough risk assessment prior to decommissioning the AI system?",
-                  "choices": [
-                      {
-                          "text": "Comprehensive risk assessment completed, covering ethical, technical, and operational impacts",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Partial risk assessment covering key risks but with gaps in ethical considerations",
-                          "value": "Item 2",
-                          "beneficence": 1,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Basic assessment focusing only on operational risks, with minimal ethical or technical analysis",
-                          "value": "Item 3",
-                          "beneficence": 2,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "No formal risk assessment conducted",
-                          "value": "Item 4",
-                          "beneficence": 4,
-                          "non_maleficence": 4,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
+                "type": "panel",
+                "name": "panel21",
+                "title": "Risk Assessment",
+                "state": "expanded",
+                "elements": [
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question283",
+                                    "title": "Has the organization conducted a thorough risk assessment prior to decommissioning the AI system?",
+                                    "choices": [
+                                        {
+                                            "text": "Comprehensive risk assessment completed, covering ethical, technical, and operational impacts",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Partial risk assessment covering key risks but with gaps in ethical considerations",
+                                            "value": "Item 2",
+                                            "beneficence": 1,
+                                            "non_maleficence": 1,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Basic assessment focusing only on operational risks, with minimal ethical or technical analysis",
+                                            "value": "Item 3",
+                                            "beneficence": 2,
+                                            "non_maleficence": 2,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "No formal risk assessment conducted",
+                                            "value": "Item 4",
+                                            "beneficence": 4,
+                                            "non_maleficence": 4,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                }
+                            ]},
               {
-                  "type": "radiogroup",
-                  "name": "question284",
-                  "title": "To what extent are stakeholders (e.g., end users, customers, affected communities) involved in the AI decommissioning process?\n",
-                  "choices": [
-                      {
-                          "text": "Stakeholders are fully engaged through consultations and feedback loops at all stages",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Stakeholders are partially involved, with limited consultations on specific aspects",
-                          "value": "Item 2",
-                          "beneficence": 1,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Stakeholders are minimally involved, with sporadic feedback gathering",
-                          "value": "Item 3",
-                          "beneficence": 2,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Stakeholders are not consulted or informed",
-                          "value": "Item 4",
-                          "beneficence": 3,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
+                "type": "panel",
+                "name": "panel21",
+                "title": "Stakeholder Engagement",
+                "state": "expanded",
+                "elements": [
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question284",
+                                    "title": "To what extent are stakeholders (e.g., end users, customers, affected communities) involved in the AI decommissioning process?\n",
+                                    "choices": [
+                                        {
+                                            "text": "Stakeholders are fully engaged through consultations and feedback loops at all stages",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Stakeholders are partially involved, with limited consultations on specific aspects",
+                                            "value": "Item 2",
+                                            "beneficence": 1,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Stakeholders are minimally involved, with sporadic feedback gathering",
+                                            "value": "Item 3",
+                                            "beneficence": 2,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Stakeholders are not consulted or informed",
+                                            "value": "Item 4",
+                                            "beneficence": 3,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                }
+                            ]},
               {
-                  "type": "radiogroup",
-                  "name": "question285",
-                  "title": " How are personal data and other sensitive information handled during the decommissioning process?",
-                  "choices": [
-                      {
-                          "text": "Personal data is securely deleted following international best practices (e.g., GDPR-compliant deletion protocols)",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Personal data is deleted, but no verification or audit process is in place",
-                          "value": "Item 2",
-                          "beneficence": 0,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Personal data is archived indefinitely with no specific deletion plan",
-                          "value": "Item 3",
-                          "beneficence": 0,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "No action is taken to ensure proper handling or deletion of personal data",
-                          "value": "Item 4",
-                          "beneficence": 0,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
+                "type": "panel",
+                "name": "panel21",
+                "title": "Data Management",
+                "state": "expanded",
+                "elements": [
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question285",
+                                    "title": " How are personal data and other sensitive information handled during the decommissioning process?",
+                                    "choices": [
+                                        {
+                                            "text": "Personal data is securely deleted following international best practices (e.g., GDPR-compliant deletion protocols)",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Personal data is deleted, but no verification or audit process is in place",
+                                            "value": "Item 2",
+                                            "beneficence": 0,
+                                            "non_maleficence": 1,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Personal data is archived indefinitely with no specific deletion plan",
+                                            "value": "Item 3",
+                                            "beneficence": 0,
+                                            "non_maleficence": 2,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "No action is taken to ensure proper handling or deletion of personal data",
+                                            "value": "Item 4",
+                                            "beneficence": 0,
+                                            "non_maleficence": 3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question286",
+                                    "title": " How does the organization manage AI models and training data after decommissioning?",
+                                    "choices": [
+                                        {
+                                            "text": "Models and data are securely archived for auditing, reproducibility, and compliance purposes",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Models and data are archived, but security controls (e.g., encryption) are minimal",
+                                            "value": "Item 2",
+                                            "beneficence": 0,
+                                            "non_maleficence": 1,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Models and data are retained with no formal archiving or security plan",
+                                            "value": "Item 3",
+                                            "beneficence": 0,
+                                            "non_maleficence": 2,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Models and data are deleted without considering auditing or compliance needs",
+                                            "value": "Item 4",
+                                            "beneficence": 0,
+                                            "non_maleficence": 3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                }
+                            ]},
               {
-                  "type": "radiogroup",
-                  "name": "question286",
-                  "title": " How does the organization manage AI models and training data after decommissioning?",
-                  "choices": [
-                      {
-                          "text": "Models and data are securely archived for auditing, reproducibility, and compliance purposes",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Models and data are archived, but security controls (e.g., encryption) are minimal",
-                          "value": "Item 2",
-                          "beneficence": 0,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Models and data are retained with no formal archiving or security plan",
-                          "value": "Item 3",
-                          "beneficence": 0,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Models and data are deleted without considering auditing or compliance needs",
-                          "value": "Item 4",
-                          "beneficence": 0,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
+                "type": "panel",
+                "name": "panel21",
+                "title": "Impact Management",
+                "state": "expanded",
+                "elements": [
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question287",
+                                    "title": "What steps are taken to mitigate potential negative ethical impacts caused by the decommissioning of the AI system?",
+                                    "choices": [
+                                        {
+                                            "text": "Ethical impacts are fully assessed and mitigation plans are developed, including for marginalized groups",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": -3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Ethical impacts are partially assessed, with focus on high-risk areas but limited breadth",
+                                            "value": "Item 2",
+                                            "beneficence": 0,
+                                            "non_maleficence": -1,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Ethical risks are acknowledged but no concrete mitigation strategies are in place",
+                                            "value": "Item 3",
+                                            "beneficence": 0,
+                                            "non_maleficence": 2,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Ethical risks are not considered",
+                                            "value": "Item 4",
+                                            "beneficence": 0,
+                                            "non_maleficence": 3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question288",
+                                    "title": "How does the organization ensure continuity or provide alternatives for users dependent on the AI system?",
+                                    "choices": [
+                                        {
+                                            "text": "Comprehensive transition plan includes equivalent services or manual processes, with user support",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": -3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Partial transition plan with some gaps in continuity for dependent users",
+                                            "value": "Item 2",
+                                            "beneficence": -1,
+                                            "non_maleficence": -1,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Users are notified, but no specific alternative or support is provided",
+                                            "value": "Item 3",
+                                            "beneficence": 2,
+                                            "non_maleficence": 2,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "No continuity or alternative services are provided",
+                                            "value": "Item 4",
+                                            "beneficence": 3,
+                                            "non_maleficence": 3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "radiogroup",
+                                    "name": "question289",
+                                    "title": "How are environmental considerations (e.g., energy consumption of servers) addressed during decommissioning?",
+                                    "choices": [
+                                        {
+                                            "text": "Hardware is responsibly recycled, and energy use is minimized in accordance with sustainability goals",
+                                            "value": "Item 1",
+                                            "beneficence": 0,
+                                            "non_maleficence": 0,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Some recycling or energy minimization efforts are made, but no formal strategy exists",
+                                            "value": "Item 2",
+                                            "beneficence": 1,
+                                            "non_maleficence": 1,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Minimal effort to address environmental impact, with no formal measures taken",
+                                            "value": "Item 3",
+                                            "beneficence": 2,
+                                            "non_maleficence": 2,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        },
+                                        {
+                                            "text": "Environmental impact is not considered",
+                                            "value": "Item 4",
+                                            "beneficence": 3,
+                                            "non_maleficence": 3,
+                                            "autonomy": 0,
+                                            "justice": 0,
+                                            "explicability": 0
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
               {
-                  "type": "radiogroup",
-                  "name": "question287",
-                  "title": "What steps are taken to mitigate potential negative ethical impacts caused by the decommissioning of the AI system?",
-                  "choices": [
-                      {
-                          "text": "Ethical impacts are fully assessed and mitigation plans are developed, including for marginalized groups",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": -3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Ethical impacts are partially assessed, with focus on high-risk areas but limited breadth",
-                          "value": "Item 2",
-                          "beneficence": 0,
-                          "non_maleficence": -1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Ethical risks are acknowledged but no concrete mitigation strategies are in place",
-                          "value": "Item 3",
-                          "beneficence": 0,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Ethical risks are not considered",
-                          "value": "Item 4",
-                          "beneficence": 0,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
-              {
-                  "type": "radiogroup",
-                  "name": "question288",
-                  "title": "How does the organization ensure continuity or provide alternatives for users dependent on the AI system?",
-                  "choices": [
-                      {
-                          "text": "Comprehensive transition plan includes equivalent services or manual processes, with user support",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": -3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Partial transition plan with some gaps in continuity for dependent users",
-                          "value": "Item 2",
-                          "beneficence": -1,
-                          "non_maleficence": -1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Users are notified, but no specific alternative or support is provided",
-                          "value": "Item 3",
-                          "beneficence": 2,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "No continuity or alternative services are provided",
-                          "value": "Item 4",
-                          "beneficence": 3,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
-              {
-                  "type": "radiogroup",
-                  "name": "question289",
-                  "title": "How are environmental considerations (e.g., energy consumption of servers) addressed during decommissioning?",
-                  "choices": [
-                      {
-                          "text": "Hardware is responsibly recycled, and energy use is minimized in accordance with sustainability goals",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Some recycling or energy minimization efforts are made, but no formal strategy exists",
-                          "value": "Item 2",
-                          "beneficence": 1,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Minimal effort to address environmental impact, with no formal measures taken",
-                          "value": "Item 3",
-                          "beneficence": 2,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Environmental impact is not considered",
-                          "value": "Item 4",
-                          "beneficence": 3,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
-              {
-                  "type": "radiogroup",
-                  "name": "question290",
-                  "title": "To what extent is the decommissioning process documented and made transparent?",
-                  "choices": [
-                      {
-                          "text": "The entire process is thoroughly documented and shared with internal and external stakeholders",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Partial documentation exists, but some steps are unclear or unavailable to stakeholders",
-                          "value": "Item 2",
-                          "beneficence": 0,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 1
-                      },
-                      {
-                          "text": "Minimal documentation is available, and it is not shared externally",
-                          "value": "Item 3",
-                          "beneficence": 0,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 2
-                      },
-                      {
-                          "text": "No documentation of the decommissioning process exists",
-                          "value": "Item 4",
-                          "beneficence": 0,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 3
-                      }
-                  ]
-              },
-              {
-                  "type": "radiogroup",
-                  "name": "question291",
-                  "title": " How are risks from third-party dependencies (e.g., APIs, external data sources) managed during decommissioning?",
-                  "choices": [
-                      {
-                          "text": "All third-party contracts and dependencies are reviewed and terminated in alignment with decommissioning",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": 0,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Some third-party dependencies are reviewed, but gaps in termination plans exist",
-                          "value": "Item 2",
-                          "beneficence": 0,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "No formal review of third-party dependencies, but termination is informally managed",
-                          "value": "Item 3",
-                          "beneficence": 0,
-                          "non_maleficence": 2,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Third-party dependencies are ignored during decommissioning",
-                          "value": "Item 4",
-                          "beneficence": 0,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
-              },
-              {
-                  "type": "radiogroup",
-                  "name": "question292",
-                  "title": "Is there a post-decommission review or audit to ensure all risks have been mitigated and lessons learned?",
-                  "choices": [
-                      {
-                          "text": "Comprehensive post-decommission review and audit conducted, with lessons learned applied to future projects",
-                          "value": "Item 1",
-                          "beneficence": 0,
-                          "non_maleficence": -3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "A basic review is conducted, but no formal audit or feedback loop exists",
-                          "value": "Item 2",
-                          "beneficence": 0,
-                          "non_maleficence": -1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "Informal review conducted with no structured learning process",
-                          "value": "Item 3",
-                          "beneficence": 0,
-                          "non_maleficence": 1,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      },
-                      {
-                          "text": "No review or audit is conducted after decommissioning",
-                          "value": "Item 4",
-                          "beneficence": 0,
-                          "non_maleficence": 3,
-                          "autonomy": 0,
-                          "justice": 0,
-                          "explicability": 0
-                      }
-                  ]
+                "type": "panel",
+                "name": "panel21",
+                "title": "Documentation and Transparency",
+                "state": "expanded",
+                "elements": [
+                                {
+                                "type": "radiogroup",
+                                "name": "question290",
+                                "title": "To what extent is the decommissioning process documented and made transparent?",
+                                "choices": [
+                                    {
+                                        "text": "The entire process is thoroughly documented and shared with internal and external stakeholders",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Partial documentation exists, but some steps are unclear or unavailable to stakeholders",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 1
+                                    },
+                                    {
+                                        "text": "Minimal documentation is available, and it is not shared externally",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 2,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 2
+                                    },
+                                    {
+                                        "text": "No documentation of the decommissioning process exists",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 3,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question291",
+                                "title": " How are risks from third-party dependencies (e.g., APIs, external data sources) managed during decommissioning?",
+                                "choices": [
+                                    {
+                                        "text": "All third-party contracts and dependencies are reviewed and terminated in alignment with decommissioning",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Some third-party dependencies are reviewed, but gaps in termination plans exist",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "No formal review of third-party dependencies, but termination is informally managed",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 2,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Third-party dependencies are ignored during decommissioning",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 3,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "radiogroup",
+                                "name": "question292",
+                                "title": "Is there a post-decommission review or audit to ensure all risks have been mitigated and lessons learned?",
+                                "choices": [
+                                    {
+                                        "text": "Comprehensive post-decommission review and audit conducted, with lessons learned applied to future projects",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": -3,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "A basic review is conducted, but no formal audit or feedback loop exists",
+                                        "value": "Item 2",
+                                        "beneficence": 0,
+                                        "non_maleficence": -1,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Informal review conducted with no structured learning process",
+                                        "value": "Item 3",
+                                        "beneficence": 0,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "No review or audit is conducted after decommissioning",
+                                        "value": "Item 4",
+                                        "beneficence": 0,
+                                        "non_maleficence": 3,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            }
+                        ]
               }
           ]
       }

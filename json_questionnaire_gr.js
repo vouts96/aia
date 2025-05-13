@@ -9408,435 +9408,470 @@ const json_questionnaire_gr = {
             "title": "Στάδιο Απόσυρσης",
             "elements": [
               {
-                "type": "radiogroup",
-                "name": "question283",
-                "title": "Έχει πραγματοποιήσει ο οργανισμός εμπεριστατωμένη εκτίμηση κινδύνου πριν από την απόσυρση του συστήματος ΤΝ;",
-                "choices": [
-                    {
-                        "text": "Ολοκληρωμένη εκτίμηση κινδύνου, καλύπτοντας ηθικές, τεχνικές και λειτουργικές επιπτώσεις",
-                        "value": "Item 1",
-                        "beneficence": 0,
-                        "non_maleficence": 0,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    },
-                    {
-                        "text": "Μερική εκτίμηση κινδύνου που καλύπτει βασικούς κινδύνους αλλά με κενά στις ηθικές εκτιμήσεις",
-                        "value": "Item 2",
-                        "beneficence": 1,
-                        "non_maleficence": 1,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    },
-                    {
-                        "text": "Βασική εκτίμηση που επικεντρώνεται μόνο σε λειτουργικούς κινδύνους, με ελάχιστη ηθική ή τεχνική ανάλυση",
-                        "value": "Item 3",
-                        "beneficence": 2,
-                        "non_maleficence": 2,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    },
-                    {
-                        "text": "Δεν πραγματοποιήθηκε καμία επίσημη εκτίμηση κινδύνου",
-                        "value": "Item 4",
-                        "beneficence": 4,
-                        "non_maleficence": 4,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    }
-                ]
-            },
+                "type": "panel",
+                "name": "panel21",
+                "title": "Ανάλυση Κινδύνου",
+                "state": "expanded",
+                "elements": [
+                              {
+                                "type": "radiogroup",
+                                "name": "question283",
+                                "title": "Έχει πραγματοποιήσει ο οργανισμός εμπεριστατωμένη εκτίμηση κινδύνου πριν από την απόσυρση του συστήματος ΤΝ;",
+                                "choices": [
+                                    {
+                                        "text": "Ολοκληρωμένη εκτίμηση κινδύνου, καλύπτοντας ηθικές, τεχνικές και λειτουργικές επιπτώσεις",
+                                        "value": "Item 1",
+                                        "beneficence": 0,
+                                        "non_maleficence": 0,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Μερική εκτίμηση κινδύνου που καλύπτει βασικούς κινδύνους αλλά με κενά στις ηθικές εκτιμήσεις",
+                                        "value": "Item 2",
+                                        "beneficence": 1,
+                                        "non_maleficence": 1,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Βασική εκτίμηση που επικεντρώνεται μόνο σε λειτουργικούς κινδύνους, με ελάχιστη ηθική ή τεχνική ανάλυση",
+                                        "value": "Item 3",
+                                        "beneficence": 2,
+                                        "non_maleficence": 2,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    },
+                                    {
+                                        "text": "Δεν πραγματοποιήθηκε καμία επίσημη εκτίμηση κινδύνου",
+                                        "value": "Item 4",
+                                        "beneficence": 4,
+                                        "non_maleficence": 4,
+                                        "autonomy": 0,
+                                        "justice": 0,
+                                        "explicability": 0
+                                    }
+                                ]
+                            }
+                          ]},
             {
-                "type": "radiogroup",
-                "name": "question284",
-                "title": "Σε ποιο βαθμό εμπλέκονται τα ενδιαφερόμενα μέρη (π.χ. τελικοί χρήστες, πελάτες, επηρεαζόμενες κοινότητες) στη διαδικασία απόσυρσης της ΤΝ;",
-                "choices": [
-                    {
-                        "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν πλήρως μέσω διαβουλεύσεων και κύκλων ανατροφοδότησης σε όλα τα στάδια",
-                        "value": "Item 1",
-                        "beneficence": 0,
-                        "non_maleficence": 0,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    },
-                    {
-                        "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν εν μέρει, με περιορισμένες διαβουλεύσεις για συγκεκριμένες πτυχές",
-                        "value": "Item 2",
-                        "beneficence": 1,
-                        "non_maleficence": 0,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    },
-                    {
-                        "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν ελάχιστα, με αποσπασματική συλλογή ανατροφοδότησης",
-                        "value": "Item 3",
-                        "beneficence": 2,
-                        "non_maleficence": 0,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    },
-                    {
-                        "text": "Τα ενδιαφερόμενα μέρη δεν ενημερώνονται ούτε συμμετέχουν",
-                        "value": "Item 4",
-                        "beneficence": 3,
-                        "non_maleficence": 0,
-                        "autonomy": 0,
-                        "justice": 0,
-                        "explicability": 0
-                    }
-                ]
-            },
+              "type": "panel",
+              "name": "panel21",
+              "title": "Εμπλοκή Ενδιαφερομένων Μερών",
+              "state": "expanded",
+              "elements": [
+                            {
+                              "type": "radiogroup",
+                              "name": "question284",
+                              "title": "Σε ποιο βαθμό εμπλέκονται τα ενδιαφερόμενα μέρη (π.χ. τελικοί χρήστες, πελάτες, επηρεαζόμενες κοινότητες) στη διαδικασία απόσυρσης της ΤΝ;",
+                              "choices": [
+                                  {
+                                      "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν πλήρως μέσω διαβουλεύσεων και κύκλων ανατροφοδότησης σε όλα τα στάδια",
+                                      "value": "Item 1",
+                                      "beneficence": 0,
+                                      "non_maleficence": 0,
+                                      "autonomy": 0,
+                                      "justice": 0,
+                                      "explicability": 0
+                                  },
+                                  {
+                                      "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν εν μέρει, με περιορισμένες διαβουλεύσεις για συγκεκριμένες πτυχές",
+                                      "value": "Item 2",
+                                      "beneficence": 1,
+                                      "non_maleficence": 0,
+                                      "autonomy": 0,
+                                      "justice": 0,
+                                      "explicability": 0
+                                  },
+                                  {
+                                      "text": "Τα ενδιαφερόμενα μέρη συμμετέχουν ελάχιστα, με αποσπασματική συλλογή ανατροφοδότησης",
+                                      "value": "Item 3",
+                                      "beneficence": 2,
+                                      "non_maleficence": 0,
+                                      "autonomy": 0,
+                                      "justice": 0,
+                                      "explicability": 0
+                                  },
+                                  {
+                                      "text": "Τα ενδιαφερόμενα μέρη δεν ενημερώνονται ούτε συμμετέχουν",
+                                      "value": "Item 4",
+                                      "beneficence": 3,
+                                      "non_maleficence": 0,
+                                      "autonomy": 0,
+                                      "justice": 0,
+                                      "explicability": 0
+                                  }
+                              ]
+                          }
+                        ]},
             {
-              "type": "radiogroup",
-              "name": "question285",
-              "title": "Πώς διαχειρίζονται τα προσωπικά δεδομένα και άλλες ευαίσθητες πληροφορίες κατά τη διαδικασία απόσυρσης;",
-              "choices": [
-                  {
-                      "text": "Τα προσωπικά δεδομένα διαγράφονται με ασφάλεια σύμφωνα με διεθνείς βέλτιστες πρακτικές (π.χ. πρωτόκολλα διαγραφής συμβατά με τον GDPR)",
-                      "value": "Item 1",
-                      "beneficence": 0,
-                      "non_maleficence": 0,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
+              "type": "panel",
+              "name": "panel21",
+              "title": "Διαχείριση Δεδομένων",
+              "state": "expanded",
+              "elements": [
+                            {
+                      "type": "radiogroup",
+                      "name": "question285",
+                      "title": "Πώς διαχειρίζονται τα προσωπικά δεδομένα και άλλες ευαίσθητες πληροφορίες κατά τη διαδικασία απόσυρσης;",
+                      "choices": [
+                          {
+                              "text": "Τα προσωπικά δεδομένα διαγράφονται με ασφάλεια σύμφωνα με διεθνείς βέλτιστες πρακτικές (π.χ. πρωτόκολλα διαγραφής συμβατά με τον GDPR)",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          },
+                          {
+                              "text": "Τα προσωπικά δεδομένα διαγράφονται, αλλά δεν υπάρχει διαδικασία επαλήθευσης ή ελέγχου",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 1,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          },
+                          {
+                              "text": "Τα προσωπικά δεδομένα αρχειοθετούνται επ’ αόριστον χωρίς συγκεκριμένο σχέδιο διαγραφής",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 2,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          },
+                          {
+                              "text": "Δεν λαμβάνεται κανένα μέτρο για την ορθή διαχείριση ή διαγραφή των προσωπικών δεδομένων",
+                              "value": "Item 4",
+                              "beneficence": 0,
+                              "non_maleficence": 3,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          }
+                      ]
                   },
                   {
-                      "text": "Τα προσωπικά δεδομένα διαγράφονται, αλλά δεν υπάρχει διαδικασία επαλήθευσης ή ελέγχου",
-                      "value": "Item 2",
-                      "beneficence": 0,
-                      "non_maleficence": 1,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
-                  },
-                  {
-                      "text": "Τα προσωπικά δεδομένα αρχειοθετούνται επ’ αόριστον χωρίς συγκεκριμένο σχέδιο διαγραφής",
-                      "value": "Item 3",
-                      "beneficence": 0,
-                      "non_maleficence": 2,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
-                  },
-                  {
-                      "text": "Δεν λαμβάνεται κανένα μέτρο για την ορθή διαχείριση ή διαγραφή των προσωπικών δεδομένων",
-                      "value": "Item 4",
-                      "beneficence": 0,
-                      "non_maleficence": 3,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
+                      "type": "radiogroup",
+                      "name": "question286",
+                      "title": "Πώς διαχειρίζεται ο οργανισμός τα μοντέλα ΤΝ και τα δεδομένα εκπαίδευσης μετά την απόσυρση;",
+                      "choices": [
+                          {
+                              "text": "Τα μοντέλα και τα δεδομένα αρχειοθετούνται με ασφάλεια για λόγους ελέγχου, αναπαραγωγιμότητας και συμμόρφωσης",
+                              "value": "Item 1",
+                              "beneficence": 0,
+                              "non_maleficence": 0,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          },
+                          {
+                              "text": "Τα μοντέλα και τα δεδομένα αρχειοθετούνται, αλλά τα μέτρα ασφαλείας (π.χ. κρυπτογράφηση) είναι ελάχιστα",
+                              "value": "Item 2",
+                              "beneficence": 0,
+                              "non_maleficence": 1,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          },
+                          {
+                              "text": "Τα μοντέλα και τα δεδομένα διατηρούνται χωρίς επίσημο σχέδιο αρχειοθέτησης ή ασφάλειας",
+                              "value": "Item 3",
+                              "beneficence": 0,
+                              "non_maleficence": 2,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          },
+                          {
+                              "text": "Τα μοντέλα και τα δεδομένα διαγράφονται χωρίς να λαμβάνονται υπόψη οι ανάγκες ελέγχου ή συμμόρφωσης",
+                              "value": "Item 4",
+                              "beneficence": 0,
+                              "non_maleficence": 3,
+                              "autonomy": 0,
+                              "justice": 0,
+                              "explicability": 0
+                          }
+                      ]
                   }
-              ]
-          },
+                ]},
           {
-              "type": "radiogroup",
-              "name": "question286",
-              "title": "Πώς διαχειρίζεται ο οργανισμός τα μοντέλα ΤΝ και τα δεδομένα εκπαίδευσης μετά την απόσυρση;",
-              "choices": [
-                  {
-                      "text": "Τα μοντέλα και τα δεδομένα αρχειοθετούνται με ασφάλεια για λόγους ελέγχου, αναπαραγωγιμότητας και συμμόρφωσης",
-                      "value": "Item 1",
-                      "beneficence": 0,
-                      "non_maleficence": 0,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
-                  },
-                  {
-                      "text": "Τα μοντέλα και τα δεδομένα αρχειοθετούνται, αλλά τα μέτρα ασφαλείας (π.χ. κρυπτογράφηση) είναι ελάχιστα",
-                      "value": "Item 2",
-                      "beneficence": 0,
-                      "non_maleficence": 1,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
-                  },
-                  {
-                      "text": "Τα μοντέλα και τα δεδομένα διατηρούνται χωρίς επίσημο σχέδιο αρχειοθέτησης ή ασφάλειας",
-                      "value": "Item 3",
-                      "beneficence": 0,
-                      "non_maleficence": 2,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
-                  },
-                  {
-                      "text": "Τα μοντέλα και τα δεδομένα διαγράφονται χωρίς να λαμβάνονται υπόψη οι ανάγκες ελέγχου ή συμμόρφωσης",
-                      "value": "Item 4",
-                      "beneficence": 0,
-                      "non_maleficence": 3,
-                      "autonomy": 0,
-                      "justice": 0,
-                      "explicability": 0
-                  }
-              ]
-          },
-          {
-            "type": "radiogroup",
-            "name": "question287",
-            "title": "Ποια βήματα λαμβάνονται για την αντιμετώπιση πιθανών αρνητικών ηθικών επιπτώσεων λόγω της απόσυρσης του συστήματος ΤΝ;",
-            "choices": [
-                {
-                    "text": "Οι ηθικές επιπτώσεις αξιολογούνται πλήρως και αναπτύσσονται σχέδια μετριασμού, συμπεριλαμβανομένων για περιθωριοποιημένες ομάδες",
-                    "value": "Item 1",
-                    "beneficence": 0,
-                    "non_maleficence": -3,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Οι ηθικές επιπτώσεις αξιολογούνται μερικώς, με εστίαση σε περιοχές υψηλού κινδύνου αλλά με περιορισμένη έκταση",
-                    "value": "Item 2",
-                    "beneficence": 0,
-                    "non_maleficence": -1,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Οι ηθικοί κίνδυνοι αναγνωρίζονται αλλά δεν υπάρχουν συγκεκριμένες στρατηγικές μετριασμού",
-                    "value": "Item 3",
-                    "beneficence": 0,
-                    "non_maleficence": 2,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Οι ηθικοί κίνδυνοι δεν λαμβάνονται υπόψη",
-                    "value": "Item 4",
-                    "beneficence": 0,
-                    "non_maleficence": 3,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                }
-            ]
-        },
+            "type": "panel",
+              "name": "panel21",
+              "title": "Διαχείριση Επιπτώσεων",
+              "state": "expanded",
+              "elements": [
+                            {
+                        "type": "radiogroup",
+                        "name": "question287",
+                        "title": "Ποια βήματα λαμβάνονται για την αντιμετώπιση πιθανών αρνητικών ηθικών επιπτώσεων λόγω της απόσυρσης του συστήματος ΤΝ;",
+                        "choices": [
+                            {
+                                "text": "Οι ηθικές επιπτώσεις αξιολογούνται πλήρως και αναπτύσσονται σχέδια μετριασμού, συμπεριλαμβανομένων για περιθωριοποιημένες ομάδες",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": -3,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Οι ηθικές επιπτώσεις αξιολογούνται μερικώς, με εστίαση σε περιοχές υψηλού κινδύνου αλλά με περιορισμένη έκταση",
+                                "value": "Item 2",
+                                "beneficence": 0,
+                                "non_maleficence": -1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Οι ηθικοί κίνδυνοι αναγνωρίζονται αλλά δεν υπάρχουν συγκεκριμένες στρατηγικές μετριασμού",
+                                "value": "Item 3",
+                                "beneficence": 0,
+                                "non_maleficence": 2,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Οι ηθικοί κίνδυνοι δεν λαμβάνονται υπόψη",
+                                "value": "Item 4",
+                                "beneficence": 0,
+                                "non_maleficence": 3,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            }
+                        ]
+                    },
+                    {
+                        "type": "radiogroup",
+                        "name": "question288",
+                        "title": "Πώς διασφαλίζει ο οργανισμός τη συνέχεια ή παρέχει εναλλακτικές για τους χρήστες που εξαρτώνται από το σύστημα ΤΝ;",
+                        "choices": [
+                            {
+                                "text": "Πλήρες σχέδιο μετάβασης που περιλαμβάνει ισοδύναμες υπηρεσίες ή χειροκίνητες διαδικασίες με υποστήριξη χρηστών",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": -3,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Μερικό σχέδιο μετάβασης με κενά στη συνέχεια για εξαρτώμενους χρήστες",
+                                "value": "Item 2",
+                                "beneficence": -1,
+                                "non_maleficence": -1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Οι χρήστες ειδοποιούνται αλλά δεν παρέχεται συγκεκριμένη εναλλακτική ή υποστήριξη",
+                                "value": "Item 3",
+                                "beneficence": 2,
+                                "non_maleficence": 2,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Δεν παρέχεται καμία συνέχεια ή εναλλακτική υπηρεσία",
+                                "value": "Item 4",
+                                "beneficence": 3,
+                                "non_maleficence": 3,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            }
+                        ]
+                    },
+                    {
+                        "type": "radiogroup",
+                        "name": "question289",
+                        "title": "Πώς αντιμετωπίζονται οι περιβαλλοντικές επιπτώσεις (π.χ. κατανάλωση ενέργειας από διακομιστές) κατά την απόσυρση;",
+                        "choices": [
+                            {
+                                "text": "Ο εξοπλισμός ανακυκλώνεται υπεύθυνα και η κατανάλωση ενέργειας ελαχιστοποιείται σύμφωνα με τους στόχους βιωσιμότητας",
+                                "value": "Item 1",
+                                "beneficence": 0,
+                                "non_maleficence": 0,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Γίνονται κάποιες προσπάθειες ανακύκλωσης ή μείωσης ενέργειας αλλά δεν υπάρχει επίσημη στρατηγική",
+                                "value": "Item 2",
+                                "beneficence": 1,
+                                "non_maleficence": 1,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Ελάχιστη προσπάθεια για την αντιμετώπιση του περιβαλλοντικού αντίκτυπου, χωρίς επίσημα μέτρα",
+                                "value": "Item 3",
+                                "beneficence": 2,
+                                "non_maleficence": 2,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            },
+                            {
+                                "text": "Ο περιβαλλοντικός αντίκτυπος δεν λαμβάνεται υπόψη",
+                                "value": "Item 4",
+                                "beneficence": 3,
+                                "non_maleficence": 3,
+                                "autonomy": 0,
+                                "justice": 0,
+                                "explicability": 0
+                            }
+                        ]
+                    }
+                  ]},
         {
-            "type": "radiogroup",
-            "name": "question288",
-            "title": "Πώς διασφαλίζει ο οργανισμός τη συνέχεια ή παρέχει εναλλακτικές για τους χρήστες που εξαρτώνται από το σύστημα ΤΝ;",
-            "choices": [
-                {
-                    "text": "Πλήρες σχέδιο μετάβασης που περιλαμβάνει ισοδύναμες υπηρεσίες ή χειροκίνητες διαδικασίες με υποστήριξη χρηστών",
-                    "value": "Item 1",
-                    "beneficence": 0,
-                    "non_maleficence": -3,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
+          "type": "panel",
+              "name": "panel21",
+              "title": "Τεκμηρίωση και Διαφάνεια",
+              "state": "expanded",
+              "elements": [
+                            {
+                    "type": "radiogroup",
+                    "name": "question290",
+                    "title": "Σε ποιο βαθμό τεκμηριώνεται και καθίσταται διαφανής η διαδικασία απόσυρσης;",
+                    "choices": [
+                        {
+                            "text": "Ολόκληρη η διαδικασία τεκμηριώνεται πλήρως και κοινοποιείται σε εσωτερικούς και εξωτερικούς ενδιαφερόμενους",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Υπάρχει μερική τεκμηρίωση, αλλά ορισμένα βήματα είναι ασαφή ή δεν είναι διαθέσιμα στους ενδιαφερόμενους",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 1
+                        },
+                        {
+                            "text": "Διατίθεται ελάχιστη τεκμηρίωση και δεν κοινοποιείται εξωτερικά",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 2
+                        },
+                        {
+                            "text": "Δεν υπάρχει τεκμηρίωση της διαδικασίας απόσυρσης",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 3
+                        }
+                    ]
                 },
                 {
-                    "text": "Μερικό σχέδιο μετάβασης με κενά στη συνέχεια για εξαρτώμενους χρήστες",
-                    "value": "Item 2",
-                    "beneficence": -1,
-                    "non_maleficence": -1,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
+                    "type": "radiogroup",
+                    "name": "question291",
+                    "title": "Πώς διαχειρίζονται οι κίνδυνοι από εξαρτήσεις τρίτων (π.χ. APIs, εξωτερικές πηγές δεδομένων) κατά την απόσυρση;",
+                    "choices": [
+                        {
+                            "text": "Όλες οι συμβάσεις και εξαρτήσεις τρίτων επανεξετάζονται και τερματίζονται σύμφωνα με τη διαδικασία απόσυρσης",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": 0,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Ορισμένες εξαρτήσεις τρίτων επανεξετάζονται, αλλά υπάρχουν κενά στα σχέδια τερματισμού",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Δεν υπάρχει επίσημη επανεξέταση εξαρτήσεων τρίτων, αλλά ο τερματισμός διαχειρίζεται ανεπίσημα",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 2,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Οι εξαρτήσεις τρίτων αγνοούνται κατά την απόσυρση",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        }
+                    ]
                 },
                 {
-                    "text": "Οι χρήστες ειδοποιούνται αλλά δεν παρέχεται συγκεκριμένη εναλλακτική ή υποστήριξη",
-                    "value": "Item 3",
-                    "beneficence": 2,
-                    "non_maleficence": 2,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Δεν παρέχεται καμία συνέχεια ή εναλλακτική υπηρεσία",
-                    "value": "Item 4",
-                    "beneficence": 3,
-                    "non_maleficence": 3,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                }
-            ]
-        },
-        {
-            "type": "radiogroup",
-            "name": "question289",
-            "title": "Πώς αντιμετωπίζονται οι περιβαλλοντικές επιπτώσεις (π.χ. κατανάλωση ενέργειας από διακομιστές) κατά την απόσυρση;",
-            "choices": [
-                {
-                    "text": "Ο εξοπλισμός ανακυκλώνεται υπεύθυνα και η κατανάλωση ενέργειας ελαχιστοποιείται σύμφωνα με τους στόχους βιωσιμότητας",
-                    "value": "Item 1",
-                    "beneficence": 0,
-                    "non_maleficence": 0,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Γίνονται κάποιες προσπάθειες ανακύκλωσης ή μείωσης ενέργειας αλλά δεν υπάρχει επίσημη στρατηγική",
-                    "value": "Item 2",
-                    "beneficence": 1,
-                    "non_maleficence": 1,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Ελάχιστη προσπάθεια για την αντιμετώπιση του περιβαλλοντικού αντίκτυπου, χωρίς επίσημα μέτρα",
-                    "value": "Item 3",
-                    "beneficence": 2,
-                    "non_maleficence": 2,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                },
-                {
-                    "text": "Ο περιβαλλοντικός αντίκτυπος δεν λαμβάνεται υπόψη",
-                    "value": "Item 4",
-                    "beneficence": 3,
-                    "non_maleficence": 3,
-                    "autonomy": 0,
-                    "justice": 0,
-                    "explicability": 0
-                }
-            ]
-        },
-        {
-          "type": "radiogroup",
-          "name": "question290",
-          "title": "Σε ποιο βαθμό τεκμηριώνεται και καθίσταται διαφανής η διαδικασία απόσυρσης;",
-          "choices": [
-              {
-                  "text": "Ολόκληρη η διαδικασία τεκμηριώνεται πλήρως και κοινοποιείται σε εσωτερικούς και εξωτερικούς ενδιαφερόμενους",
-                  "value": "Item 1",
-                  "beneficence": 0,
-                  "non_maleficence": 0,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Υπάρχει μερική τεκμηρίωση, αλλά ορισμένα βήματα είναι ασαφή ή δεν είναι διαθέσιμα στους ενδιαφερόμενους",
-                  "value": "Item 2",
-                  "beneficence": 0,
-                  "non_maleficence": 1,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 1
-              },
-              {
-                  "text": "Διατίθεται ελάχιστη τεκμηρίωση και δεν κοινοποιείται εξωτερικά",
-                  "value": "Item 3",
-                  "beneficence": 0,
-                  "non_maleficence": 2,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 2
-              },
-              {
-                  "text": "Δεν υπάρχει τεκμηρίωση της διαδικασίας απόσυρσης",
-                  "value": "Item 4",
-                  "beneficence": 0,
-                  "non_maleficence": 3,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 3
-              }
-          ]
-      },
-      {
-          "type": "radiogroup",
-          "name": "question291",
-          "title": "Πώς διαχειρίζονται οι κίνδυνοι από εξαρτήσεις τρίτων (π.χ. APIs, εξωτερικές πηγές δεδομένων) κατά την απόσυρση;",
-          "choices": [
-              {
-                  "text": "Όλες οι συμβάσεις και εξαρτήσεις τρίτων επανεξετάζονται και τερματίζονται σύμφωνα με τη διαδικασία απόσυρσης",
-                  "value": "Item 1",
-                  "beneficence": 0,
-                  "non_maleficence": 0,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Ορισμένες εξαρτήσεις τρίτων επανεξετάζονται, αλλά υπάρχουν κενά στα σχέδια τερματισμού",
-                  "value": "Item 2",
-                  "beneficence": 0,
-                  "non_maleficence": 1,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Δεν υπάρχει επίσημη επανεξέταση εξαρτήσεων τρίτων, αλλά ο τερματισμός διαχειρίζεται ανεπίσημα",
-                  "value": "Item 3",
-                  "beneficence": 0,
-                  "non_maleficence": 2,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Οι εξαρτήσεις τρίτων αγνοούνται κατά την απόσυρση",
-                  "value": "Item 4",
-                  "beneficence": 0,
-                  "non_maleficence": 3,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              }
-          ]
-      },
-      {
-          "type": "radiogroup",
-          "name": "question292",
-          "title": "Υπάρχει επανεξέταση ή έλεγχος μετά την απόσυρση για τη διασφάλιση ότι έχουν μετριαστεί όλοι οι κίνδυνοι και ότι αντλήθηκαν μαθήματα;",
-          "choices": [
-              {
-                  "text": "Έχει διενεργηθεί πλήρης επανεξέταση και έλεγχος μετά την απόσυρση, με εφαρμογή των διδαγμάτων σε μελλοντικά έργα",
-                  "value": "Item 1",
-                  "beneficence": 0,
-                  "non_maleficence": -3,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Διενεργείται βασική επανεξέταση, αλλά δεν υπάρχει επίσημος έλεγχος ή κύκλος ανατροφοδότησης",
-                  "value": "Item 2",
-                  "beneficence": 0,
-                  "non_maleficence": -1,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Διενεργείται ανεπίσημη επανεξέταση χωρίς δομημένη διαδικασία μάθησης",
-                  "value": "Item 3",
-                  "beneficence": 0,
-                  "non_maleficence": 1,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              },
-              {
-                  "text": "Δεν διενεργείται καμία επανεξέταση ή έλεγχος μετά την απόσυρση",
-                  "value": "Item 4",
-                  "beneficence": 0,
-                  "non_maleficence": 3,
-                  "autonomy": 0,
-                  "justice": 0,
-                  "explicability": 0
-              }
-          ]
-      }      
+                    "type": "radiogroup",
+                    "name": "question292",
+                    "title": "Υπάρχει επανεξέταση ή έλεγχος μετά την απόσυρση για τη διασφάλιση ότι έχουν μετριαστεί όλοι οι κίνδυνοι και ότι αντλήθηκαν μαθήματα;",
+                    "choices": [
+                        {
+                            "text": "Έχει διενεργηθεί πλήρης επανεξέταση και έλεγχος μετά την απόσυρση, με εφαρμογή των διδαγμάτων σε μελλοντικά έργα",
+                            "value": "Item 1",
+                            "beneficence": 0,
+                            "non_maleficence": -3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Διενεργείται βασική επανεξέταση, αλλά δεν υπάρχει επίσημος έλεγχος ή κύκλος ανατροφοδότησης",
+                            "value": "Item 2",
+                            "beneficence": 0,
+                            "non_maleficence": -1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Διενεργείται ανεπίσημη επανεξέταση χωρίς δομημένη διαδικασία μάθησης",
+                            "value": "Item 3",
+                            "beneficence": 0,
+                            "non_maleficence": 1,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        },
+                        {
+                            "text": "Δεν διενεργείται καμία επανεξέταση ή έλεγχος μετά την απόσυρση",
+                            "value": "Item 4",
+                            "beneficence": 0,
+                            "non_maleficence": 3,
+                            "autonomy": 0,
+                            "justice": 0,
+                            "explicability": 0
+                        }
+                    ]
+                }  
+              ]}    
             ]
         }
     ]
