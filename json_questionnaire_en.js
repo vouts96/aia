@@ -2,6 +2,8 @@ const json_questionnaire_en = {
   "title": "Algorithmic Impact Assessment",
   "showProgressBar": "top",
   "logoPosition": "right",
+  "showTOC": true,
+  "progressBarShowPageNumbers": true,
   "pages": [
       {
           "name": "page1",

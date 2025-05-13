@@ -62,3 +62,49 @@ body {
 .closeButton:hover {
   background-color: #a93636;
 }
+
+ /* Common styles for top and bottom bars */
+    .loader-bar-container {
+      position: fixed;
+      left: 0;
+      height: 6px;
+      width: 100%;
+      background-color: #eee;
+      z-index: 9999;
+      overflow: hidden;
+    }
+
+    .loader-bar {
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      background-color: #2e8b8b; /* soft teal */
+      animation: slideBarFull 1.5s ease-in-out infinite;
+    }
+
+    .loader-top {
+      top: 0;
+    }
+
+    .loader-bottom {
+      bottom: 0;
+    }
+
+    @keyframes slideBarFull {
+      0% {
+        left: -20%;
+      }
+      50% {
+        left: 40%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+
+
+    .blurred {
+      filter: blur(1px);
+      pointer-events: none; /* disables clicks */
+      opacity: 0.6; /* optional, for visual feedback */
+    }

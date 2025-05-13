@@ -2,6 +2,8 @@ const json_questionnaire_gr = {
     "title": "Αξιολόγηση Αντίκτυπου Αλγορίθμου",
     "showProgressBar": "top",
     "logoPosition": "right",
+    "showTOC": true,
+    "progressBarShowPageNumbers": true,
     "pages": [
         {
             "name": "page1",
