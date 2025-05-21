@@ -11276,6 +11276,21 @@ const json_questionnaire_en = {
                         ]
               }
           ]
+      },
+      {
+        "name": "page9",
+        "title": "Code Analysis",
+        "elements": [
+            {
+                "type": "file",
+                "title": "Please upload a .zip file with your code",
+                "name": "files",
+                "storeDataAsText": false,
+                "waitForUpload": true,
+                "allowMultiple": true,
+                "maxSize": 102400
+                }
+            ]
       }
   ]
 }

@@ -18,7 +18,7 @@ const savePdf = function(surveyData, lang) {
     const textFontSize = 12;
     const margin = 20;
     const lineHeight = 10;
-    const maxYPosition = 250;
+    const maxYPosition = 280;
     const pageWidth = 180;
 
     surveyPdf.addFont("./fonts/NotoSans-Regular.ttf", "NotoSans", "normal");
@@ -229,16 +229,26 @@ const savePdf = function(surveyData, lang) {
         );
         }
 
-        addWrappedText(`${formattedQuestionName}: ${question.title}`, 14, 'black');
+        addWrappedText(`${formattedQuestionName}: ${question.title}`, textFontSize, 'black');
 
         
         if (Array.isArray(question.answer)) {
-            addWrappedText(`Answer:`, textFontSize, 'black', 'bold');
+            if(lang === 'gr'){
+                addWrappedText(`Απάντηση:`, textFontSize, 'black', 'bold');
+            }
+            else if(lang === 'en'){
+                addWrappedText(`Answer:`, textFontSize, 'black', 'bold');
+            }
             question.answer.forEach((answer) => {
                 addWrappedText(`${answer}`, textFontSize, 'black');
             });
         } else {
-            addWrappedText(`Answer:`, textFontSize, 'black', 'bold');
+            if(lang === 'gr'){
+                addWrappedText(`Απάντηση:`, textFontSize, 'black', 'bold');
+            }
+            else if(lang === 'en'){
+                addWrappedText(`Answer:`, textFontSize, 'black', 'bold');
+            }
             addWrappedText(`${question.answer}`, textFontSize, 'black');
         }
         surveyPdf.autoTable({

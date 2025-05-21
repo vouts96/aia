@@ -12,6 +12,18 @@ function SurveyComponent() {
     }
     const survey = new Survey.Model(json_q);
     survey.locale = lang
+    // Prefill from localStorage if available
+    const prefill = localStorage.getItem("prefilledSurvey");
+    if (prefill) {
+    try {
+        const parsed = JSON.parse(prefill);
+        survey.mergeData(parsed);
+        localStorage.removeItem("prefilledSurvey"); // optional: clear after use
+    } catch (err) {
+        console.error("Invalid prefilled survey data in localStorage", err);
+    }
+    }
+
     const [surveyData, setSurveyData] = React.useState(null); // Set to null initially
     const [isSurveyCompleted, setIsSurveyCompleted] = React.useState(false); // Track survey completion
   
@@ -37,59 +49,12 @@ function SurveyComponent() {
         }
     }
 
-    // This function just opens the file picker
-    const triggerUpload = () => {
-        document.getElementById('uploadJSON').click();
-    };
-    
-    // This function reads the file
-    const handleUploadJSON = (event) => {
-        const file = event.target.files[0];
-        if (!file) return;
-    
-        const reader = new FileReader();
-        reader.onload = (e) => {
-        try {
-            const uploadedData = JSON.parse(e.target.result);
-            console.log("Uploaded prefill data:", uploadedData);
-            survey.mergeData(uploadedData);  // <- Pre-fill the survey
-        } catch (error) {
-            console.error("Failed to parse JSON:", error);
-            alert("Το αρχείο δεν είναι έγκυρο JSON.");
-        }
-        };
-        reader.readAsText(file);
-        handleCloseJSONModal();
-    };
-
-    const handleCloseJSONModal = () => {
-        document.getElementById('uploadJSONModal').style.display = "none"
-    }
   
       
   
     if(lang === 'gr'){
         return (
             <>
-                <div id="uploadJSONModal">
-                    <div className="modal-content">
-                        <p>Θα θέλατε να προσυμπληρώσετε τη φόρμα;</p>
-                        <button onClick={triggerUpload} className="jsonButton" style={{ marginRight: "10px" }}>
-                            Ανέβασμα JSON αρχείου
-                        </button>
-                        <button onClick={handleCloseJSONModal} className="closeButton">Κλείσιμο</button>
-
-                        {/* Hidden file input */}
-                        <input
-                        type="file"
-                        id="uploadJSON"
-                        accept=".json"
-                        style={{ display: "none" }}
-                        onChange={handleUploadJSON}
-                        />
-                    </div>
-                </div>
-
               <SurveyReact.Survey model={survey} />
               
               
@@ -112,24 +77,6 @@ function SurveyComponent() {
     else if(lang === 'en'){
         return (
         <>
-            <div id="uploadJSONModal">
-                    <div className="modal-content">
-                        <p>Would you like to prefill the survey?</p>
-                        <button onClick={triggerUpload} className="jsonButton" style={{ marginRight: "10px" }}>
-                            Upload JSON file
-                        </button>
-                        <button onClick={handleCloseJSONModal} className="closeButton">Close</button>
-
-                        {/* Hidden file input */}
-                        <input
-                        type="file"
-                        id="uploadJSON"
-                        accept=".json"
-                        style={{ display: "none" }}
-                        onChange={handleUploadJSON}
-                        />
-                    </div>
-                </div>
 
             <SurveyReact.Survey model={survey} />
             

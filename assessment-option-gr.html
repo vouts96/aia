@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UNIFAI – Επιλογή Τρόπου Έναρξης</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .logo-container {
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 80px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 40px;
+      background-color: white;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 15px;
+      background-color: #0D3B3E;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #003e74;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    label.upload-button {
+      background-color: #0D3B3E;
+      padding: 12px 25px;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 15px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="emp.svg" alt="Λογότυπο EMP">
+    <img src="logo.png" alt="Λογότυπο UNIFAI">
+  </div>
+
+  <div class="container">
+    <h1>Επιλέξτε Πώς να Ξεκινήσετε</h1>
+    <p>Παρακαλώ επιλέξτε έναν τρόπο για να ξεκινήσετε την αξιολόγηση:</p>
+
+    <!-- Start a new empty survey -->
+    <a href="index.html?lang=gr" class="button">Νέα Αξιολόγηση</a>
+
+    <!-- Upload pre-filled survey JSON -->
+    <form action="index.html" method="GET" onsubmit="return handleFileUpload(event)">
+      <label for="jsonUpload" class="upload-button">Μεταφόρτωση Προσυμπληρωμένου Ερωτηματολογίου</label>
+      <input type="file" id="jsonUpload" accept=".json" />
+    </form>
+  </div>
+
+  <script>
+    function handleFileUpload(event) {
+      event.preventDefault();
+      const fileInput = document.getElementById('jsonUpload');
+      if (!fileInput.files.length) return;
+
+      const file = fileInput.files[0];
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const content = e.target.result;
+        localStorage.setItem('prefilledSurvey', content);
+        window.location.href = 'index.html?prefilled=true&lang=gr'; // Add lang=gr if needed
+      };
+      reader.readAsText(file);
+    }
+
+    document.getElementById('jsonUpload').addEventListener('change', handleFileUpload);
+  </script>
+
+</body>
+</html>

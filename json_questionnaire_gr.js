@@ -9873,6 +9873,21 @@ const json_questionnaire_gr = {
                 }  
               ]}    
             ]
-        }
+        },
+        {
+        "name": "page9",
+        "title": "Ανάλυση Κώδικα",
+        "elements": [
+            {
+                "type": "file",
+                "title": "Παρακαλώ ανεβάστε ένα .zip αρχείο με τον κώδικά σας",
+                "name": "files",
+                "storeDataAsText": false,
+                "waitForUpload": true,
+                "allowMultiple": true,
+                "maxSize": 102400
+                }
+            ]
+      }
     ]
   }
