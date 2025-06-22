@@ -32,6 +32,73 @@ function SurveyComponent() {
         setSurveyData({ beneficence, non_maleficence, autonomy, justice, explicability, totalScore, questionDetails, prefillData }); // Set both total score and question details
         setIsSurveyCompleted(true); // Mark the survey as completed
     });
+    survey.onUploadFiles.add((_, options) => {
+    const formData = new FormData();
+
+    // Only support one ZIP file
+    const zipFile = options.files[0];
+    formData.append("file", zipFile);  // use "file" as the key
+
+    fetch("https://aia.dslab.ece.ntua.gr:8000/analyze", {
+        method: "POST",
+        body: formData
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        localStorage.setItem("semgrepAnalysis", JSON.stringify(data));
+
+        options.callback([
+            {
+                file: zipFile,
+                content: JSON.stringify(data, null, 2)  // Display result as JSON
+            }
+        ]);
+    })
+    .catch((error) => {
+        console.error("Error: ", error);
+        options.callback([], ['An error occurred during file upload.']);
+    });
+});
+
+    // survey.onComplete.add((sender, options) => {
+    //     const {
+    //         beneficence,
+    //         non_maleficence,
+    //         autonomy,
+    //         justice,
+    //         explicability,
+    //         totalScore,
+    //         questionDetails,
+    //         prefillData
+    //     } = calculateScore(sender.data, json_q);
+
+    //     const result = {
+    //         beneficence,
+    //         non_maleficence,
+    //         autonomy,
+    //         justice,
+    //         explicability,
+    //         totalScore,
+    //         questionDetails,
+    //         prefillData
+    //     };
+
+    //     // Save result to state
+    //     setSurveyData(result);
+    //     setIsSurveyCompleted(true);
+
+    //     // Save to localStorage
+    //     localStorage.setItem("surveyResults", JSON.stringify(result));
+    //     localStorage.setItem("surveyLang", lang);
+
+    //     // Redirect to thank you page with language
+    //     if (lang === "gr") {
+    //         window.location.href = "/thankyou-gr.html";
+    //     } else {
+    //         window.location.href = "/thankyou-en.html";
+    //     }
+    // });
+
   
     const handleSavePdf = () => {
         if (surveyData) {

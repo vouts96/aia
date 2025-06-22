@@ -3,6 +3,7 @@ body {
 }
 
 /* --- Modal Backdrop --- */
+/* === Modal Overlay === */
 #savePdfModal,
 #uploadJSONModal {
   position: fixed;
@@ -10,52 +11,71 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10000;
+  font-family: Arial, sans-serif;
 }
 
-/* --- Modal Box --- */
+/* === Modal Box === */
 #savePdfModal .modal-content,
 #uploadJSONModal .modal-content {
   background-color: #ffffff;
-  padding: 28px;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  width: 320px;
-  max-width: 90%;
-  font-family: 'Open Sans', sans-serif;
+  padding: 40px 30px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
 
-/* --- Primary Action Button --- */
+/* === Headings & Paragraphs === */
+#savePdfModal h3,
+#uploadJSONModal h3 {
+  font-size: 1.6em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#savePdfModal p,
+#uploadJSONModal p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* === Primary Buttons === */
 #savePdfButton,
 .jsonButton {
-  background-color: #2e8b8b; /* Your loader teal */
-  color: white;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: bold;
   border: none;
-  padding: 10px 22px;
-  margin-bottom: 12px;
-  border-radius: 8px;
+  border-radius: 6px;
+  background-color: #0D3B3E;
+  color: white;
   cursor: pointer;
-  font-size: 14px;
   transition: background-color 0.3s ease;
 }
 #savePdfButton:hover,
 .jsonButton:hover {
-  background-color: #257373;
+  background-color: #003e74;
 }
 
-/* --- Close Button --- */
+/* === Close Button === */
 .closeButton {
+  padding: 12px 24px;
+  margin-top: 10px;
   background-color: #c44545;
   color: white;
   border: none;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

@@ -272,6 +272,44 @@ const savePdf = function(surveyData, lang) {
 
     yPosition += 2 * lineHeight;
 
+    // 🟨 Retrieve Semgrep result from localStorage
+    const semgrepRaw = localStorage.getItem("semgrepAnalysis");
+    const semgrepResult = semgrepRaw ? JSON.parse(semgrepRaw) : null;
+
+    // Add Semgrep Section
+    if (semgrepResult?.results?.length > 0) {
+        if (lang === 'gr') {
+            addWrappedText("Ανάλυση Κώδικα (Semgrep)", titleFontSize, '#0D3B3E', 'bold');
+            surveyPdf.outline.add(rootBookmark, "Ανάλυση Κώδικα (Semgrep)", {
+                pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber
+            });
+        } else {
+            addWrappedText("Code Analysis (Semgrep)", titleFontSize, '#0D3B3E', 'bold');
+            surveyPdf.outline.add(rootBookmark, "Code Analysis (Semgrep)", {
+                pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber
+            });
+        }
+
+        yPosition += lineHeight;
+
+        semgrepResult.results.forEach((issue, idx) => {
+            const lines = [
+                `#${idx + 1} - ${issue.check_id}`,
+                `File: ${issue.path}`,
+                `Severity: ${issue.extra.severity}`,
+                `Message: ${issue.extra.message}`
+            ];
+
+            lines.forEach(line => {
+                addWrappedText(line, textFontSize, '#000');
+            });
+
+            yPosition += lineHeight;
+        });
+
+        localStorage.removeItem("semgrepAnalysis")
+    }
+
     if(lang === 'gr'){
         addWrappedText("Συμπεριληπτικά Αποτελέσματα", titleFontSize, '#0D3B3E', 'bold');
         surveyPdf.outline.add(rootBookmark, "Συμπεριληπτικά Αποτελέσματα", { pageNumber: surveyPdf.internal.getCurrentPageInfo().pageNumber });

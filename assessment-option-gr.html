@@ -111,6 +111,7 @@
       reader.onload = function (e) {
         const content = e.target.result;
         localStorage.setItem('prefilledSurvey', content);
+        fileInput.value = "";
         window.location.href = 'index.html?prefilled=true&lang=gr'; // Add lang=gr if needed
       };
       reader.readAsText(file);

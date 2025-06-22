@@ -112,6 +112,7 @@
       reader.onload = function (e) {
         const content = e.target.result;
         localStorage.setItem('prefilledSurvey', content);
+        fileInput.value = "";
         window.location.href = 'index.html?prefilled=true&lang=en'; // You handle this in index.html
       };
       reader.readAsText(file);
